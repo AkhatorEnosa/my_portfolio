@@ -1,4 +1,10 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    transition: background-color 0.1s, color 0.05s;
+  }
 
 .cursor {
     animation: move 1s ease-in-out infinite alternate;

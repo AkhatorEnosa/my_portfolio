@@ -6,7 +6,7 @@ interface SocialLinkProps {
 
 const SocialLink = ({url, title, icon}: SocialLinkProps) => {
   return (
-    <a href={url} title={title}><i className={`bi ${icon}`}></i></a>
+    <a href={url} title={title} className="hover:scale-125 hover:text-[#008080] transition-all duration-300"><i className={`bi ${icon}`}></i></a>
   )
 }
 

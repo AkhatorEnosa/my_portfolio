@@ -1,15 +1,11 @@
-/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
+  darkMode: 'class', // Only class-based dark mode
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{jsx,tsx}' // Only React components
   ],
   theme: {
-    extend: {},
-  },
-  plugins: [
-    require("@xpd/tailwind-3dtransforms")
-    ],
+    extend: {} // No extra config needed
+  }
 }

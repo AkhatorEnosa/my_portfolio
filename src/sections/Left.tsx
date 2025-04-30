@@ -2,8 +2,17 @@ import NavLink from "../components/NavLink"
 import SocialLink from "../components/SocialLink"
 import cv from '../assets/osakhogba.pdf';
 import { motion } from "framer-motion"
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 
 const Left = () => {
+  const context = useContext(AppContext);
+
+  if (!context) {
+    throw new Error("AppContext must be used within an AppContextProvider");
+  }
+
+  const { theme, themeHandler } = context;
   return (
     <section className="col-span-3 w-full h-full flex flex-col justify-between pr-30">
       <div>
@@ -18,11 +27,10 @@ const Left = () => {
             <div className="relative w-fit flex flex-col mt-10 gap-2">
                 <a href={cv} target="_blank" className="relative z-10">
                     <motion.button
-                        whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="w-fit p-3 rounded-lg bg-[#1F2937] text-[#FFF9F0] dark:bg-[#FFF9F0] dark:text-[#1F2937]">Click to download CV</motion.button>
+                        className="w-fit p-3 rounded-lg bg-[#1F2937] text-[#FFF9F0] dark:bg-[#FFF9F0] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] transition-all duration-300">Click to download CV</motion.button>
                 </a>
-                <i className="absolute cursor bi bi-cursor-fill top-5 right-10 text-[#FFF9F0] dark:text-[#1F2937] -rotate-90 z-30"></i>
+                <i className="absolute cursor bi bi-cursor-fill top-5 right-10 text-[#FFF9F0] dark:text-[#1F2937] z-30"></i>
             </div>
           </div>
         </div>
@@ -37,12 +45,19 @@ const Left = () => {
         </div>
       </div>
 
-      <div className="w-full flex mt-10 gap-6 text-2xl">
-        {/* social links */}
-        <SocialLink url="https://www.github.com/Akhatorenosa" title="Github" icon="bi-github"/>
-        <SocialLink url="https://www.linkedin.com/in/osakhogba-akhator-024762139/" title="LinkedIn" icon="bi-linkedin"/>
-        <SocialLink url="https://x.com/5hin3_x" title="X(formerly Twitter)" icon="bi-twitter-x"/>
-        <SocialLink url="https://soozeer.netlify.app/#/aefea77c-748a-4850-bc28-5bc45f74a7ce" title="Soozeer" icon="bi-globe"/>
+      <div className="w-full flex mt-10 justify-between items-center text-2xl">
+        {/* social links */} 
+        <div className="flex gap-6">
+          <SocialLink url="https://www.github.com/Akhatorenosa" title="Github" icon="bi-github"/>
+          <SocialLink url="https://www.linkedin.com/in/osakhogba-akhator-024762139/" title="LinkedIn" icon="bi-linkedin"/>
+          <SocialLink url="https://x.com/5hin3_x" title="X(formerly Twitter)" icon="bi-twitter-x"/>
+          <SocialLink url="https://soozeer.netlify.app/#/aefea77c-748a-4850-bc28-5bc45f74a7ce" title="Soozeer" icon="bi-globe"/>
+        </div>
+
+        <div className="relative w-fit flex hover:bg-[#1f2937]/5 dark:hover:bg-[#FFF9F0]/5 p-2 rounded-full cursor-pointer overflow-hidden" aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => themeHandler()}>
+          <p className={`w-fit text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-150 transition-all`}></i></p>
+          <p className={`absolute w-fit text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Dark Mode<i className={`text-2xl bi bi-moon-fill ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-150 transition-all`}></i></p>
+        </div>
       </div>
     </section>
   )
