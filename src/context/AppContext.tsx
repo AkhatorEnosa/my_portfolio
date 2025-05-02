@@ -3,10 +3,14 @@ import { createContext, ReactNode, useEffect, useState } from 'react'
 export const AppContext = createContext<{
   theme: string;
   setTheme: React.Dispatch<React.SetStateAction<string>>;
+  revealAll: boolean;
+  setRevealAll: React.Dispatch<React.SetStateAction<boolean>>;
   themeHandler: () => void
 }>({
   theme: 'light',
   setTheme: () => {},
+  revealAll: false,
+  setRevealAll: () => {},
   themeHandler: () => {},
 });
 
@@ -14,6 +18,7 @@ export const AppContext = createContext<{
 
 export function AppProvider({ children } : { children: ReactNode }) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+    const [revealAll, setRevealAll] = useState(false)
 
     const themeHandler = () => {
       const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -35,6 +40,7 @@ export function AppProvider({ children } : { children: ReactNode }) {
   return (
     <AppContext.Provider value={{
         theme, setTheme,
+        revealAll, setRevealAll,
         themeHandler,
     }}>
       {children}
