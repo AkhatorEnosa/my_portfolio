@@ -15,11 +15,16 @@ import Kickrs from '../assets/kickrs.png'
 import { motion } from "framer-motion"
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import { LANGUAGES } from "../constants/languages";
+import { FRAMEWORKS } from "../constants/frameworks";
+import Skills from "../components/Skills";
+import { TOOL_LIST } from "../constants/tools";
+import { SOFT_SKILLS } from "../constants/softskills";
 
 const Right = () => {
     const {revealAll, setRevealAll} = useContext(AppContext);
   return (
-        <section className="col-span-4 w-full h-full flex flex-col overflow-scroll scroll-smooth">
+        <section className="lg:w-[52%] lg:py-24 lg:px-12">
             <motion.div 
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -43,10 +48,9 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3 }}
                     className="flex flex-col gap-2">
                         <h2 className="text-lh font-bold">Languages</h2>
-                        <p className="text-sm">JavaScript</p>
-                        <p className="text-sm">TypeScript</p>
-                        <p className="text-sm">HTML</p>
-                        <p className="text-sm">CSS</p>
+                        {LANGUAGES.map((x, index) => (
+                            <Skills url={x.url} name={x.name} icon={x.icon} index={index}/>
+                        ))}
                     </motion.div>
                     <motion.div 
                         initial={{ opacity: 0, y: -50 }}
@@ -54,12 +58,10 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3.2 }}
                         className="flex flex-col gap-2"
                     >
-                        <h2 className="text-lg font-bold">Frameworks</h2>
-                        <p className="text-sm">ReactJS</p>
-                        <p className="text-sm">Redux Toolkit</p>
-                        <p className="text-sm">Tanstack Query</p>
-                        <p className="text-sm">TailwindCSS</p>
-                        <p className="text-sm">Bootstrap</p>
+                        <h2 className="text-lg font-bold">Frameworks & Libraries</h2>
+                        {FRAMEWORKS.map((x, index) => (
+                            <Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
+                        ))}
                     </motion.div>
                     <motion.div 
                         initial={{ opacity: 0, y: -50 }}
@@ -67,14 +69,10 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3.4 }}
                         className="flex flex-col gap-2"
                     >
-                        <h2 className="text-lg font-bold">Tools</h2>
-                        <p className="text-sm">Git</p>
-                        <p className="text-sm">GitHub</p>
-                        <p className="text-sm">PostgreSQL</p>
-                        <p className="text-sm">Supabase</p>
-                        <p className="text-sm">Figma</p>
-                        <p className="text-sm">Motion(formerly Framer Motion)</p>
-                        <p className="text-sm">VS Code</p>
+                        <h2 className="text-lg font-bold">Tools & Softwares</h2>
+                        {TOOL_LIST.map((x, index) =>(
+                            <Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
+                        ))}
                     </motion.div>
                     <motion.div 
                         initial={{ opacity: 0, y: -50 }}
@@ -83,14 +81,9 @@ const Right = () => {
                         className="flex flex-col gap-2"
                     >
                         <h2 className="text-lg font-bold">Soft Skills</h2>
-                        <p className="text-sm">Problem Solving</p>
-                        <p className="text-sm">Teamwork</p>
-                        <p className="text-sm">Communication</p>
-                        <p className="text-sm">Adaptability</p>
-                        <p className="text-sm">Time Management</p>
-                        <p className="text-sm">Attention to Detail</p>
-                        <p className="text-sm">Collaboration</p>
-                        <p className="text-sm">Emotional Intelligence</p>
+                        {SOFT_SKILLS.map((x, index) => (
+                            <Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
+                        ))}
                     </motion.div>
                 </div>
             </div>
@@ -198,10 +191,10 @@ const Right = () => {
                 </div>
             </motion.div>
 
-            {/* <div>
+            <div className="w-full flex flex-col mt-10 justify-center items-center">
                 <p className="text-2xl mt-10">I am currently open to remote opportunities.</p>
                 <p className="text-sm mt-2 opacity-80">Feel free to reach out for collaboration or just a chat!</p>
-            </div> */}
+            </div>
         </section>
   )
 }

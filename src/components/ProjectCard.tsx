@@ -24,13 +24,15 @@ const ProjectCard = ({ title, desc, tech, url, imgSrc }: ProjectCardProps) => {
                 <div className="w-full flex gap-2 mt-5 text-sm font-semibold flex-wrap">
                     {/* {tech.map((x: string) => (x + " • "))} */}
                     {tech.map((x: string, index: number) => (
-                        <p key={index} className="px-2 py-1 bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 border-[0.5px] border-[#1f2937] dark:border-[#f9fafb] rounded-2xl">{x}</p>
+                        <p key={index} className="px-2 py-1 bg-[#008080]/5 dark:bg-[#008080]/30 rounded-2xl">{x}</p>
                     ))}
                 </div>
                 {/* <a href={url} target="_blank" className="text-sm text-[#FF6B6B]">View Project</a> */}
             </div>
-            <div className="col-span-2 h-32 dark:border-[#f9fafb]/20 rounded-lg border-[1px] border-[#1f2937]/20 overflow-hidden">
-                <img src={imgSrc} alt="Soozeer" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-300"/>
+            <div className="h-full col-span-2 flex justify-center items-center">
+              <div className=" h-48 dark:border-[#f9fafb]/20 rounded-3xl border-[1px] border-[#1f2937]/20 overflow-hidden">
+                  <img src={imgSrc} alt="Soozeer" className="w-full h-full object-cover scale-125 group-hover:scale-100 transition-transform duration-300"/>
+              </div>
             </div>
         </div>
     </motion.a>

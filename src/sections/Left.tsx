@@ -14,7 +14,7 @@ const Left = () => {
 
   const { theme, themeHandler } = context;
   return (
-    <section className="col-span-3 w-full h-full flex flex-col justify-between pr-30">
+    <section className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 lg:px-12">
       <div>
         <div className="w-full flex flex-col">
           {/* user data  */}
@@ -47,7 +47,7 @@ const Left = () => {
                 <a href={cv} target="_blank" className="relative z-10">
                     <motion.button
                         whileTap={{ scale: 0.95 }}
-                        className="resume-button w-fit p-3 rounded-lg bg-[#1F2937] text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] transition-all duration-300">Click to download CV</motion.button>
+                        className="resume-button w-fit p-3 rounded-lg bg-[#1F2937] text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] dark:hover:bg-[#008080] dark:hover:text-[#f9fafb] transition-all duration-300">Click to download CV</motion.button>
                 </a>
                 <i className="absolute cursor bi bi-cursor-fill top-5 right-10 text-[#f9fafb] dark:text-[#1F2937] z-30"></i>
             </motion.div>
@@ -83,7 +83,7 @@ const Left = () => {
 
         <div className="relative w-fit flex bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 hover:text-[#008080] dark:hover:text-inherit dark:hover:font-bold py-2 px-4 rounded-full cursor-pointer overflow-hidden" aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => themeHandler()}>
           <p className={`w-fit text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-150 transition-all`}></i></p>
-          <p className={`absolute w-fit text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Dark Mode<i className={`text-2xl bi bi-moon-fill ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-150 transition-all`}></i></p>
+          <p className={`absolute w-fit text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-150 transition-all`}></i></p>
         </div>
       </motion.div>
     </section>
