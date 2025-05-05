@@ -24,18 +24,18 @@ import { SOFT_SKILLS } from "../constants/softskills";
 const Right = () => {
     const {revealAll, setRevealAll} = useContext(AppContext);
   return (
-        <section className="lg:w-[52%] lg:py-24 lg:px-12">
+        <section id="about" className="lg:w-[52%] lg:py-24 lg:px-12">
             <motion.div 
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 2.5 }}
-            id="about">
-                <p>I am a <b>Frontend Developer</b> with a B.Sc in Computer Science, passionate about crafting <b>intuitive, responsive,</b> and <b>scalable</b> applications. I specialize in modern tools like <b>JavaScript, TypeScript, ReactJS, Motion</b> for sleek user interfaces, <b>TailwindCSS</b> for streamlined styling, and <b>Redux Toolkit</b> for seamless state management when not using ReactJs's <b>Context API</b>. I have also worked with <b>Supabase</b> and <b>PostgreSQL</b> to integrate robust backend solutions that elevate frontend performance. 
+            >
+                <p>I am a <b>Frontend Developer</b> with a B.Sc in Computer Science, passionate about crafting <b>intuitive, responsive,</b> and <b>scalable</b> applications. I specialize in modern tools like <b>JavaScript, TypeScript, ReactJS, Motion</b> for sleek user interfaces, <b>TailwindCSS</b> for streamlined styling, and <b>Redux Toolkit</b> for seamless state management when not using ReactJs's <b>Context API</b>. I have strong expertise in <b>API</b> consumption, integrating and managing data from various endpoints to enhance application functionality. Additionally, I have also worked with <b>Supabase</b> and <b>PostgreSQL</b> to integrate robust backend solutions that elevate frontend performance. 
                 <br /><br />
                 My goal? Build user-focused experiences that solve real-world problems while keeping code clean and efficient. I am also open to <b>remote work</b> opportunities and thrive on continuous learning to stay updated on the ever-evolving tech landscape.</p>
             </motion.div>
 
-            <div id="skills" className="mt-10">
+            <div id="skills" className="py-10">
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -92,7 +92,7 @@ const Right = () => {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 3.8 }}
-                id="projects" className="mt-10"
+                id="projects" className="py-10"
             >
                 <h1 className="text-2xl font-bold">{revealAll ? "All Projects" : "Selected Projects"}</h1>
                 <div className="w-full flex flex-col gap-6 mt-5">
@@ -182,7 +182,7 @@ const Right = () => {
                     
                     <div className="w-full flex justify-center items-center mt-5">
                         <button 
-                            className="group w-fit h-fit flex justify-center items-center gap-3 hover:text-[#008080] opacity-80 hover:opacity-100 transition-all duration-300"
+                            className="group w-fit h-fit flex justify-center items-center gap-3 bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 hover:text-[#008080] dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold py-2 px-4 rounded-full transition-all duration-300"
                             onClick={() => setRevealAll(!revealAll)}
                         >
                             {revealAll ? "Switch Back" : "Reveal All"} <i className={`bi bi-arrow-right -rotate-45 ${revealAll ? "group-hover:-rotate-90" : "group-hover:rotate-90"} transition-all duration-300`}></i>
