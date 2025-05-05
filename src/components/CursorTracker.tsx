@@ -24,12 +24,12 @@ export default function CursorTracker() {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Custom cursor */}
       <motion.div
-        className="fixed top-0 left-0 h-96 w-96 rounded-full pointer-events-none bg-[#cfe7ff] dark:bg-[#2881ff] opacity-20 blur-[150px] z-50"
-        animate={{
-            x: mousePosition.x - 16,
-            y: mousePosition.y - 16
+        className="fixed top-0 left-0 h-96 w-96 rounded-full pointer-events-none bg-[#cfe7ff] dark:bg-[#2881ff] blur-[150px] opacity-20 z-50"
+        style={{
+            x: mousePosition.x - 180,
+            y: mousePosition.y - 180
         }}
-        // transition={{ type: "spring", mass: 0.1 }}
+        transition={{ type: "spring", mass: 0.1 }}
       />
 
       {/* Interactive content */}
