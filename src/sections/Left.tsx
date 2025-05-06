@@ -14,7 +14,7 @@ const Left = () => {
 
   const { theme, themeHandler } = context;
   return (
-    <section className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 lg:px-12">
+    <section className="relative lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 lg:px-12">
       <div>
         <div className="w-full flex flex-col">
           {/* user data  */}
@@ -22,7 +22,7 @@ const Left = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-6xl font-bold leading-14"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-14"
           >
               Osakhogba Akhator
           </motion.h1>
@@ -32,12 +32,12 @@ const Left = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-2xl">Frontend Developer</motion.p>
+            className="text-lg lg:text-2xl">Frontend Developer</motion.p>
             <motion.p
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-            className="text-lg mt-2 dark:text-[#f9fafb]/70">Code + design → flawless interfaces. Turning ideas into interactive reality.</motion.p>
+            className="w-[60%] text-sm lg:text-lg mt-2 dark:text-[#f9fafb]/70">Code + design → flawless interfaces. Turning ideas into interactive reality.</motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: -50 }}
@@ -47,7 +47,7 @@ const Left = () => {
                 <a href={cv} target="_blank" className="relative z-10">
                     <motion.button
                         whileTap={{ scale: 0.95 }}
-                        className="resume-button w-fit p-3 rounded-lg bg-[#1F2937] text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] dark:hover:bg-[#008080] dark:hover:text-[#f9fafb] transition-all duration-300">Click to download CV</motion.button>
+                        className="resume-button w-fit p-3 rounded-lg bg-[#1F2937] text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] dark:hover:bg-[#008080] dark:hover:text-[#f9fafb] text-sm lg:text-base transition-all duration-300">Click to download CV</motion.button>
                 </a>
                 <i className="absolute cursor bi bi-cursor-fill top-5 right-10 text-[#f9fafb] dark:text-[#1F2937] z-30"></i>
             </motion.div>
@@ -60,7 +60,7 @@ const Left = () => {
           transition={{ duration: 0.5, delay: 1.5 }}
         className="w-full flex flex-col mt-10">
           {/* nav links */}
-          <div className="relative flex flex-col mt-10 gap-2 z-40">
+          <div className="relative hidden lg:flex lg:flex-col mt-10 gap-2 z-40">
             <NavLink url="#about" title="About"/>
             <NavLink url="#skills" title="Skills"/>
             <NavLink url="#projects" title="Projects"/>
@@ -72,7 +72,7 @@ const Left = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 2 }}
-      className="w-full flex mt-10 justify-between items-center text-2xl">
+      className="w-full flex lg:mt-10 justify-between items-center text-xl lg:text-2xl">
         {/* social links */} 
         <div className="flex gap-6">
           <SocialLink url="https://www.github.com/Akhatorenosa" title="Github" icon="bi-github"/>
@@ -81,7 +81,7 @@ const Left = () => {
           <SocialLink url="https://soozeer.netlify.app/#/aefea77c-748a-4850-bc28-5bc45f74a7ce" title="Soozeer" icon="bi-globe"/>
         </div>
 
-        <div className="sticky top-0 lg:relative w-fit flex bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold py-2 px-4 rounded-full cursor-pointer overflow-hidden" aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => themeHandler()}>
+        <div className="fixed right-5 top-5 lg:relative w-fit flex bg-[#e9edf1] dark:bg-[#2a3b52] dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold border-8 border-[#f9fafb] dark:border-none lg:border-none py-2 px-4 rounded-full cursor-pointer overflow-hidden z-40 duration-300 transition-all" aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => themeHandler()}>
           <p className={`w-fit text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill text-orange-300 ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-150 transition-all`}></i></p>
           <p className={`absolute w-fit text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill text-yellow-200 ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-150 transition-all`}></i></p>
         </div>

@@ -13,18 +13,25 @@ import ProjectCard from "../components/ProjectCard";
 const Right = () => {
     const {revealAll, groupBy, setGroupBy} = useContext(AppContext);
   return (
-        <section id="about" className="lg:w-[52%] lg:py-24 lg:px-12">
+        <section id="about" className="mt-10 lg:mt-0 lg:w-[52%] lg:py-24 lg:px-12">
             <motion.div 
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 2.5 }}
-                className="text-sm lg:text-base dark:text-[#f9fafb]/70"
+                className="text-base"
             >
+            <motion.h1
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.5 }}
+                className="text-2xl font-bold">About</motion.h1>
+
                 <motion.p
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ amount: 0.2 }}
+                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 tracking-wide"
                 >I am a <b className="dark:text-[#f9fafb]">Frontend Developer</b> with a B.Sc in Computer Science, passionate about crafting <b className="dark:text-[#f9fafb]">intuitive, responsive,</b> and <b className="dark:text-[#f9fafb]">scalable</b> applications. I specialize in modern tools like <b className="dark:text-[#f9fafb]">JavaScript, TypeScript, ReactJS, Motion</b> for sleek user interfaces, <b className="dark:text-[#f9fafb]">TailwindCSS</b> for streamlined styling, and <b className="dark:text-[#f9fafb]">Redux Toolkit</b> for seamless state management when not using ReactJs's <b className="dark:text-[#f9fafb]">Context API</b>. I have strong expertise in <b className="dark:text-[#f9fafb]">API</b> consumption, integrating and managing data from various endpoints to enhance application functionality. Additionally, I have also worked with <b className="dark:text-[#f9fafb]">Supabase</b> and <b className="dark:text-[#f9fafb]">PostgreSQL</b> to integrate robust backend solutions that elevate frontend performance. 
                 <br /><br />
                 My goal? Build user-focused experiences that solve real-world problems while keeping code clean and efficient. I am also open to <b className="dark:text-[#f9fafb]">remote work</b> opportunities and thrive on continuous learning to stay updated on the ever-evolving tech landscape.</motion.p>
@@ -93,7 +100,7 @@ const Right = () => {
                 <div className="w-full flex flex-col gap-6 mt-5">
                     <div className="w-full flex gap-3 items-center">
                         {TABS.map((tab) => (
-                            <button key={tab.id} className={`w-fit h-fit flex justify-center items-center capitalize text-xs gap-3 bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 hover:text-[#008080] dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] ${groupBy === tab.title && "bg-[#1f2937] text-[#f9fafb] hover:text-[#f9fafb] dark:bg-[#ffffff] dark:text-[#1f2937] dark:hover:text-[#1f2937]"} hover:font-semibold py-2 px-4 rounded-full transition-all duration-300`}
+                            <button key={tab.id} className={`w-fit h-fit flex justify-center items-center capitalize text-xs gap-3 ${groupBy === tab.title ? "bg-[#1f2937] text-[#f9fafb] hover:text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1f2937] dark:hover:text-[#1f2937]" : " bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 hover:text-[#008080] dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb]"} hover:font-semibold py-2 px-4 rounded-full transition-all duration-300`}
                                 onClick={() => setGroupBy(tab.title)}
                             >{tab.title}</button>
                         ))}
