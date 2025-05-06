@@ -11,6 +11,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, desc, tech, url, imgSrc }: ProjectCardProps) => {
   return (
     <motion.a 
+      layout
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}

@@ -5,12 +5,16 @@ export const AppContext = createContext<{
   setTheme: React.Dispatch<React.SetStateAction<string>>;
   revealAll: boolean;
   setRevealAll: React.Dispatch<React.SetStateAction<boolean>>;
+  groupBy: string;
+  setGroupBy: React.Dispatch<React.SetStateAction<string>>;
   themeHandler: () => void
 }>({
   theme: 'light',
   setTheme: () => {},
   revealAll: false,
   setRevealAll: () => {},
+  groupBy: 'all',
+  setGroupBy: () => {},
   themeHandler: () => {},
 });
 
@@ -19,6 +23,7 @@ export const AppContext = createContext<{
 export function AppProvider({ children } : { children: ReactNode }) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
     const [revealAll, setRevealAll] = useState(false)
+    const [groupBy, setGroupBy] = useState("all")
 
     const themeHandler = () => {
       const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -41,6 +46,7 @@ export function AppProvider({ children } : { children: ReactNode }) {
     <AppContext.Provider value={{
         theme, setTheme,
         revealAll, setRevealAll,
+        groupBy, setGroupBy,
         themeHandler,
     }}>
       {children}

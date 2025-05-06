@@ -11,7 +11,7 @@ function App() {
       <div className={`${theme === 'dark' ? "bg-[#1F2937]" : "bg-[#f9fafb]"} fixed w-screen h-screen left-0 top-0 z-10`}>
         <CursorTracker/>
       </div>
-      <div className="relative lg:flex lg:justify-between lg:gap-10 z-30">
+      <div className="relative flex flex-col lg:flex-row lg:justify-between gap-10 z-30">
         <Left />
         <Right />
       </div>
