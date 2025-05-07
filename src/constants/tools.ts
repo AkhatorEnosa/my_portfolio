@@ -42,5 +42,3 @@ export const TOOL_LIST = [
         description: "An open-source relational database management system",
     }
 ];
-export const TOOL_LIST_TITLE = "Tools & Software";
-export const TOOL_LIST_DESCRIPTION = "I have experience with a variety of tools and software, including Visual Studio Code, Figma, Postman, Git, GitHub, Supabase, Netlify, and PostgreSQL. I am always eager to learn new technologies and improve my skills.";

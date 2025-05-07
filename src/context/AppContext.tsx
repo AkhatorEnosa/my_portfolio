@@ -3,16 +3,16 @@ import { createContext, ReactNode, useEffect, useState } from 'react'
 export const AppContext = createContext<{
   theme: string;
   setTheme: React.Dispatch<React.SetStateAction<string>>;
-  revealAll: boolean;
-  setRevealAll: React.Dispatch<React.SetStateAction<boolean>>;
+  selectedSection: string;
+  setSelectedSection: React.Dispatch<React.SetStateAction<string>>;
   groupBy: string;
   setGroupBy: React.Dispatch<React.SetStateAction<string>>;
   themeHandler: () => void
 }>({
   theme: 'light',
   setTheme: () => {},
-  revealAll: false,
-  setRevealAll: () => {},
+  selectedSection: 'about',
+  setSelectedSection: () => {},
   groupBy: 'all',
   setGroupBy: () => {},
   themeHandler: () => {},
@@ -22,7 +22,7 @@ export const AppContext = createContext<{
 
 export function AppProvider({ children } : { children: ReactNode }) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
-    const [revealAll, setRevealAll] = useState(false)
+    const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') || "about")
     const [groupBy, setGroupBy] = useState("all")
 
     const themeHandler = () => {
@@ -35,17 +35,22 @@ export function AppProvider({ children } : { children: ReactNode }) {
     useEffect(() => {
       const savedTheme = localStorage.getItem('theme');
       const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      localStorage.setItem('section', selectedSection)
       
       const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
       setTheme(initialTheme);
       document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+
+      const originUrl = location.origin;
+      location.href = originUrl + "/#" + selectedSection
+      // console.log(newLocation)
     }
-    , [theme])
+    , [theme, selectedSection])
     
   return (
     <AppContext.Provider value={{
         theme, setTheme,
-        revealAll, setRevealAll,
+        selectedSection, setSelectedSection,
         groupBy, setGroupBy,
         themeHandler,
     }}>

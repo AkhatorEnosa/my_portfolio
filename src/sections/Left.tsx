@@ -4,6 +4,7 @@ import cv from '../assets/osakhogba.pdf';
 import { motion } from "framer-motion"
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import { NAVLINKS } from "../constants/navlinks";
 
 const Left = () => {
   const context = useContext(AppContext);
@@ -37,7 +38,7 @@ const Left = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-            className="w-[60%] text-sm lg:text-lg mt-2 dark:text-[#f9fafb]/70">Code + design → flawless interfaces. Turning ideas into interactive reality.</motion.p>
+            className="w-[60%] lg:w-full text-sm lg:text-lg mt-2 dark:text-[#f9fafb]/70">Code + design → flawless interfaces. Turning ideas into interactive reality.</motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: -50 }}
@@ -61,9 +62,11 @@ const Left = () => {
         className="w-full flex flex-col mt-10">
           {/* nav links */}
           <div className="relative hidden lg:flex lg:flex-col mt-10 gap-2 z-40">
-            <NavLink url="#about" title="About"/>
-            <NavLink url="#skills" title="Skills"/>
-            <NavLink url="#projects" title="Projects"/>
+            {
+              NAVLINKS.map((navlink, index) => (
+                <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
+              ))
+            }
           </div>
         </motion.div>
       </div>
@@ -81,10 +84,14 @@ const Left = () => {
           <SocialLink url="https://soozeer.netlify.app/#/aefea77c-748a-4850-bc28-5bc45f74a7ce" title="Soozeer" icon="bi-globe"/>
         </div>
 
-        <div className="fixed right-5 top-5 lg:relative w-fit flex bg-[#e9edf1] dark:bg-[#2a3b52] dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold border-8 border-[#f9fafb] dark:border-none lg:border-none py-2 px-4 rounded-full cursor-pointer overflow-hidden z-40 duration-300 transition-all" aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => themeHandler()}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2.5}}
+          className="fixed right-5 top-5 lg:relative lg:right-0 lg:top-0 w-fit flex bg-[#e9edf1] dark:bg-[#2a3b52] dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold border-8 border-[#f9fafb] dark:border-none lg:border-none py-2 px-4 rounded-full cursor-pointer overflow-hidden z-40 duration-150 transition-all" aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => themeHandler()}>
           <p className={`w-fit text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill text-orange-300 ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-150 transition-all`}></i></p>
           <p className={`absolute w-fit text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill text-yellow-200 ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-150 transition-all`}></i></p>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   )

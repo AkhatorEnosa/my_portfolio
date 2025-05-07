@@ -11,7 +11,7 @@ import { PROJECTS } from "../constants/projects";
 import ProjectCard from "../components/ProjectCard";
 
 const Right = () => {
-    const {revealAll, groupBy, setGroupBy} = useContext(AppContext);
+    const {groupBy, setGroupBy} = useContext(AppContext);
   return (
         <section id="about" className="mt-10 lg:mt-0 lg:w-[52%] lg:py-24 lg:px-12">
             <motion.div 
@@ -24,7 +24,7 @@ const Right = () => {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.5 }}
-                className="text-2xl font-bold">About</motion.h1>
+                className="w-full text-2xl font-bold tracking-widest uppercase lg:hidden">About</motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -42,16 +42,16 @@ const Right = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.8 }}
-                className="text-2xl font-bold">Skills</motion.h1>
+                    className="w-full text-2xl font-bold tracking-widest uppercase">What I work with</motion.h1>
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-4 mt-5">
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 3 }}
                     className="flex flex-col gap-2">
-                        <h2 className="text-lh font-bold">Languages</h2>
+                        <h2 className="text-lg font-bold">Languages</h2>
                         {LANGUAGES.map((x, index) => (
-                            <Skills url={x.url} name={x.name} icon={x.icon} index={index}/>
+                            <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index}/>
                         ))}
                     </motion.div>
                     <motion.div 
@@ -62,7 +62,7 @@ const Right = () => {
                     >
                         <h2 className="text-lg font-bold">Frameworks & Libraries</h2>
                         {FRAMEWORKS.map((x, index) => (
-                            <Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
+                            <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
                         ))}
                     </motion.div>
                     <motion.div 
@@ -73,7 +73,7 @@ const Right = () => {
                     >
                         <h2 className="text-lg font-bold">Tools & Softwares</h2>
                         {TOOL_LIST.map((x, index) =>(
-                            <Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
+                            <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
                         ))}
                     </motion.div>
                     <motion.div 
@@ -84,7 +84,7 @@ const Right = () => {
                     >
                         <h2 className="text-lg font-bold">Soft Skills</h2>
                         {SOFT_SKILLS.map((x, index) => (
-                            <Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
+                            <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
                         ))}
                     </motion.div>
                 </div>
@@ -96,7 +96,7 @@ const Right = () => {
                 transition={{ duration: 0.5, delay: 3.8 }}
                 id="projects" className="py-10"
             >
-                <h1 className="text-2xl font-bold">{revealAll ? "All Projects" : "Selected Projects"}</h1>
+                <h1 className="w-full text-2xl font-bold tracking-widest uppercase">Selected Projects</h1>
                 <div className="w-full flex flex-col gap-6 mt-5">
                     <div className="w-full flex gap-3 items-center">
                         {TABS.map((tab) => (
@@ -108,7 +108,7 @@ const Right = () => {
 
                     {
                         PROJECTS.map((project) => (
-                            (project.group === groupBy || groupBy === "all") && <ProjectCard title={project.title} imgSrc={project.image} tech={project.tag || []} url={project.url} desc={project.description}/>
+                            (project.group === groupBy || groupBy === "all") && <ProjectCard key={project.id} title={project.title} imgSrc={project.image} tech={project.tag || []} url={project.url} desc={project.description}/>
                         ))
                     }
                 </div>

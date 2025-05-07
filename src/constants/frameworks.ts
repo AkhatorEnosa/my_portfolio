@@ -42,5 +42,3 @@ export const FRAMEWORKS = [
         description: "The official, opinionated, batteries-included toolset for efficient Redux development",
     }
 ];
-export const FRAMEWORKS_TITLE = "Frameworks & Libraries";
-export const FRAMEWORKS_DESCRIPTION = "I have experience with a variety of frameworks and libraries, including React, Next.js, Tailwind CSS, Bootstrap, Tanstack Query, Framer Motion, and Redux Toolkit. I am always eager to learn new technologies and improve my skills.";

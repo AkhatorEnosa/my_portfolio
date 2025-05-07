@@ -23,7 +23,7 @@ export const PROJECTS = [
         title: "soozeer",
         image: soozeer,
         description: "A dynamic and interactive social media platform built with React, Redux Toolkit, React Query, and Supabase. Featuring seamless state management, real-time updates, and secure user authentication, this platform delivers a modern and scalable social experience. Connect, share, and engage like never before! 🚀",
-        tags: ["ReactJS", "Tanstack Query", "Redux Toolkit", "TailwindCSS", "Supabase"],
+        tag: ["ReactJS", "Tanstack Query", "Redux Toolkit", "TailwindCSS", "Supabase"],
         url: "https://soozeer.netlify.app/",
         group: "web applications"
     },
@@ -32,7 +32,7 @@ export const PROJECTS = [
         title: "kickrs",
         image: Kickrs,
         description: "A sleek and responsive product page designed to showcase items with detailed descriptions, and high-quality images. Built to enhance the shopping experience, it ensures seamless navigation and quick purchasing decisions.",
-        tags: ["ReactJS", "TailwindCSS"],
+        tag: ["ReactJS", "TailwindCSS"],
         url: "https://kickrs.netlify.app/",
         group: "micro interactions"
     },
@@ -41,7 +41,7 @@ export const PROJECTS = [
         title: "mynoet",
         image: myNoet,
         description: "myNoet is an application meticulously crafted to mirror the spirit of Google Keep, thoughtfully designed to provide users with a swift and seamless platform for capturing their ideas and thoughts with exceptional ease and efficiency, unencumbered by unnecessary complexities.",
-        tags: ["ReactJS", "Tanstack Query", "Redux Toolkit", "TailwindCSS", "Supabase"],
+        tag: ["ReactJS", "Tanstack Query", "Redux Toolkit", "TailwindCSS", "Supabase"],
         url: "https://mynoet.netlify.app/",
         group: "web applications"
     },
@@ -50,7 +50,7 @@ export const PROJECTS = [
         title: "moovees",
         image: moovees,
         description: "A platform built with ReactJS that integrates TMDB's API to display movie details, trailers, ratings, and recommendations. Designed for ease of use, it offers a clean and efficient way to explore films.",
-        tags: ["ReactJS", "TailwindCSS", "Appwrite"],
+        tag: ["ReactJS", "TailwindCSS", "Appwrite"],
         url: "https://moovees.netlify.app/",
         group: "websites"
     },
@@ -59,7 +59,7 @@ export const PROJECTS = [
       title: "dotaska",
       image: doTaska,
       description: "A task management application that allows users to create, edit, and delete tasks. Built with ReactJS, it provides a clean interface and efficient navigation.",
-      tags: ["ReactJS", "TypeScript", "TailwindCSS", "Motion"],
+      tag: ["ReactJS", "TypeScript", "TailwindCSS", "Motion"],
       url: "https://dotaska.netlify.app/",
       group: "web applications"
     },
@@ -68,7 +68,7 @@ export const PROJECTS = [
       title: "foodsco",
       image: foodsco,
       description: "This is a website that could be scaled for delivering fresh, high-quality ingredients and delicious dishes to your doorstep. From classic favorites to exciting new flavors, our culinary experts ensure every meal meets the highest standards of taste and quality with unmatched convenience.",
-      tags: ["ReactJS", "TailwindCSS"],
+      tag: ["ReactJS", "TailwindCSS"],
       url: "https://foodsc.netlify.app/",
       group: "websites"
     },
@@ -77,7 +77,7 @@ export const PROJECTS = [
         title: "lokateur",
         image: Lokateur,
         description: "A web application is a geolocation tool that converts IP addresses into detailed location data, including city, country, time zone, and currency. Built with precision and user-friendliness in mind, it provides accurate and instant results for developers, businesses, and curious users alike.",
-        tags: ["ReactJS", "TailwindCSS", "API"],
+        tag: ["ReactJS", "TailwindCSS", "API"],
         url: "https://lokateur.netlify.app/",
         group: "web applications"
     },
@@ -86,7 +86,7 @@ export const PROJECTS = [
         title: "space tour travel",
         image: space,
         description: "This is a space tourism website offering suborbital flights, orbital adventures, and lunar voyages with top providers like SpaceX and Virgin Galactic. Experience weightlessness, Earth’s curvature, and cosmic wonders with safe, curated packages for thrill-seekers. Book your stellar journey today.",
-        tags: ["html", "CSS", "javascript"],
+        tag: ["html", "CSS", "javascript"],
         url: "https://spacetourtravel.netlify.app/",
         group: "websites"
     },
@@ -95,7 +95,7 @@ export const PROJECTS = [
         title: "unscramble",
         image: Unscramble,
         description: "A fun and interactive word game where players unscramble letters to form words. Built with ReactJS, it offers a clean interface and engaging gameplay.",
-        tags: ["ReactJS", "CSS", "API"],
+        tag: ["ReactJS", "CSS", "API"],
         url: "https://akhatorenosa.github.io/unscramble-game/",
         group: "web applications"
     },
@@ -104,7 +104,7 @@ export const PROJECTS = [
         title: "bill splitter",
         image: splitter,
         description: "A user-friendly web application designed to simplify splitting bills between two or more people, including optional tip calculations. Built with HTML, CSS, and JavaScript, it offers a clean and intuitive interface for quick and accurate bill division.",
-        tags: ["Html", "CSS", "Javascript"],
+        tag: ["Html", "CSS", "Javascript"],
         url: "https://splitify.netlify.app/",
         group: "web applications"
     },
@@ -113,7 +113,7 @@ export const PROJECTS = [
         title: "genotype match checker",
         image: Genotype,
         description: "The idea that birthed this project is to assist couples in determining if their genotypes are compatible for their future children. Designed with simplicity and accuracy in mind, it provides quick insights to support informed family planning decisions.",
-        tags: ["Html", "CSS", "Javascript"],
+        tag: ["Html", "CSS", "Javascript"],
         url: "https://akhatorenosa.github.io/genotype_match_checker",
         group: "web applications"
     },
