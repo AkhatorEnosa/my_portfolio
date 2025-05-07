@@ -22,7 +22,7 @@ export const AppContext = createContext<{
 
 export function AppProvider({ children } : { children: ReactNode }) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
-    const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') || "about")
+    const [selectedSection, setSelectedSection] = useState("about")
     const [groupBy, setGroupBy] = useState("all")
 
     const themeHandler = () => {
@@ -35,14 +35,14 @@ export function AppProvider({ children } : { children: ReactNode }) {
     useEffect(() => {
       const savedTheme = localStorage.getItem('theme');
       const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      localStorage.setItem('section', selectedSection)
+      // localStorage.setItem('section', selectedSection)
       
       const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
       setTheme(initialTheme);
       document.documentElement.classList.toggle('dark', initialTheme === 'dark');
 
-      const originUrl = location.origin;
-      location.href = originUrl + "/#" + selectedSection
+      // const originUrl = location.origin;
+      // location.href = originUrl + "/#" + selectedSection
       // console.log(newLocation)
     }
     , [theme, selectedSection])
