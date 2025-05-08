@@ -11,7 +11,7 @@ export const AppContext = createContext<{
 }>({
   theme: 'light',
   setTheme: () => {},
-  selectedSection: 'about',
+  selectedSection: '',
   setSelectedSection: () => {},
   groupBy: 'all',
   setGroupBy: () => {},
@@ -19,10 +19,19 @@ export const AppContext = createContext<{
 });
 
 
+// get url last part 
+const originUrl = location.href;
+const splitUrl = originUrl.split("/");
+const lastPartOfUrl = splitUrl[splitUrl.length - 1]
+const result = lastPartOfUrl.slice(1)
+// location.href = originUrl + "/#" + selectedSection
+console.log(lastPartOfUrl.slice(1))
+
+
 
 export function AppProvider({ children } : { children: ReactNode }) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
-    const [selectedSection, setSelectedSection] = useState("about")
+    const [selectedSection, setSelectedSection] = useState(result === '' ? result : localStorage.getItem('section') || '')
     const [groupBy, setGroupBy] = useState("all")
 
     const themeHandler = () => {
@@ -35,15 +44,12 @@ export function AppProvider({ children } : { children: ReactNode }) {
     useEffect(() => {
       const savedTheme = localStorage.getItem('theme');
       const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      // localStorage.setItem('section', selectedSection)
+      localStorage.setItem('section', selectedSection)
       
       const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
       setTheme(initialTheme);
       document.documentElement.classList.toggle('dark', initialTheme === 'dark');
 
-      // const originUrl = location.origin;
-      // location.href = originUrl + "/#" + selectedSection
-      // console.log(newLocation)
     }
     , [theme, selectedSection])
     

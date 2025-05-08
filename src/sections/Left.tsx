@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import { NAVLINKS } from "../constants/navlinks";
+import { SOCIALLINKS } from "../constants/sociallinks";
 
 const Left = () => {
   const context = useContext(AppContext);
@@ -20,7 +21,7 @@ const Left = () => {
         <div className="w-full flex flex-col">
           {/* user data  */}
           <motion.h1
-            initial={{ opacity: 0, y: -50 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-14"
@@ -30,18 +31,18 @@ const Left = () => {
           <div className="flex flex-col mt-2 gap-2">
             {/* description  */}
             <motion.p
-              initial={{ opacity: 0, y: -50 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             className="text-lg lg:text-2xl">Frontend Developer</motion.p>
             <motion.p
-              initial={{ opacity: 0, y: -50 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             className="w-[60%] lg:w-full text-sm lg:text-lg mt-2 dark:text-[#f9fafb]/70">Code + design → flawless interfaces. Turning ideas into interactive reality.</motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: -50 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
              className="relative w-fit flex flex-col mt-10 gap-2">
@@ -56,12 +57,12 @@ const Left = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
         className="w-full flex flex-col mt-10">
           {/* nav links */}
-          <div className="relative hidden lg:flex lg:flex-col mt-10 gap-2 z-40">
+          <div className="fixed right-20 left-20 bottom-5 lg:relative lg:right-0 lg:left-0 lg:bottom-0 flex lg:flex-col justify-center items-center lg:items-start  bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] lg:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-5 px-5 lg:py-0 lg:px-0 mt-10 gap-16 lg:gap-2 z-40">
             {
               NAVLINKS.map((navlink, index) => (
                 <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
@@ -72,23 +73,24 @@ const Left = () => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 2 }}
       className="w-full flex lg:mt-10 justify-between items-center text-xl lg:text-2xl">
         {/* social links */} 
-        <div className="flex gap-6">
-          <SocialLink url="https://www.github.com/Akhatorenosa" title="Github" icon="bi-github"/>
-          <SocialLink url="https://www.linkedin.com/in/osakhogba-akhator-024762139/" title="LinkedIn" icon="bi-linkedin"/>
-          <SocialLink url="https://x.com/5hin3_x" title="X(formerly Twitter)" icon="bi-twitter-x"/>
-          <SocialLink url="https://soozeer.netlify.app/#/aefea77c-748a-4850-bc28-5bc45f74a7ce" title="Soozeer" icon="bi-globe"/>
+        <div className="flex gap-6 ">
+          {
+            SOCIALLINKS.map((sociallink) => (
+              <SocialLink key={sociallink.id} url={sociallink.url} title={sociallink.title} icon={sociallink.icon}/>
+            ))
+          }
         </div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.5}}
-          className="fixed right-5 top-5 lg:relative lg:right-0 lg:top-0 w-fit flex bg-[#e9edf1] dark:bg-[#2a3b52] dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold border-8 border-[#f9fafb] dark:border-none lg:border-none py-2 px-4 rounded-full cursor-pointer overflow-hidden z-40 duration-150 transition-all" aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => themeHandler()}>
+          className="fixed right-2 top-8 lg:relative lg:right-0 lg:top-0 w-fit flex bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold py-2 px-4 rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-hidden z-40 duration-150 transition-all" aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => themeHandler()}>
           <p className={`w-fit text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill text-orange-300 ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-150 transition-all`}></i></p>
           <p className={`absolute w-fit text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill text-yellow-200 ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-150 transition-all`}></i></p>
         </motion.div>

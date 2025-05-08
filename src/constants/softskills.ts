@@ -36,12 +36,6 @@ export const SOFT_SKILLS = [
         description: "The process of planning and exercising conscious control over the amount of time spent on specific activities.",
     },
     {
-        name: "Leadership",
-        icon: "bi bi-person-check",
-        url: "https://en.wikipedia.org/wiki/Leadership",
-        description: "The action of leading a group of people or an organization.",
-    },
-    {
         name: "Critical Thinking",
         icon: "bi bi-clipboard-check",
         url: "https://en.wikipedia.org/wiki/Critical_thinking",
@@ -70,12 +64,6 @@ export const SOFT_SKILLS = [
         icon: "bi bi-person-lines-fill",
         url: "https://en.wikipedia.org/wiki/Interpersonal_skills",
         description: "The skills used by a person to interact with others properly.",
-    },
-    {
-        name: "Networking",
-        icon: "bi bi-link",
-        url: "https://en.wikipedia.org/wiki/Networking_(business)",
-        description: "The action or process of interacting with others to exchange information and develop professional or social contacts.",
     },
     {
         name: "Attention to Detail",
