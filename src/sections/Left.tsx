@@ -61,9 +61,9 @@ const Left = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
-        className="w-full flex flex-col mt-10">
+        className="w-full mt-10 lg:mt-0 fixed flex left-0 bottom-4 justify-center items-center lg:relative lg:right-0 lg:left-0 lg:bottom-0">
           {/* nav links */}
-          <div className="fixed right-10 left-10 md:right-20 md:left-20 bottom-4 lg:relative lg:right-0 lg:left-0 lg:bottom-0 flex lg:flex-col justify-center items-center lg:items-start  bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-5 px-5 lg:py-0 lg:px-0 mt-10 gap-5 md:gap-16 lg:gap-2 z-40">
+          <div className="w-[80%] md:w-[50%] lg:w-full flex lg:flex-col justify-between md:justify-center items-center lg:items-start bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-5 px-5 lg:py-0 lg:px-0 mt-10 gap-5 md:gap-16 lg:gap-2 z-40">
             {
               NAVLINKS.map((navlink, index) => (
                 <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
@@ -77,7 +77,7 @@ const Left = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 2 }}
-      className="w-full flex lg:mt-10 justify-between items-center text-xl lg:text-2xl">
+      className="w-full flex mt-12 lg:mt-10 justify-between items-center text-3xl lg:text-2xl">
         {/* social links */} 
         <div className="flex gap-6 ">
           {
