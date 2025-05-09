@@ -50,7 +50,7 @@ const Right = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 3 }}
                     className="flex flex-col gap-2">
-                        <h2 className="text-lg font-bold">Languages</h2>
+                        <h2 className="leading-5 md:text-lg font-bold">Languages</h2>
                         {LANGUAGES.map((x, index) => (
                             <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index}/>
                         ))}
@@ -61,7 +61,7 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3.2 }}
                         className="flex flex-col gap-2"
                     >
-                        <h2 className="text-lg font-bold">Frameworks & Libraries</h2>
+                        <h2 className="leading-5 md:text-lg font-bold">Frameworks & Libraries</h2>
                         {FRAMEWORKS.map((x, index) => (
                             <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
                         ))}
@@ -72,7 +72,7 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3.4 }}
                         className="flex flex-col gap-2"
                     >
-                        <h2 className="text-lg font-bold">Tools & Softwares</h2>
+                        <h2 className="leading-5 md:text-lg font-bold">Tools & Softwares</h2>
                         {TOOL_LIST.map((x, index) =>(
                             <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
                         ))}
@@ -83,7 +83,7 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3.6 }}
                         className="flex flex-col gap-2"
                     >
-                        <h2 className="text-lg font-bold">Soft Skills</h2>
+                        <h2 className="leading-5 md:text-lg font-bold">Soft Skills</h2>
                         {SOFT_SKILLS.map((x, index) => (
                             <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
                         ))}
@@ -99,7 +99,7 @@ const Right = () => {
             >
                 <h1 className="w-full text-2xl font-bold tracking-widest uppercase">Selected Projects</h1>
                 <div className="cards w-full flex flex-col gap-6 mt-5">
-                    <div className="tabs w-full flex gap-2 lg:gap-3 items-center overflow-x-scroll scroll">
+                    <div className="tabs w-full flex gap-2 lg:gap-3 items-center overflow-x-scroll">
                         {TABS.map((tab) => (
                             <TabButton 
                                 key={tab.id}
