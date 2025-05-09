@@ -13,6 +13,21 @@
     animation: move 1s ease-in-out infinite alternate;
 }
 
+/* .cards:has(.card:hover) .card:not(:hover) {
+    op
+  } */
+
+
+/* Chrome, Safari and Opera */
+.tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tabs {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
 @keyframes move {
     0% {
         transform: translateY(1rem) translateX(-1rem);

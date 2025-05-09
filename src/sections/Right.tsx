@@ -9,9 +9,10 @@ import { SOFT_SKILLS } from "../constants/softskills";
 import { TABS } from "../constants/tabs";
 import { PROJECTS } from "../constants/projects";
 import ProjectCard from "../components/ProjectCard";
+import TabButton from "../components/TabButton";
 
 const Right = () => {
-    const {groupBy, setGroupBy} = useContext(AppContext);
+    const {groupBy} = useContext(AppContext);
   return (
         <section id="about" className="mt-10 lg:mt-0 lg:w-[52%] lg:py-24 lg:px-12">
             <motion.div 
@@ -97,12 +98,13 @@ const Right = () => {
                 id="projects" className="py-10"
             >
                 <h1 className="w-full text-2xl font-bold tracking-widest uppercase">Selected Projects</h1>
-                <div className="w-full flex flex-col gap-6 mt-5">
-                    <div className="w-full flex gap-3 items-center">
+                <div className="cards w-full flex flex-col gap-6 mt-5">
+                    <div className="tabs w-full flex gap-2 lg:gap-3 items-center overflow-x-scroll scroll">
                         {TABS.map((tab) => (
-                            <button key={tab.id} className={`w-fit h-fit flex justify-center items-center capitalize text-xs gap-3 ${groupBy === tab.title ? "bg-[#1f2937] text-[#f9fafb] hover:text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1f2937] dark:hover:text-[#1f2937]" : " bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 hover:text-[#008080] dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb]"} hover:font-semibold py-2 px-4 rounded-full transition-all duration-300`}
-                                onClick={() => setGroupBy(tab.title)}
-                            >{tab.title}</button>
+                            <TabButton 
+                                key={tab.id}
+                                title={tab.title}
+                            />
                         ))}
                     </div>
 

@@ -62,7 +62,7 @@ const Left = () => {
           transition={{ duration: 0.5, delay: 1.5 }}
         className="w-full flex flex-col mt-10">
           {/* nav links */}
-          <div className="fixed right-20 left-20 bottom-5 lg:relative lg:right-0 lg:left-0 lg:bottom-0 flex lg:flex-col justify-center items-center lg:items-start  bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] lg:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-5 px-5 lg:py-0 lg:px-0 mt-10 gap-16 lg:gap-2 z-40">
+          <div className="fixed right-10 left-10 md:right-20 md:left-20 bottom-5 lg:relative lg:right-0 lg:left-0 lg:bottom-0 flex lg:flex-col justify-center items-center lg:items-start  bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-5 px-5 lg:py-0 lg:px-0 mt-10 gap-5 md:gap-16 lg:gap-2 z-40">
             {
               NAVLINKS.map((navlink, index) => (
                 <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
