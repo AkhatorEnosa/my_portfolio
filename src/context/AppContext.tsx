@@ -24,14 +24,15 @@ const originUrl = location.href;
 const splitUrl = originUrl.split("/");
 const lastPartOfUrl = splitUrl[splitUrl.length - 1]
 const result = lastPartOfUrl.slice(1)
+  localStorage.setItem("section", result)
 // location.href = originUrl + "/#" + selectedSection
-console.log(lastPartOfUrl.slice(1))
+console.log(result)
 
 
 
 export function AppProvider({ children } : { children: ReactNode }) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
-    const [selectedSection, setSelectedSection] = useState(result === '' ? result : localStorage.getItem('section') || '')
+    const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') || '')
     const [groupBy, setGroupBy] = useState("all")
 
     const themeHandler = () => {

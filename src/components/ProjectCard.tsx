@@ -30,7 +30,7 @@ const ProjectCard = ({ title, desc, tech, url, imgSrc }: ProjectCardProps) => {
                 </div>
                 {/* <a href={url} target="_blank" className="text-sm text-[#FF6B6B]">View Project</a> */}
             </div>
-            <div className="w-full md:w-fit md:h-full md:col-span-2 flex justify-center items-center">
+            <div className="w-full md:w-fit md:h-full md:col-span-2 flex justify-center items-start">
               <div className="w-full h-48 dark:border-[#f9fafb]/20 rounded-lg md:rounded-3xl border-[1px] border-[#1f2937]/20 overflow-hidden">
                   <img src={imgSrc} alt="Soozeer" className="w-full h-full object-cover scale-125 group-hover:scale-100 transition-transform duration-300"/>
               </div>
