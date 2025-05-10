@@ -10,6 +10,7 @@ import { TABS } from "../constants/tabs";
 import { PROJECTS } from "../constants/projects";
 import ProjectCard from "../components/ProjectCard";
 import TabButton from "../components/TabButton";
+import cv from '../assets/osakhogba.pdf';
 
 const Right = () => {
     const {groupBy} = useContext(AppContext);
@@ -33,9 +34,23 @@ const Right = () => {
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ amount: 0.2 }}
                     className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 tracking-wide"
-                >I am a <b className="dark:text-[#f9fafb]">Frontend Developer</b> with a B.Sc in Computer Science, passionate about crafting <b className="dark:text-[#f9fafb]">intuitive, responsive,</b> and <b className="dark:text-[#f9fafb]">scalable</b> applications. I specialize in modern tools like <b className="dark:text-[#f9fafb]">JavaScript, TypeScript, ReactJS, Motion</b> for sleek user interfaces, <b className="dark:text-[#f9fafb]">TailwindCSS</b> for streamlined styling, and <b className="dark:text-[#f9fafb]">Redux Toolkit</b> for seamless state management when not using ReactJs's <b className="dark:text-[#f9fafb]">Context API</b>. I have strong expertise in <b className="dark:text-[#f9fafb]">API</b> consumption, integrating and managing data from various endpoints to enhance application functionality. Additionally, I have also worked with <b className="dark:text-[#f9fafb]">Supabase</b> and <b className="dark:text-[#f9fafb]">PostgreSQL</b> to integrate robust backend solutions that elevate frontend performance. 
-                <br /><br />
-                My goal? Build user-focused experiences that solve real-world problems while keeping code clean and efficient. I am also open to <b className="dark:text-[#f9fafb]">remote work</b> opportunities and thrive on continuous learning to stay updated on the ever-evolving tech landscape.</motion.p>
+                        >I am a <b className="dark:text-[#f9fafb]">Frontend Developer</b> with a B.Sc in Computer Science, passionate about crafting <b className="dark:text-[#f9fafb]">intuitive, responsive,</b> and <b className="dark:text-[#f9fafb]">scalable</b> applications. I specialize in modern tools like <b className="dark:text-[#f9fafb]">JavaScript, TypeScript, ReactJS, Motion</b> for sleek user interfaces, <b className="dark:text-[#f9fafb]">TailwindCSS</b> for streamlined styling, and <b className="dark:text-[#f9fafb]">Redux Toolkit</b> for seamless state management when not using ReactJs's <b className="dark:text-[#f9fafb]">Context API</b>. I have experience in <b className="dark:text-[#f9fafb]">API</b> consumption, integrating and managing data from various endpoints to enhance application functionality. Additionally, I have also worked with <b className="dark:text-[#f9fafb]">Supabase</b> and <b className="dark:text-[#f9fafb]">PostgreSQL</b> to integrate robust backend solutions that elevate frontend performance. 
+                        <br /><br />
+                        My goal? Build user-focused experiences that solve real-world problems while keeping code clean and efficient. I am also open to <b className="dark:text-[#f9fafb]">remote work</b> opportunities and thrive on continuous learning to stay updated on the ever-evolving tech landscape.
+                </motion.p>
+
+                <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className="relative w-fit flex flex-col mt-5 gap-2">
+                    <a href={cv} target="_blank" className="relative z-10">
+                        <motion.button
+                            whileTap={{ scale: 0.95 }}
+                            className="resume-button w-fit p-3 rounded-lg bg-[#1F2937] text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] dark:hover:bg-[#008080] dark:hover:text-[#f9fafb] text-sm lg:text-base transition-all duration-300">Download CV</motion.button>
+                    </a>
+                    <i className="absolute cursor bi bi-cursor-fill top-5 right-10 text-[#f9fafb] dark:text-[#1F2937] z-30"></i>
+                </motion.div>
             </motion.div>
 
             <div id="skills" className="py-10">
@@ -110,7 +125,7 @@ const Right = () => {
 
                     {
                         PROJECTS.map((project) => (
-                            (project.group === groupBy || groupBy === "all") && <ProjectCard key={project.id} title={project.title} imgSrc={project.image} tech={project.tag || []} url={project.url} desc={project.description}/>
+                            (project.group === groupBy || groupBy === "all") && <ProjectCard key={project.id} title={project.title} imgSrc={project.image} tech={project.tag || []} url={project.url} desc={project.description} construction={project.construction}/>
                         ))
                     }
                 </div>

@@ -1,6 +1,6 @@
 import NavLink from "../components/NavLink"
 import SocialLink from "../components/SocialLink"
-import cv from '../assets/osakhogba.pdf';
+// import cv from '../assets/osakhogba.pdf';
 import { motion } from "framer-motion"
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
@@ -41,7 +41,7 @@ const Left = () => {
               transition={{ duration: 0.5, delay: 0.8 }}
             className="w-[60%] lg:w-full text-sm lg:text-lg mt-2 dark:text-[#f9fafb]/70">Code + design → flawless interfaces. Turning ideas into interactive reality.</motion.p>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
@@ -52,7 +52,7 @@ const Left = () => {
                         className="resume-button w-fit p-3 rounded-lg bg-[#1F2937] text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] dark:hover:bg-[#008080] dark:hover:text-[#f9fafb] text-sm lg:text-base transition-all duration-300">Click to download CV</motion.button>
                 </a>
                 <i className="absolute cursor bi bi-cursor-fill top-5 right-10 text-[#f9fafb] dark:text-[#1F2937] z-30"></i>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
 
