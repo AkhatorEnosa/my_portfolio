@@ -66,7 +66,7 @@ export const PROJECTS = [
       tag: ["ReactJS", "TypeScript", "TailwindCSS", "Motion"],
       url: "https://dotaska.netlify.app/",
       group: "web applications",
-      construction: true
+      construction: false
     },
     {
       id: 6,
@@ -95,17 +95,7 @@ export const PROJECTS = [
         description: "A sleek and responsive product page designed to showcase items with detailed descriptions, and high-quality images. Built to enhance the shopping experience, it ensures seamless navigation and quick purchasing decisions.",
         tag: ["ReactJS", "TailwindCSS"],
         url: "https://kickrs.netlify.app/",
-        group: "micro interactions",
-        construction: false
-    },
-    {
-        id: 8,
-        title: "space tour travel",
-        image: space,
-        description: "This is a space tourism website offering suborbital flights, orbital adventures, and lunar voyages with top providers like SpaceX and Virgin Galactic. Experience weightlessness, Earth’s curvature, and cosmic wonders with safe, curated packages for thrill-seekers. Book your stellar journey today.",
-        tag: ["html", "CSS", "javascript"],
-        url: "https://spacetourtravel.netlify.app/",
-        group: "websites",
+        group: "web applications",
         construction: false
     },
     {
@@ -133,7 +123,7 @@ export const PROJECTS = [
         title: "techkare",
         image: Techkare,
         description: "A centralized platform for managing and displaying patient data, designed to streamline workflows and improve care delivery. Built with ReactJS and integrated with a robust API, it ensures seamless functionality.",
-        tag: ["ReactJS", "TailwindCSS", "API"],
+        tag: ["html", "css", "javascript", "TailwindCSS", "API"],
         url: "https://techkare.netlify.app/",
         group: "web applications",
         construction: true
@@ -146,7 +136,7 @@ export const PROJECTS = [
         tag: ["Typescript", "ReactJS", "TailwindCSS", "Motion"],
         url: "https://checkleest.netlify.app/",
         group: "micro interactions",
-        construction: true
+        construction: false
     },
     {
         id: 13,
@@ -156,6 +146,16 @@ export const PROJECTS = [
         tag: ["Typescript", "ReactJS", "TailwindCSS", "Motion"],
         url: "https://walletity.netlify.app/",
         group: "micro interactions",
+        construction: false
+    },
+    {
+        id: 8,
+        title: "space tour travel",
+        image: space,
+        description: "This is a space tourism website offering suborbital flights, orbital adventures, and lunar voyages with top providers like SpaceX and Virgin Galactic. Experience weightlessness, Earth’s curvature, and cosmic wonders with safe, curated packages for thrill-seekers. Book your stellar journey today.",
+        tag: ["html", "CSS", "javascript"],
+        url: "https://spacetourtravel.netlify.app/",
+        group: "websites",
         construction: true
     },
 ]

@@ -32,7 +32,7 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
                 {/* <a href={url} target="_blank" className="text-sm text-[#FF6B6B]">View Project</a> */}
             </div>
             <div className="relative w-full md:w-fit md:h-full md:col-span-2 flex justify-center items-start">
-              {construction && <span className="absolute size-6 lg:opacity-0 lg:group-hover:opacity-100 flex justify-center items-center bg-yellow-300 rounded-full border-[1px] border-black dark:text-black right-0 -top-2 shadow-lg text-xs z-20 transition-opacity duration-300" title="Under construction">
+              {construction && <span className="absolute size-6 lg:opacity-0 lg:group-hover:opacity-100 flex justify-center items-center bg-yellow-300 rounded-full border-[1px] border-black dark:text-black right-0 -top-2 shadow-lg text-xs animate-pulse z-20 transition-opacity duration-300" title="Under construction">
                 <i className="bi bi-bricks"></i>
               </span>}
               <div className="w-full h-48 dark:border-[#f9fafb]/20 rounded-lg md:rounded-3xl border-[1px] border-[#1f2937]/20 overflow-hidden">
