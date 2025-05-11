@@ -28,16 +28,22 @@ const Right = () => {
                 transition={{ duration: 0.5, delay: 1.5 }}
                 className="w-full text-2xl font-bold tracking-widest uppercase lg:hidden">About</motion.h1>
 
-                <motion.p
+                <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ amount: 0.2 }}
                     className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 tracking-wide"
-                        >I am a <b className="dark:text-[#f9fafb]">Frontend Developer</b> with a B.Sc in Computer Science, passionate about crafting <b className="dark:text-[#f9fafb]">intuitive, responsive,</b> and <b className="dark:text-[#f9fafb]">scalable</b> applications. I specialize in modern tools like <b className="dark:text-[#f9fafb]">JavaScript, TypeScript, ReactJS, Motion</b> for sleek user interfaces, <b className="dark:text-[#f9fafb]">TailwindCSS</b> for streamlined styling, and <b className="dark:text-[#f9fafb]">Redux Toolkit</b> for seamless state management when not using ReactJs's <b className="dark:text-[#f9fafb]">Context API</b>. I have experience in <b className="dark:text-[#f9fafb]">API</b> consumption, integrating and managing data from various endpoints to enhance application functionality. Additionally, I have also worked with <b className="dark:text-[#f9fafb]">Supabase</b> and <b className="dark:text-[#f9fafb]">PostgreSQL</b> to integrate robust backend solutions that elevate frontend performance. 
-                        <br /><br />
-                        My goal? Build user-focused experiences that solve real-world problems while keeping code clean and efficient. I am also open to <b className="dark:text-[#f9fafb]">remote work</b> opportunities and thrive on continuous learning to stay updated on the ever-evolving tech landscape.
-                </motion.p>
+                        >
+                        Hey there 👋, I'm a <span className="font-semibold dark:text-[#f9fafb]">frontend developer</span> with a degree in Computer Science, and I love building digital experiences that are <span className="font-semibold dark:text-[#f9fafb]">smooth, intuitive, and built to last</span>. My toolbox includes <span className="font-semibold dark:text-[#f9fafb]">React, TypeScript, and JavaScript</span> for bringing ideas to life, <span className="font-semibold dark:text-[#f9fafb]">Motion</span> for adding that extra polish, and <span className="font-semibold dark:text-[#f9fafb]">TailwindCSS</span> to make styling fast and fun. When apps need to handle complex state, I reach for <span className="font-semibold dark:text-[#f9fafb]">Redux Toolkit</span> or React's <span className="font-semibold dark:text-[#f9fafb]">Context API</span>, whichever fits best.
+
+                        <p className="mt-4">
+                        I've worked with <span className="font-semibold dark:text-[#f9fafb]">APIs</span> to fetch, manage, and display data in ways that make apps feel alive. And when a project needs a little backend muscle, I've used <span className="font-semibold dark:text-[#f9fafb]">Supabase</span> and <span className="font-semibold dark:text-[#f9fafb]">PostgreSQL</span> to make sure everything runs smoothly behind the scenes.
+                        </p>
+
+                        <p className="mt-4">
+                        At the end of the day, I care about solving real problems with clean, thoughtful code, no overengineering, just stuff that works. I'm always learning, always tinkering, and open to <span className="font-semibold dark:text-[#f9fafb]">remote opportunities</span> where I can build things people actually enjoy using.</p>
+                </motion.div>
 
                 <motion.div
                 initial={{ opacity: 0, y: 50 }}

@@ -8,7 +8,7 @@ import foodsco from '../assets/foodsco.png'
 import Lokateur from '../assets/lokateur.png'
 import splitter from '../assets/splitter.png'
 import Genotype from '../assets/gmc.png'
-import Techkare from '../assets/techkare.png'
+// import Techkare from '../assets/techkare.png'
 import space from '../assets/space.png'
 // import Foodie2 from '../assets/foodie.png'
 // import Foodie from '../assets/foodie.gif'
@@ -118,16 +118,16 @@ export const PROJECTS = [
         group: "web applications",
         construction: false
     },
-    {
-        id: 11,
-        title: "techkare",
-        image: Techkare,
-        description: "A centralized platform for managing and displaying patient data, designed to streamline workflows and improve care delivery. Built with ReactJS and integrated with a robust API, it ensures seamless functionality.",
-        tag: ["html", "css", "javascript", "TailwindCSS", "API"],
-        url: "https://techkare.netlify.app/",
-        group: "web applications",
-        construction: true
-    },
+    // {
+    //     id: 11,
+    //     title: "techkare",
+    //     image: Techkare,
+    //     description: "A centralized platform for managing and displaying patient data, designed to streamline workflows and improve care delivery. Built with ReactJS and integrated with a robust API, it ensures seamless functionality.",
+    //     tag: ["html", "css", "javascript", "TailwindCSS", "API"],
+    //     url: "https://techkare.netlify.app/",
+    //     group: "web applications",
+    //     construction: true
+    // },
     {
         id: 12,
         title: "checkleest",
