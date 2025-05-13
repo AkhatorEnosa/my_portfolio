@@ -15,7 +15,7 @@ import cv from '../assets/osakhogba.pdf';
 const Right = () => {
     const {groupBy} = useContext(AppContext);
   return (
-        <section id="about" className="mt-10 lg:mt-0 lg:w-[52%] lg:py-24 lg:px-12">
+        <section id="about" className="mt-10 lg:mt-0 lg:w-[52%] lg:py-14 lg:px-12">
             <motion.div 
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,18 @@ const Right = () => {
                     viewport={{ amount: 0.2 }}
                     className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 tracking-wide"
                         >
-                        Hey there 👋, I'm a <span className="font-semibold dark:text-[#f9fafb]">frontend developer</span> with a degree in Computer Science, and I love building digital experiences that are <span className="font-semibold dark:text-[#f9fafb]">smooth, intuitive, and built to last</span>. My toolbox includes <span className="font-semibold dark:text-[#f9fafb]">React, TypeScript, and JavaScript</span> for bringing ideas to life, <span className="font-semibold dark:text-[#f9fafb]">Motion</span> for adding that extra polish, and <span className="font-semibold dark:text-[#f9fafb]">TailwindCSS</span> to make styling fast and fun. When apps need to handle complex state, I reach for <span className="font-semibold dark:text-[#f9fafb]">Redux Toolkit</span> or React's <span className="font-semibold dark:text-[#f9fafb]">Context API</span>, whichever fits best.
+                        
+                        <motion.p 
+                                animate={{
+                                    rotate: [0, 15, -10, 0],
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    repeatType: "reverse",
+                                    ease: "easeInOut"
+                                }}
+                                className="font-semibold dark:text-[#f9fafb] text-2xl inline-block origin-bottom mr-2 hover:cursor-pointer">👋</motion.p> Hey there, I'm a <span className="font-semibold dark:text-[#f9fafb]">frontend developer</span> with a degree in Computer Science, and I love building digital experiences that are <span className="font-semibold dark:text-[#f9fafb]">smooth, intuitive, and built to last</span>. My toolbox includes <span className="font-semibold dark:text-[#f9fafb]">React, TypeScript, and JavaScript</span> for bringing ideas to life, <span className="font-semibold dark:text-[#f9fafb]">Motion</span> for adding that extra polish, and <span className="font-semibold dark:text-[#f9fafb]">TailwindCSS</span> to make styling fast and fun. When apps need to handle complex state, I reach for <span className="font-semibold dark:text-[#f9fafb]">Redux Toolkit</span> or React's <span className="font-semibold dark:text-[#f9fafb]">Context API</span>, whichever fits best.
 
                         <p className="mt-4">
                         I've worked with <span className="font-semibold dark:text-[#f9fafb]">APIs</span> to fetch, manage, and display data in ways that make apps feel alive. And when a project needs a little backend muscle, I've used <span className="font-semibold dark:text-[#f9fafb]">Supabase</span> and <span className="font-semibold dark:text-[#f9fafb]">PostgreSQL</span> to make sure everything runs smoothly behind the scenes.
