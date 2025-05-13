@@ -142,7 +142,7 @@ export const PROJECTS = [
         id: 13,
         title: "walletity",
         image: walletity,
-        description: "A wallet with card micro interactions",
+        description: "A wallet with card micro interactions inspired by @UIbyBiba on X",
         tag: ["Typescript", "ReactJS", "TailwindCSS", "Motion"],
         url: "https://walletity.netlify.app/",
         group: "micro interactions",

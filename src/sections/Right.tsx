@@ -148,7 +148,7 @@ const Right = () => {
                 </div>
             </motion.div>
 
-            <div className="w-full flex flex-col lg:mt-10 pb-10 justify-center items-center">
+            <div className="w-full flex flex-col lg:mt-10 pb-10 justify-center items-center text-center">
                 <p className="text-2xl mt-10">I am currently open to remote opportunities.</p>
                 <p className="text-sm mt-2 opacity-80">Feel free to reach out for collaboration or just a chat!</p>
             </div>
