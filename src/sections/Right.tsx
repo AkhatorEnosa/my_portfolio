@@ -43,19 +43,19 @@ const Right = () => {
 
                         <p className="mt-4">
                         At the end of the day, I care about solving real problems with clean, thoughtful code, no overengineering, just stuff that works. I'm always learning, always tinkering, and open to <span className="font-semibold dark:text-[#f9fafb]">remote opportunities</span> where I can build things people actually enjoy using.</p>
-                </motion.div>
 
-                <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                className="relative w-fit flex flex-col mt-5 gap-2">
-                    <a href={cv} target="_blank" className="relative z-10">
-                        <motion.button
-                            whileTap={{ scale: 0.95 }}
-                            className="resume-button w-fit p-3 rounded-lg bg-[#1F2937] text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] dark:hover:bg-[#008080] dark:hover:text-[#f9fafb] text-sm lg:text-base transition-all duration-300">Download CV</motion.button>
-                    </a>
-                    <i className="absolute cursor bi bi-cursor-fill top-5 right-10 text-[#f9fafb] dark:text-[#1F2937] z-30"></i>
+                        <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.7 }}
+                        className="relative w-fit flex flex-col mt-5 gap-2">
+                            <a href={cv} target="_blank" className="relative z-10">
+                                <motion.button
+                                    whileTap={{ scale: 0.95 }}
+                                    className="resume-button w-fit p-3 rounded-lg bg-[#1F2937] text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] dark:hover:bg-[#008080] dark:hover:text-[#f9fafb] text-sm lg:text-base transition-all duration-300">Download CV</motion.button>
+                            </a>
+                            <i className="absolute cursor bi bi-cursor-fill top-5 right-10 text-[#f9fafb] dark:text-[#1F2937] z-30"></i>
+                        </motion.div>
                 </motion.div>
             </motion.div>
 
@@ -128,7 +128,7 @@ const Right = () => {
                             />
                         ))}
                     </div>
-
+                        
                     {
                         PROJECTS.map((project) => (
                             (project.group === groupBy || groupBy === "all") && <ProjectCard key={project.id} title={project.title} imgSrc={project.image} tech={project.tag || []} url={project.url} desc={project.description} construction={project.construction}/>
