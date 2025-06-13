@@ -1,5 +1,5 @@
 import soozeer from "../assets/soozeer.webp";
-// import Shaup from '../assets/shaup.webp'
+import Shaup from '../assets/shaup.webp'
 import Unscramble from '../assets/unscramble.webp'
 import myNoet from '../assets/mynoet.webp'
 import moovees from '../assets/moovees.webp'
@@ -37,6 +37,16 @@ export const PROJECTS = [
         url: "https://mynoet.netlify.app/",
         group: "web applications",
         construction: false
+    },
+    {
+        id: 15,
+        title: "Shaup",
+        image: Shaup,
+        description: "An Online Shopping platform to demo a seamless shopping experience. It features a user-friendly interface, allowing customers to browse products, add items to their cart, and proceed to checkout with ease. The platform is designed to enhance the online shopping experience, making it efficient and enjoyable.",
+        tag: ["ReactJS", "TailwindCSS", "API", "Motion"],
+        url: "https://shsaup.netlify.app/",
+        group: "web applications",
+        construction: true
     },
     {
         id: 3,
