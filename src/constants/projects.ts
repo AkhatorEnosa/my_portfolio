@@ -44,7 +44,7 @@ export const PROJECTS = [
         image: Shaup,
         description: "An Online Shopping platform to demo a seamless shopping experience. It features a user-friendly interface, allowing customers to browse products, add items to their cart, and proceed to checkout with ease. The platform is designed to enhance the online shopping experience, making it efficient and enjoyable.",
         tag: ["ReactJS", "TailwindCSS", "API", "Motion"],
-        url: "https://shsaup.netlify.app/",
+        url: "https://shaup.netlify.app/",
         group: "web applications",
         construction: true
     },
