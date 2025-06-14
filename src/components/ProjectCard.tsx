@@ -19,9 +19,11 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
       viewport={{ amount: 0.2 }}
       href={url} target="_blank" className="group card relative text-sm bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 md:bg-transparent md:darK:bg-transparent md:hover:bg-[#1f2937]/5 md:dark:hover:bg-[#f9fafb]/5 dark:text-[#f9fafb] rounded-lg p-4 transition-all duration-300 flex flex-col gap-2">
         <div className="flex flex-col-reverse md:grid md:grid-cols-5 justify-between items-center gap-4 md:gap-6">
-            <div className="w-full md:w-fit md:col-span-3 md:h-full flex flex-col gap-2">
-                <h2 className="w-full flex gap-2 text-lg font-bold group-hover:text-[#008080] group-hover:dark:text-inherit capitalize">{title} <i className="bi bi-arrow-right -rotate-45 group-hover:rotate-0 transition-all duration-300"></i></h2>
-                <p className="text-sm">{desc}</p>
+            <div className="w-full md:w-fit md:col-span-3 md:h-full flex flex-col justify-between gap-2">
+                <div className="w-full flex flex-col gap-2">
+                  <h2 className="w-full flex gap-2 text-lg font-bold group-hover:text-[#008080] group-hover:dark:text-inherit capitalize">{title} <i className="bi bi-arrow-right -rotate-45 group-hover:rotate-0 transition-all duration-300"></i></h2>
+                  <p className="text-sm">{desc}</p>
+                </div>
                 {/* <hr className="text-[#1f2937]/20"/> */}
                 <div className="w-full flex gap-2 mt-5 text-[10px] font-semibold uppercase tracking-wider flex-wrap">
                     {/* {tech.map((x: string) => (x + " • "))} */}

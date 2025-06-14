@@ -1,3 +1,5 @@
+import CV from '../assets/osakhogba.pdf';
+
 export const SOCIALLINKS = [
     {
         id: 1,
@@ -22,5 +24,11 @@ export const SOCIALLINKS = [
         title: "Soozeer",
         icon: "bi-globe",
         url: "https://soozeer.netlify.app/#/aefea77c-748a-4850-bc28-5bc45f74a7ce"
+    }, 
+    {
+        id: 5,
+        title: "My Resume",
+        icon: "bi-file-text",
+        url: CV
     }
 ]
