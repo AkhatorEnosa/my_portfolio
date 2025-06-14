@@ -114,11 +114,11 @@ const Right = () => {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 3.8 }}
-                id="projects" className="py-10"
+                id="projects" className="py-10 relative"
             >
                 <h1 className="w-full text-2xl font-bold tracking-widest uppercase">Selected Projects</h1>
                 <div className="cards w-full flex flex-col gap-6 mt-5">
-                    <div className="tabs w-full flex gap-2 lg:gap-3 items-center overflow-x-scroll">
+                    <div className="tabs w-fit flex gap-2 lg:gap-3 items-center overflow-x-scroll py-3 px-3 rounded-full md:sticky top-4 bg-[#f9fafb]/80 dark:bg-[#1f2937]/80 backdrop-blur-sm z-30">
                         {TABS.map((tab, index) => (
                             <TabButton 
                                 key={index}
@@ -137,7 +137,7 @@ const Right = () => {
 
             <div className="w-full flex flex-col lg:mt-10 pb-10 justify-center items-center text-center">
                 <p className="text-2xl mt-10">Let us work on something together!</p>
-                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline">collaboration or just a chat!</a></p>
+                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse text-[#008080] dark:text-inherit">collaboration or just a chat!</a></p>
             </div>
         </section>
   )
