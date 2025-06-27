@@ -10,7 +10,7 @@ import Lokateur from '../assets/lokateur.webp'
 import splitter from '../assets/splitter.webp'
 import Genotype from '../assets/gmc.webp'
 import Techkare from '../assets/techkare.webp'
-import space from '../assets/space.webp'
+// import space from '../assets/space.webp'
 // import Foodie2 from '../assets/foodie.webp'
 // import Foodie from '../assets/foodie.gif'
 import Kickrs from '../assets/kickrs.webp'
@@ -44,7 +44,7 @@ export const PROJECTS = [
         tag: ["ReactJS", "TailwindCSS", "API", "Motion"],
         url: "https://shaup.netlify.app/",
         group: "web applications",
-        construction: true
+        construction: false
     },
     {
         title: "bill splitter",
@@ -145,13 +145,13 @@ export const PROJECTS = [
         group: "micro interactions",
         construction: false
     },
-    {
-        title: "space tour travel",
-        image: space,
-        description: "This is a space tourism website offering suborbital flights, orbital adventures, and lunar voyages with top providers like SpaceX and Virgin Galactic. Experience weightlessness, Earth’s curvature, and cosmic wonders with safe, curated packages for thrill-seekers. Book your stellar journey today.",
-        tag: ["html", "CSS", "javascript"],
-        url: "https://spacetourtravel.netlify.app/",
-        group: "websites",
-        construction: true
-    },
+    // {
+    //     title: "space tour travel",
+    //     image: space,
+    //     description: "This is a space tourism website offering suborbital flights, orbital adventures, and lunar voyages with top providers like SpaceX and Virgin Galactic. Experience weightlessness, Earth’s curvature, and cosmic wonders with safe, curated packages for thrill-seekers. Book your stellar journey today.",
+    //     tag: ["html", "CSS", "javascript"],
+    //     url: "https://spacetourtravel.netlify.app/",
+    //     group: "websites",
+    //     construction: true
+    // },
 ]
