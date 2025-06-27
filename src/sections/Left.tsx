@@ -74,14 +74,16 @@ const Left = () => {
           }
         </div>
 
-        <motion.div
+        <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.5}}
-          className="fixed right-2 top-5 lg:relative lg:right-0 lg:top-0 w-fit flex bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold py-2 px-4 rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-hidden z-40 duration-150 transition-all" aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => themeHandler()}>
-          <p className={`w-fit text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill text-orange-300 ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-150 transition-all`}></i></p>
-          <p className={`absolute w-fit text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill text-yellow-200 ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-150 transition-all`}></i></p>
-        </motion.div>
+          className="fixed right-2 top-5 lg:relative lg:right-0 lg:top-0 w-fit flex bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold py-2 px-4 rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-hidden z-40 duration-150 transition-all" 
+          aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
+          onClick={() => themeHandler()}>
+            <p className={`w-fit text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill text-orange-300 ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-150 transition-all`}></i></p>
+            <p className={`absolute w-fit text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-150 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill text-yellow-200 ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-150 transition-all`}></i></p>
+        </motion.button>
       </motion.div>
     </section>
   )
