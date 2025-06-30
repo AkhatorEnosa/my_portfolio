@@ -15,7 +15,7 @@ import TabButton from "../components/TabButton";
 const Right = () => {
     const {groupBy} = useContext(AppContext);
   return (
-        <section id="about" className="mt-10 lg:mt-0 lg:w-[52%] lg:py-14 lg:px-12">
+        <main id="about" className="mt-10 lg:mt-0 lg:w-[52%] lg:py-14 lg:px-12">
             <motion.div 
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ const Right = () => {
                 <p className="text-2xl mt-10">Let us work on something together!</p>
                 <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse text-[#008080] dark:text-inherit">collaboration or just a chat!</a></p>
             </div>
-        </section>
+        </main>
   )
 }
 

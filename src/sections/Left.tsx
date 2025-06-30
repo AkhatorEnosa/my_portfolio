@@ -18,7 +18,7 @@ const Left = () => {
   return (
     <section className="relative lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 lg:px-12">
       <div>
-        <div className="w-full flex flex-col">
+        <header className="w-full flex flex-col">
           {/* user data  */}
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
@@ -41,9 +41,9 @@ const Left = () => {
               transition={{ duration: 0.5, delay: 0.8 }}
             className="w-[60%] lg:w-full text-sm lg:text-lg mt-2 dark:text-[#f9fafb]/70">Creating web experiences and turning designs into reality.</motion.p>
           </div>
-        </div>
+        </header>
 
-        <motion.div
+        <motion.nav
           layout
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ const Left = () => {
               ))
             }
           </div>
-        </motion.div>
+        </motion.nav>
       </div>
 
       <motion.div
