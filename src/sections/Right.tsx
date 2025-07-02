@@ -70,9 +70,11 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3 }}
                     className="flex flex-col gap-2">
                         <h2 className="leading-5 md:text-lg font-bold">Languages</h2>
-                        {LANGUAGES.map((x, index) => (
-                            <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index}/>
-                        ))}
+                        <ul>
+                            {LANGUAGES.map((x, index) => (
+                                <li><Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index}/></li>
+                            ))}
+                        </ul>
                     </motion.div>
                     <motion.div 
                         initial={{ opacity: 0, y: -50 }}
@@ -81,9 +83,11 @@ const Right = () => {
                         className="flex flex-col gap-2"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Frameworks & Libraries</h2>
-                        {FRAMEWORKS.map((x, index) => (
-                            <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
-                        ))}
+                        <ul>
+                            {FRAMEWORKS.map((x, index) => (
+                                <li><Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
+                            ))}
+                        </ul>
                     </motion.div>
                     <motion.div 
                         initial={{ opacity: 0, y: -50 }}
@@ -92,9 +96,11 @@ const Right = () => {
                         className="flex flex-col gap-2"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Tools & Softwares</h2>
-                        {TOOL_LIST.map((x, index) =>(
-                            <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
-                        ))}
+                        <ul>
+                            {TOOL_LIST.map((x, index) =>(
+                                <li><Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
+                            ))}
+                        </ul>
                     </motion.div>
                     <motion.div 
                         initial={{ opacity: 0, y: -50 }}
@@ -103,9 +109,11 @@ const Right = () => {
                         className="flex flex-col gap-2"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Soft Skills</h2>
-                        {SOFT_SKILLS.map((x, index) => (
-                            <Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/>
-                        ))}
+                        <ul>
+                            {SOFT_SKILLS.map((x, index) => (
+                                <li><Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
+                            ))}
+                        </ul>
                     </motion.div>
                 </div>
             </div>
