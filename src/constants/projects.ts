@@ -10,9 +10,6 @@ import Lokateur from '../assets/lokateur.webp'
 import splitter from '../assets/splitter.webp'
 import Genotype from '../assets/gmc.webp'
 import Techkare from '../assets/techkare.webp'
-// import space from '../assets/space.webp'
-// import Foodie2 from '../assets/foodie.webp'
-// import Foodie from '../assets/foodie.gif'
 import Kickrs from '../assets/kickrs.webp'
 import checkleest from '../assets/checkleest.webp'
 import walletity from '../assets/walletity.webp'
@@ -26,7 +23,7 @@ export const PROJECTS = [
         tag: ["ReactJS", "Tanstack Query", "Redux Toolkit", "TailwindCSS", "Supabase"],
         url: "https://soozeer.netlify.app/",
         group: "web applications",
-        construction: false
+        construction: true
     },
     {
         title: "mynoet",
