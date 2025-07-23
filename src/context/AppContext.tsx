@@ -1,10 +1,12 @@
-import { createContext, ReactNode, useEffect, useState } from 'react'
+import React, { createContext, ReactNode, useEffect, useState } from 'react'
 
 export const AppContext = createContext<{
   theme: string;
   setTheme: React.Dispatch<React.SetStateAction<string>>;
   selectedSection: string;
   setSelectedSection: React.Dispatch<React.SetStateAction<string>>;
+  tabIndex: number;
+  setTabIndex: React.Dispatch<React.SetStateAction<number>>;
   groupBy: string;
   setGroupBy: React.Dispatch<React.SetStateAction<string>>;
   themeHandler: () => void
@@ -13,6 +15,8 @@ export const AppContext = createContext<{
   setTheme: () => {},
   selectedSection: '',
   setSelectedSection: () => {},
+  tabIndex: 0,
+  setTabIndex: () => {},
   groupBy: 'all',
   setGroupBy: () => {},
   themeHandler: () => {},
@@ -34,6 +38,7 @@ export function AppProvider({ children } : { children: ReactNode }) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
     const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') || '')
     const [groupBy, setGroupBy] = useState("all")
+    const [tabIndex, setTabIndex] = useState(0)
 
     const themeHandler = () => {
       const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -58,6 +63,7 @@ export function AppProvider({ children } : { children: ReactNode }) {
     <AppContext.Provider value={{
         theme, setTheme,
         selectedSection, setSelectedSection,
+        tabIndex, setTabIndex,
         groupBy, setGroupBy,
         themeHandler,
     }}>

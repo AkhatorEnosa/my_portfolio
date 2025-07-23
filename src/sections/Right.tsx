@@ -132,6 +132,7 @@ const Right = () => {
                             <TabButton 
                                 key={index}
                                 title={tab.title}
+                                index={tab.id}
                             />
                         ))}
                     </div>
