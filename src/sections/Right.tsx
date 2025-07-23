@@ -15,7 +15,7 @@ import TabButton from "../components/TabButton";
 const Right = () => {
     const {groupBy} = useContext(AppContext);
   return (
-        <main id="about" className="mt-10 lg:mt-0 lg:w-[52%] lg:py-14 lg:px-12">
+        <main id="about" className="mt-5 lg:mt-0 lg:w-[52%] lg:py-14 lg:px-12">
             <motion.div 
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ const Right = () => {
                 transition={{ duration: 0.5, delay: 3.8 }}
                 id="projects" className="py-10 relative"
             >
-                <h1 className="w-full text-2xl font-bold tracking-widest uppercase">Selected Projects</h1>
+                {/* <h1 className="w-full text-2xl font-bold tracking-widest uppercase">Selected Projects</h1> */}
                 <div className="cards w-full flex flex-col gap-6 mt-5">
                     <div className="tabs w-fit flex gap-2 lg:gap-3 items-center overflow-x-scroll py-3 px-3 rounded-full md:sticky top-4 bg-[#f9fafb]/80 dark:bg-[#1f2937]/80 backdrop-blur-sm z-30">
                         {TABS.map((tab, index) => (

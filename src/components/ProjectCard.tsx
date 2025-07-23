@@ -26,12 +26,6 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
                   <p className="text-sm">{desc}</p>
                 </div>
                 {/* <hr className="text-[#1f2937]/20"/> */}
-                <div className="w-full flex gap-2 mt-5 text-[10px] font-semibold uppercase tracking-wider flex-wrap">
-                    {/* {tech.map((x: string) => (x + " • "))} */}
-                    {tech.map((x: string, index: number) => (
-                        <p key={index} className="px-2 py-1 bg-[#008080]/5 dark:bg-[#008080]/30 rounded-2xl">{x}</p>
-                    ))}
-                </div>
                 {/* <a href={url} target="_blank" className="text-sm text-[#FF6B6B]">View Project</a> */}
             </div>
             <div className="relative w-full md:w-fit md:h-full md:col-span-2 flex justify-center items-start">
@@ -39,9 +33,16 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
                 <i className="bi bi-bricks"></i>
               </span>}
               <div className="w-full h-48 dark:border-[#f9fafb]/20 rounded-lg md:rounded-3xl border-[1px] border-[#1f2937]/20 overflow-hidden">
-                  <img src={imgSrc} alt="Soozeer" className="w-full h-full object-cover scale-125 group-hover:scale-100 transition-transform duration-300"/>
+                  <img src={imgSrc} alt="Project Image" className="w-full h-full object-cover scale-125 group-hover:scale-100 transition-transform duration-300"/>
               </div>
             </div>
+        </div>
+
+        <div className="w-full flex gap-2 mt-5 text-[10px] justify-center font-semibold uppercase tracking-wider flex-wrap">
+            {/* {tech.map((x: string) => (x + " • "))} */}
+            {tech.map((x: string, index: number) => (
+                <p key={index} className="px-2 py-1 bg-[#008080]/5 dark:bg-[#008080]/30 rounded-2xl">{x}</p>
+            ))}
         </div>
     </motion.a>
   )

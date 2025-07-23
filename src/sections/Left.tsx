@@ -18,13 +18,13 @@ const Left = () => {
   return (
     <section className="relative lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 lg:px-12">
       <div>
-        <header className="w-full flex flex-col">
+        <header className="w-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           {/* user data  */}
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 md:mt-0 leading-14"
+            className="text-6xl sm:text-8xl lg:text-6xl font-bold mt-4 md:mt-0 leading-14"
           >
               Osakhogba Akhator
           </motion.h1>
@@ -34,12 +34,12 @@ const Left = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-lg lg:text-2xl">Frontend Developer</motion.p>
+            className="text-lg sm:text-2xl">Frontend Developer</motion.p>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-            className="w-[60%] lg:w-full text-sm lg:text-lg mt-2 dark:text-[#f9fafb]/70">Creating web experiences and turning designs into reality.</motion.p>
+            className="w-full text-sm sm:text-lg mt-2 dark:text-[#f9fafb]/70">Creating web experiences and turning designs into reality.</motion.p>
           </div>
         </header>
 
@@ -64,7 +64,8 @@ const Left = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 2 }}
-      className="w-full flex mt-12 lg:mt-10 justify-between items-center text-3xl lg:text-2xl">
+        className="w-full flex mt-12 lg:mt-10 justify-center lg:justify-between items-center gap-4 text-3xl lg:text-2xl"
+      >
         {/* social links */} 
         <div className="flex gap-6 ">
           {
@@ -73,7 +74,6 @@ const Left = () => {
             ))
           }
         </div>
-
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
