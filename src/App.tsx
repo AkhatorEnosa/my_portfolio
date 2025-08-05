@@ -3,6 +3,7 @@ import Left from "./sections/Left"
 import Right from "./sections/Right"
 import { AppContext } from "./context/AppContext";
 import CursorTracker from "./components/CursorTracker";
+import Navbar from "./sections/Navbar";
 
 function App() {
   const {theme} = useContext(AppContext);
@@ -11,6 +12,7 @@ function App() {
       <div className={`${theme === 'dark' ? "bg-[#1F2937]" : "bg-[#f9fafb]"} fixed w-screen h-screen left-0 top-0 z-10`}>
         <CursorTracker/>
       </div>
+      <Navbar />
       <div className="relative flex flex-col lg:flex-row lg:justify-between gap-10 z-30">
         <Left />
         <Right />
