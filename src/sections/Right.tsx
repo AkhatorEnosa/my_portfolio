@@ -73,7 +73,7 @@ const Right = () => {
                         <h2 className="leading-5 md:text-lg font-bold">Languages</h2>
                         <ul className="flex flex-col gap-2">
                             {LANGUAGES.map((x, index) => (
-                                <li><Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index}/></li>
+                                <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index}/></li>
                             ))}
                         </ul>
                     </motion.div>
@@ -86,7 +86,7 @@ const Right = () => {
                         <h2 className="leading-5 md:text-lg font-bold">Frameworks & Libraries</h2>
                         <ul className="flex flex-col gap-2">
                             {FRAMEWORKS.map((x, index) => (
-                                <li><Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
+                                <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
                             ))}
                         </ul>
                     </motion.div>
@@ -99,7 +99,7 @@ const Right = () => {
                         <h2 className="leading-5 md:text-lg font-bold">Tools & Softwares</h2>
                         <ul className="flex flex-col gap-2">
                             {TOOL_LIST.map((x, index) =>(
-                                <li><Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
+                                <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
                             ))}
                         </ul>
                     </motion.div>
@@ -112,7 +112,7 @@ const Right = () => {
                         <h2 className="leading-5 md:text-lg font-bold">Soft Skills</h2>
                         <ul className="flex flex-col gap-2">
                             {SOFT_SKILLS.map((x, index) => (
-                                <li><Skills key={index} url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
+                                <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
                             ))}
                         </ul>
                     </motion.div>

@@ -13,7 +13,11 @@ const Navbar = () => {
     };
 
   return (
-    <div className="fixed left-0 top-0 w-full flex justify-between py-2 px-2 md:px-10 bg-[#f9fafb] dark:bg-[#1F2937] lg:bg-none z-40">
+    <motion.nav
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0 }}
+        className="fixed left-0 top-0 w-full flex justify-between py-2 px-2 md:px-10 lg:bg-none z-40">
           {/* user image */}
           <motion.div
             className="size-10 lg:w-14 lg:h-14 z-40"
@@ -52,13 +56,13 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 2.5}}
-            className="group w-fit flex bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb] py-2 px-4 rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-hidden z-50 duration-300 transition-all" 
+            className="group w-fit flex lg:hidden bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb] py-2 px-4 rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-hidden z-50 duration-300 transition-all" 
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
             onClick={() => themeHandler()}>
                 <p className={`w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill text-orange-300 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
                 <p className={`absolute w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
             </motion.button>
-    </div>
+    </motion.nav>
   )
 }
 

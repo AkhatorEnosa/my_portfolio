@@ -10,7 +10,7 @@ const NavLink = ({url, title}: NavLinkProps) => {
   const { selectedSection, setSelectedSection } = useContext(AppContext)
   return (
     <a href={url} 
-      className={`group relative w-fit h-fit flex justify-center items-center lg:gap-3 capitalize text-sm ${selectedSection === title ? "font-bold text-[#008080] dark:text-[#f9fafb]" : "hover:text-[#008080] dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-bold opacity-80 hover:opacity-100"}  transition-all duration-150`}
+      className={`group relative w-fit h-fit flex justify-center items-center lg:gap-3 capitalize text-sm ${selectedSection === title ? "font-bold text-[#008080] dark:text-[#f9fafb]" : "hover:text-[#008080] dark:text-[#f9fafb]/80 dark:hover:text-[#f9fafb] hover:font-bold opacity-80 hover:opacity-100"}  transition-all duration-150`}
       onClick={() => {
         setSelectedSection(title);
         localStorage.setItem('section', title)

@@ -24,13 +24,13 @@ export const AppContext = createContext<{
 
 
 // get url last part 
-const originUrl = location.href;
-const splitUrl = originUrl.split("/");
-const lastPartOfUrl = splitUrl[splitUrl.length - 1]
-const result = lastPartOfUrl.slice(1)
-  localStorage.setItem("section", result)
+// const originUrl = location.href;
+// const splitUrl = originUrl.split("/");
+// const lastPartOfUrl = splitUrl[splitUrl.length - 1]
+// const result = lastPartOfUrl.slice(1)
+//   localStorage.setItem("section", result)
 // location.href = originUrl + "/#" + selectedSection
-console.log(result)
+// console.log(result)
 
 
 

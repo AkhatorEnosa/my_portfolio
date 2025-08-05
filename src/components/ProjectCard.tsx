@@ -38,7 +38,7 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
             </div>
         </div>
 
-        <div className="w-full flex gap-2 mt-5 text-[10px] justify-center font-semibold uppercase tracking-wider flex-wrap">
+        <div className="w-full flex gap-2 mt-5 text-[10px] justify-center md:justify-normal font-semibold uppercase tracking-wider flex-wrap">
             {/* {tech.map((x: string) => (x + " • "))} */}
             {tech.map((x: string, index: number) => (
                 <p key={index} className="px-2 py-1 bg-[#008080]/5 dark:bg-[#008080]/30 rounded-2xl">{x}</p>
