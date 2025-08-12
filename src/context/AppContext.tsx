@@ -1,16 +1,18 @@
-import React, { createContext, ReactNode, useEffect, useState } from 'react'
+import React, { createContext, ReactNode, useEffect, useState, Dispatch, SetStateAction } from 'react'
 
-export const AppContext = createContext<{
+interface AppContextType {
   theme: string;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
-  selectedSection: string;
-  setSelectedSection: React.Dispatch<React.SetStateAction<string>>;
+  setTheme: Dispatch<SetStateAction<string>>;
+  selectedSection: string | null;
+  setSelectedSection: Dispatch<SetStateAction<string | null>>;
   tabIndex: number;
-  setTabIndex: React.Dispatch<React.SetStateAction<number>>;
+  setTabIndex: Dispatch<SetStateAction<number>>;
   groupBy: string;
-  setGroupBy: React.Dispatch<React.SetStateAction<string>>;
-  themeHandler: () => void
-}>({
+  setGroupBy: Dispatch<SetStateAction<string>>;
+  themeHandler: () => void;
+}
+
+export const AppContext = createContext<AppContextType>({
   theme: 'light',
   setTheme: () => {},
   selectedSection: '',
@@ -24,19 +26,19 @@ export const AppContext = createContext<{
 
 
 // get url last part 
-// const originUrl = location.href;
-// const splitUrl = originUrl.split("/");
-// const lastPartOfUrl = splitUrl[splitUrl.length - 1]
-// const result = lastPartOfUrl.slice(1)
-//   localStorage.setItem("section", result)
-// location.href = originUrl + "/#" + selectedSection
+const originUrl = location.href;
+const splitUrl = originUrl.split("/");
+const lastPartOfUrl = splitUrl[splitUrl.length - 1]
+
+const result = lastPartOfUrl.slice(1)
+  localStorage.setItem("section", result)
 // console.log(result)
 
 
 
 export function AppProvider({ children } : { children: ReactNode }) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
-    const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') || '')
+    const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') ? localStorage.getItem('section') : 'home')
     const [groupBy, setGroupBy] = useState("all")
     const [tabIndex, setTabIndex] = useState(0)
 
@@ -50,7 +52,6 @@ export function AppProvider({ children } : { children: ReactNode }) {
     useEffect(() => {
       const savedTheme = localStorage.getItem('theme');
       const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      localStorage.setItem('section', selectedSection)
       
       const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
       setTheme(initialTheme);

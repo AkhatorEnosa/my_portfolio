@@ -10,10 +10,6 @@ import { SOCIALLINKS } from "../constants/sociallinks";
 const Left = () => {
   const context = useContext(AppContext);
 
-  if (!context) {
-    throw new Error("AppContext must be used within an AppContextProvider");
-  }
-
   const { theme, themeHandler } = context;
 
   return (

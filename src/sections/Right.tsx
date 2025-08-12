@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AppContext } from "../context/AppContext";
 import { LANGUAGES } from "../constants/languages";
 import { FRAMEWORKS } from "../constants/frameworks";
@@ -10,13 +10,21 @@ import { TABS } from "../constants/tabs";
 import { PROJECTS } from "../constants/projects";
 import ProjectCard from "../components/ProjectCard";
 import TabButton from "../components/TabButton";
-// import cv from '../assets/osakhogba.pdf';
 
 const Right = () => {
-    const {groupBy} = useContext(AppContext);
+    const {groupBy, selectedSection} = useContext(AppContext);
+
+    //scroll to section based on selected section
+    useEffect(() => {
+        const section = document.getElementById(selectedSection!);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [selectedSection]);
+
   return (
-        <main id="about" className="mt-5 lg:mt-0 lg:w-[52%] lg:py-14 lg:px-12">
-            <motion.div 
+        <main className="mt-5 lg:mt-0 lg:w-[52%] lg:py-14 lg:px-12">
+            <motion.div id="about"
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 2.5 }}
