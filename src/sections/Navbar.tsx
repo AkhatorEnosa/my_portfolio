@@ -1,16 +1,41 @@
 import { motion } from "framer-motion";
 import Icon from "../assets/icon.webp";
 import { AppContext } from "../context/AppContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+    
+type ShapeKey = "octagon" | "circle" | "pentagon";
+
+const shapes: Record<ShapeKey, string> = {
+  octagon: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+  circle: "circle(50% at 50% 50%)",
+  pentagon: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)",
+};
  
 const Navbar = () => {
     const { theme, themeHandler } = useContext(AppContext);
+    const [currShape, setCurrShape] = useState<ShapeKey>("circle");
+    const [isHovering, setIsHovering] = useState<boolean>(false);
   
-    const shapes = {
-      octagon: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
-      circle: "circle(50% at 50% 50%)",
-      pentagon: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)",
-    };
+    // Array of shape keys to cycle through
+    const shapeKeys = Object.keys(shapes) as ShapeKey[];
+    
+    useEffect(() => {
+      if (!isHovering) return;
+
+      const interval = setInterval(() => {
+        setCurrShape((prevShape) => {
+          const currentIndex = shapeKeys.indexOf(prevShape);
+          const nextIndex = (currentIndex + 1) % shapeKeys.length;
+          return shapeKeys[nextIndex];
+        });
+      }, 500);
+
+      return () => clearInterval(interval);
+    }, [isHovering, shapeKeys]);
+
+    // Handle hover start and end
+    const handleHoverStart = () => setIsHovering(true);
+    const handleHoverEnd = () => setIsHovering(false);
 
   return (
     <motion.nav
@@ -24,25 +49,14 @@ const Navbar = () => {
           >
             <motion.div
               className="w-full h-full cursor-pointer"
-              initial={{ clipPath: shapes.circle }}
-              whileHover={{
-                clipPath: [
-                  shapes.pentagon,
-                  shapes.octagon,
-                  shapes.circle
-                ],
-                transition: {
-                  clipPath: {
-                    duration: 0.5,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    repeatType: "reverse"
-                  }
-                }
-              }}
-              transition={{
-                clipPath: { duration: 1, ease: "easeInOut" }
-              }}
+              initial={{ clipPath: shapes[currShape] }}
+              // Framer Motion animation for smooth clip-path transition
+              animate={{ clipPath: shapes[currShape] }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              onHoverStart={handleHoverStart}
+              onHoverEnd={handleHoverEnd}
+              onTouchStart={handleHoverStart}
+              onTouchEnd={handleHoverEnd}
             >
               <img
                 src={Icon}
