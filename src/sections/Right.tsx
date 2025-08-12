@@ -146,12 +146,13 @@ const Right = () => {
                             />
                         ))}
                     </div>
-                        
-                    {
-                        PROJECTS.map((project, index) => (
-                            (project.group === groupBy || groupBy === "all") && <ProjectCard key={index} title={project.title} imgSrc={project.image} tech={project.tag || []} url={project.url} desc={project.description} construction={project.construction}/>
-                        ))
-                    }
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
+                        {
+                            PROJECTS.map((project, index) => (
+                                (project.group === groupBy || groupBy === "all") && <ProjectCard key={index} title={project.title} imgSrc={project.image} tech={project.tag || []} url={project.url} desc={project.description} construction={project.construction}/>
+                            ))
+                        }
+                    </div>
                 </div>
             </motion.div>
 
