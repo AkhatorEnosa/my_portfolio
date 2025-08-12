@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { useContext, useEffect } from "react";
+import { AppContext } from "../context/AppContext";
 import { LANGUAGES } from "../constants/languages";
 import { FRAMEWORKS } from "../constants/frameworks";
 import Skills from "../components/Skills";
@@ -9,7 +10,6 @@ import { TABS } from "../constants/tabs";
 import { PROJECTS } from "../constants/projects";
 import ProjectCard from "../components/ProjectCard";
 import TabButton from "../components/TabButton";
-import { AppContext } from "../context/AppContextValue";
 
 const Right = () => {
     const {groupBy, selectedSection} = useContext(AppContext);

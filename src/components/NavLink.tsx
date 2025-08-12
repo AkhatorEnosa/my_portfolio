@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AppContext } from "../context/AppContextValue";
+import { AppContext } from "../context/AppContext";
 
 interface NavLinkProps {
   url: string;

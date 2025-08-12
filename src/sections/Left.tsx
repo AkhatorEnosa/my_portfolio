@@ -3,9 +3,9 @@ import SocialLink from "../components/SocialLink"
 // import cv from '../assets/osakhogba.pdf';
 import { motion } from "framer-motion"
 import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 import { NAVLINKS } from "../constants/navlinks";
 import { SOCIALLINKS } from "../constants/sociallinks";
-import { AppContext } from "../context/AppContextValue";
 
 const Left = () => {
   const context = useContext(AppContext);
