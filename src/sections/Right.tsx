@@ -71,7 +71,8 @@ const Right = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.8 }}
                     className="w-full text-2xl font-bold tracking-widest uppercase">What I work with</motion.h1>
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-10 mt-5">
+
+                <div className="grid grid-cols-2 gap-10 mt-5">
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -125,6 +126,7 @@ const Right = () => {
                         </ul>
                     </motion.div>
                 </div>
+
             </div>
 
             <motion.div 
