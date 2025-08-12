@@ -1,28 +1,5 @@
-import React, { createContext, ReactNode, useEffect, useState, Dispatch, SetStateAction } from 'react'
-
-interface AppContextType {
-  theme: string;
-  setTheme: Dispatch<SetStateAction<string>>;
-  selectedSection: string | null;
-  setSelectedSection: Dispatch<SetStateAction<string | null>>;
-  tabIndex: number;
-  setTabIndex: Dispatch<SetStateAction<number>>;
-  groupBy: string;
-  setGroupBy: Dispatch<SetStateAction<string>>;
-  themeHandler: () => void;
-}
-
-export const AppContext = createContext<AppContextType>({
-  theme: 'light',
-  setTheme: () => {},
-  selectedSection: '',
-  setSelectedSection: () => {},
-  tabIndex: 0,
-  setTabIndex: () => {},
-  groupBy: 'all',
-  setGroupBy: () => {},
-  themeHandler: () => {},
-});
+import { ReactNode, useEffect, useState } from 'react'
+import { AppContext } from './AppContextValue';
 
 
 // get url last part 

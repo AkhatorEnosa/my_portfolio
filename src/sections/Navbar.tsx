@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Icon from "../assets/icon.webp";
-import { AppContext } from "../context/AppContext";
 import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../context/AppContextValue";
     
 type ShapeKey = "octagon" | "circle" | "pentagon";
 
