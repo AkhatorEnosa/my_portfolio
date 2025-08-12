@@ -1,16 +1,16 @@
 export const SOFT_SKILLS = [
-    {
-        name: "Teamwork",
-        icon: "bi bi-people",
-        url: "https://en.wikipedia.org/wiki/Teamwork",
-        description: "The combined action of a group, especially when effective and efficient.",
-    },
-    {
-        name: "Communication",
-        icon: "bi bi-chat-left-text",
-        url: "https://en.wikipedia.org/wiki/Communication",
-        description: "The imparting or exchanging of information or news.",
-    },
+    // {
+    //     name: "Teamwork",
+    //     icon: "bi bi-people",
+    //     url: "https://en.wikipedia.org/wiki/Teamwork",
+    //     description: "The combined action of a group, especially when effective and efficient.",
+    // },
+    // {
+    //     name: "Communication",
+    //     icon: "bi bi-chat-left-text",
+    //     url: "https://en.wikipedia.org/wiki/Communication",
+    //     description: "The imparting or exchanging of information or news.",
+    // },
     {
         name: "Problem Solving",
         icon: "bi bi-lightbulb",
@@ -23,12 +23,12 @@ export const SOFT_SKILLS = [
         url: "https://en.wikipedia.org/wiki/Adaptability",
         description: "The ability to adjust to new conditions.",
     },
-    {
-        name: "Creativity",
-        icon: "bi bi-brush",
-        url: "https://en.wikipedia.org/wiki/Creativity",
-        description: "The use of imagination or original ideas to create something.",
-    },
+    // {
+    //     name: "Creativity",
+    //     icon: "bi bi-brush",
+    //     url: "https://en.wikipedia.org/wiki/Creativity",
+    //     description: "The use of imagination or original ideas to create something.",
+    // },
     {
         name: "Time Management",
         icon: "bi bi-clock",
@@ -47,24 +47,24 @@ export const SOFT_SKILLS = [
         url: "https://en.wikipedia.org/wiki/Collaboration",
         description: "The action of working with someone to produce or create something.",
     },
-    {
-        name: "Emotional Intelligence",
-        icon: "bi bi-heart",
-        url: "https://en.wikipedia.org/wiki/Emotional_intelligence",
-        description: "The ability to understand and manage your own emotions, and those of the people around you.",
-    },
-    {
-        name: "Decision Making",
-        icon: "bi bi-check-circle",
-        url: "https://en.wikipedia.org/wiki/Decision-making",
-        description: "The process of making choices by identifying a decision, gathering information, and assessing alternative resolutions.",
-    },
-    {
-        name: "Interpersonal Skills",
-        icon: "bi bi-person-lines-fill",
-        url: "https://en.wikipedia.org/wiki/Interpersonal_skills",
-        description: "The skills used by a person to interact with others properly.",
-    },
+    // {
+    //     name: "Emotional Intelligence",
+    //     icon: "bi bi-heart",
+    //     url: "https://en.wikipedia.org/wiki/Emotional_intelligence",
+    //     description: "The ability to understand and manage your own emotions, and those of the people around you.",
+    // },
+    // {
+    //     name: "Decision Making",
+    //     icon: "bi bi-check-circle",
+    //     url: "https://en.wikipedia.org/wiki/Decision-making",
+    //     description: "The process of making choices by identifying a decision, gathering information, and assessing alternative resolutions.",
+    // },
+    // {
+    //     name: "Interpersonal Skills",
+    //     icon: "bi bi-person-lines-fill",
+    //     url: "https://en.wikipedia.org/wiki/Interpersonal_skills",
+    //     description: "The skills used by a person to interact with others properly.",
+    // },
     {
         name: "Attention to Detail",
         icon: "bi bi-zoom-in",

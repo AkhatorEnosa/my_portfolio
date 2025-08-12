@@ -18,7 +18,7 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ amount: 0.2 }}
       aria-label={title}
-      href={url} target="_blank" className="group relative text-sm bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 md:bg-transparent md:darK:bg-transparent md:hover:bg-[#1f2937]/5 md:dark:hover:bg-[#f9fafb]/5 dark:text-[#f9fafb] border-[1px] lg:border-none border-[#1f2937]/20 dark:border-[#f9fafb]/20 lg:shadow rounded-lg md:p-4 transition-all duration-300 flex flex-col gap-2">
+      href={url} target="_blank" className="group relative text-sm bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 md:bg-transparent md:darK:bg-transparent md:hover:bg-[#1f2937]/5 md:dark:hover:bg-[#f9fafb]/5 dark:text-[#f9fafb] border-[1px] md:border-none border-[#1f2937]/20 dark:border-[#f9fafb]/20 lg:shadow rounded-lg md:p-4 transition-all duration-300 flex flex-col gap-2">
         <div className="flex flex-col-reverse md:grid md:grid-cols-5 justify-between items-center gap-4 md:gap-6">
             <div className="w-full md:w-fit md:col-span-3 md:h-full flex flex-col justify-between px-4 md:px-0 gap-2">
                 <div className="w-full flex flex-col gap-2">
