@@ -22,7 +22,7 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
         <div className="flex flex-col-reverse md:grid md:grid-cols-5 justify-between items-center gap-4 md:gap-6">
             <div className="w-full md:w-fit md:col-span-3 md:h-full flex flex-col justify-between px-4 md:px-0 gap-2">
                 <div className="w-full flex flex-col gap-2">
-                  <h2 aria-label={title} className="w-full flex gap-2 text-lg font-bold group-hover:text-[#008080] group-hover:dark:text-inherit capitalize">{title} <i className="bi bi-arrow-right -rotate-45 group-hover:rotate-0 transition-all duration-300"></i></h2>
+                  <h2 aria-label={title} className="w-full flex gap-2 text-lg font-bold lg:group-hover:underline  group-hover:text-[#008080] group-hover:dark:text-inherit capitalize">{title} <i className="bi bi-arrow-right -rotate-45 group-hover:rotate-0 transition-all duration-300"></i></h2>
                   <p className="text-sm line-clamp-3 md:line-clamp-none">{desc}</p>
                 </div>
                 {/* <hr className="text-[#1f2937]/20"/> */}
