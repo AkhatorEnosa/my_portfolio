@@ -45,8 +45,12 @@ const Navbar = () => {
         className="fixed left-0 top-0 w-full flex justify-between py-4 px-2 md:px-10 lg:bg-none z-40">
           {/* user image */}
           <motion.div
-            className="size-10 lg:w-14 lg:h-14 z-40"
+            className="group size-10 lg:w-14 lg:h-14 z-40"
           >
+            <div className="fixed left-20 top-14 w-0 group-hover:w-56 shadow-2xl rounded-lg overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-300 z-50">
+              <img src={Icon} alt="my image"/>
+            </div>
+
             <motion.div
               className="w-full h-full cursor-pointer"
               initial={{ clipPath: shapes[currShape] }}
@@ -58,11 +62,13 @@ const Navbar = () => {
               onTouchStart={handleHoverStart}
               onTouchEnd={handleHoverEnd}
             >
-              <img
-                src={Icon}
-                alt="my Image"
-                className="w-full h-full object-cover"
-              />
+              <a href="#home">
+                <img
+                  src={Icon}
+                  alt="my Image"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </a>
             </motion.div>
           </motion.div>
 

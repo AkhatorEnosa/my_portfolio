@@ -13,7 +13,7 @@ const Left = () => {
   const { theme, themeHandler } = context;
 
   return (
-    <section className="relative lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 lg:px-12">
+    <section id="home" className="relative lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 lg:px-12">
       <div>
         <header className="relative w-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           {/* user data  */}
