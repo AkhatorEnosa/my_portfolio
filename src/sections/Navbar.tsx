@@ -42,12 +42,13 @@ const Navbar = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0 }}
-        className="fixed left-0 top-0 w-full flex justify-between py-4 px-2 md:px-10 lg:bg-none z-40">
+        className="fixed left-0 top-0 w-full flex justify-between py-4 px-2 md:px-10 lg:bg-none z-40 md:z-30 md:hover:z-40">
           {/* user image */}
           <motion.div
             className="group size-10 lg:w-14 lg:h-14 z-40"
           >
-            <div className="fixed left-20 top-14 w-0 group-hover:w-56 shadow-2xl rounded-lg overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-300 z-50">
+            {/* expanded icon image */}
+            <div className="fixed left-20 top-14 lg:left-32 w-0 group-hover:w-56 shadow-2xl rounded-lg overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-150 z-50">
               <img src={Icon} alt="my image"/>
             </div>
 
