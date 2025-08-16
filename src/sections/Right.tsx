@@ -30,18 +30,20 @@ const Right = () => {
                 transition={{ duration: 0.5, delay: 2.5 }}
                 className="text-base py-10 lg:py-0"
             >
-            <motion.h1
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.5 }}
-                className="w-full text-2xl font-bold tracking-widest uppercase lg:hidden">About</motion.h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1.5 }}
+                    className="w-full text-2xl font-bold tracking-widest uppercase lg:hidden">
+                    About
+                </motion.h1>
 
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ amount: 0.2 }}
-                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 tracking-wide"
+                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-sm tracking-wide"
                 >
                         
                     <motion.p 
@@ -54,14 +56,27 @@ const Right = () => {
                             repeatType: "reverse",
                             ease: "easeInOut"
                         }}
-                        className="font-semibold dark:text-[#f9fafb] text-2xl inline-block origin-bottom mr-2 hover:cursor-pointer">👋🏽</motion.p> Hey there, I am a <span className="font-semibold dark:text-[#f9fafb]">Frontend Developer</span> with a degree in Computer Science, and I love building web experiences that are <span className="font-semibold dark:text-[#f9fafb]">smooth, intuitive, and built to last</span>. My toolbox includes <span className="font-semibold dark:text-[#f9fafb]">React, TypeScript, and JavaScript</span> for bringing ideas to life, <span className="font-semibold dark:text-[#f9fafb]">Motion</span> for adding that extra polish and animations, and <span className="font-semibold dark:text-[#f9fafb]">TailwindCSS</span> to make styling fast and fun. When web apps or sites need to handle complex state, I use <span className="font-semibold dark:text-[#f9fafb]">Redux Toolkit</span> or React's <span className="font-semibold dark:text-[#f9fafb]">Context API</span>, whichever fits best.
+                        className="font-semibold dark:text-[#f9fafb] text-xl inline-block origin-bottom mr-2 hover:cursor-pointer">👋🏽
+                        </motion.p> 
+                        {/* Hey there, I am a <span className="font-semibold dark:text-[#f9fafb]">Frontend Developer</span> with a degree in Computer Science, and I love building web experiences that are <span className="font-semibold dark:text-[#f9fafb]">smooth, intuitive, and built to last</span>. My toolbox includes <span className="font-semibold dark:text-[#f9fafb]">React, TypeScript, and JavaScript</span> for bringing ideas to life, <span className="font-semibold dark:text-[#f9fafb]">Motion</span> for adding that extra polish and animations, and <span className="font-semibold dark:text-[#f9fafb]">TailwindCSS</span> to make styling fast and fun. When web apps or sites need to handle complex state, I use <span className="font-semibold dark:text-[#f9fafb]">Redux Toolkit</span> or React's <span className="font-semibold dark:text-[#f9fafb]">Context API</span>, whichever fits best. */}
+
+                        Hey there! My journey in tech began with a fascination for building things with code. As a kid, I was captivated by how websites worked and wanted to create my own, which sparked my passion for web development. That curiosity led me to pursue a <span className="font-semibold dark:text-[#f9fafb]">degree in Computer Science</span> , where I honed my skills and learned the foundations of programming, setting the stage for my career.
+
+                        {/* <p className="mt-4">
+                        I often work with <span className="font-semibold dark:text-[#f9fafb]">APIs</span> to fetch and manage data in ways that make apps feel alive and when a project needs a little backend muscle, I use <span className="font-semibold dark:text-[#f9fafb]">Supabase</span> and <span className="font-semibold dark:text-[#f9fafb]">PostgreSQL</span> to make sure everything runs smoothly behind the scenes.
+                        </p> */}
 
                         <p className="mt-4">
-                        I often work with <span className="font-semibold dark:text-[#f9fafb]">APIs</span> to fetch and manage data in ways that make apps feel alive and when a project needs a little backend muscle, I use <span className="font-semibold dark:text-[#f9fafb]">Supabase</span> and <span className="font-semibold dark:text-[#f9fafb]">PostgreSQL</span> to make sure everything runs smoothly behind the scenes.
+                            Currently, I am a <span className="font-semibold dark:text-[#f9fafb]">Frontend Developer</span> crafting smooth, intuitive, and reliable web experiences. My go-to stack includes <span className="font-semibold dark:text-[#f9fafb]">React, TypeScript, and JavaScript</span> to bring ideas to life, <span className="font-semibold dark:text-[#f9fafb]">Motion</span> for polished animations, and <span className="font-semibold dark:text-[#f9fafb]">TailwindCSS</span> for fast, fun styling. I manage complex state with <span className="font-semibold dark:text-[#f9fafb]">Redux Toolkit or Context API</span>, depending on the project needs. I also work with <span className="font-semibold dark:text-[#f9fafb]">APIs</span> to make apps feel dynamic and leverage <span className="font-semibold dark:text-[#f9fafb]">Supabase and PostgreSQL</span> for backend support to ensure everything runs seamlessly.
                         </p>
 
+
+
                         <p className="mt-4">
-                        At the end of the day, I care about solving real world problems with clean, thoughtful code solutions, no overengineering, just stuff that works. I am always learning, always tinkering, and open to <span className="font-semibold dark:text-[#f9fafb]">collaborating with others</span> to build websites/web apps people actually enjoy using.</p>
+                        {/* At the end of the day, I care about solving real world problems with clean, thoughtful code solutions, no overengineering, just stuff that works. I am always learning, always tinkering, and open to <span className="font-semibold dark:text-[#f9fafb]">collaborating with others</span> to build websites/web apps people actually enjoy using. */}
+                        
+                         Looking ahead, I am driven to solve real world problems with clean, thoughtful code that makes a lasting impact. My goal is to build web solutions that not only delight users but also contribute to meaningful, world changing solutions. I am always learning, tinkering, and eager to collaborate on projects that push boundaries and create value.
+                        </p>
                 </motion.div>
             </motion.div>
 

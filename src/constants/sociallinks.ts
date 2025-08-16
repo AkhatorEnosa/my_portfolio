@@ -1,4 +1,4 @@
-import CV from '../assets/osakhogba.cv.pdf';
+import CV from '../assets/osakhogba.resume.pdf';
 
 export const SOCIALLINKS = [
     {
