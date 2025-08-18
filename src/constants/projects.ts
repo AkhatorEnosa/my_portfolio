@@ -23,7 +23,7 @@ export const PROJECTS = [
         tag: ["ReactJS", "Tanstack Query", "Redux Toolkit", "TailwindCSS", "Supabase"],
         url: "https://soozeer.netlify.app/",
         group: "web applications",
-        construction: true
+        construction: false
     },
     {
         title: "mynoet",

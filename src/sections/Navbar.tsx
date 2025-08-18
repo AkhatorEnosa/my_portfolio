@@ -42,7 +42,7 @@ const Navbar = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0 }}
-        className="fixed left-0 top-0 w-full flex justify-between py-4 px-2 md:px-10 lg:bg-none z-40 md:z-30 md:hover:z-40">
+        className="fixed left-0 top-0 w-full flex justify-between py-4 px-2 md:px-10 lg:bg-none z-40 md:z-30 md:hover:z-40 lg:z-50">
           {/* user image */}
           <motion.div
             className="group size-10 lg:w-14 lg:h-14 z-40"

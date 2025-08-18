@@ -1,12 +1,14 @@
+import { Tooltip } from "@mui/material";
 import { motion } from "framer-motion";
+import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
 
 interface ProjectCardProps {
   title: string,
   desc: string,
   tech: string[],
-    url: string,
-    imgSrc: string,
-    construction: boolean,
+  url: string,
+  imgSrc: string,
+  construction: boolean,
 }
 
 const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCardProps) => {
@@ -29,9 +31,14 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
                 {/* <a href={url} target="_blank" className="text-sm text-[#FF6B6B]">View Project</a> */}
             </div>
             <div className="relative w-full md:w-fit md:h-full md:col-span-2 flex justify-center items-start">
-              {construction && <span className="absolute size-6 lg:opacity-0 lg:group-hover:opacity-100 flex justify-center items-center bg-yellow-300 rounded-full border-[1px] border-black dark:text-black right-0 -top-2 shadow-lg text-xs animate-pulse z-20 transition-opacity duration-300" title="Under construction">
-                <i className="bi bi-bricks"></i>
-              </span>}
+              {
+                construction && 
+                <Tooltip title="possible future updates" placement="bottom" arrow>
+                  <span className="absolute size-6 lg:opacity-0 lg:group-hover:opacity-100 flex justify-center items-center bg-yellow-500 rounded-full border-[1px] border-black dark:text-black right-0 -top-2 shadow-lg text-xs z-20 transition-opacity duration-300">
+                    <NotificationsActiveOutlinedIcon sx={{ fontSize: 20 }}></NotificationsActiveOutlinedIcon>
+                  </span>
+                </Tooltip>
+              }
               <div className="w-full h-48 dark:border-[#f9fafb]/20 rounded-lg md:rounded-3xl md:border-[1px] border-[#1f2937]/20 overflow-hidden">
                   <img src={imgSrc} alt="Project Image" className="w-full h-full object-cover scale-125 group-hover:scale-100 transition-transform duration-300"/>
               </div>
