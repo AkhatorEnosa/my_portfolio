@@ -2,18 +2,85 @@ import NavLink from "../components/NavLink"
 import SocialLink from "../components/SocialLink"
 // import cv from '../assets/osakhogba.pdf';
 import { motion } from "framer-motion"
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { NAVLINKS } from "../constants/navlinks";
 import { SOCIALLINKS } from "../constants/sociallinks";
+import Icon from "../assets/icon.webp";
+
+type ShapeKey = "octagon" | "circle" | "pentagon";
+
+const shapes: Record<ShapeKey, string> = {
+  octagon: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+  circle: "circle(50% at 50% 50%)",
+  pentagon: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)",
+};
 
 const Left = () => {
-  const context = useContext(AppContext);
+  const { setSelectedSection, theme, themeHandler } = useContext(AppContext);
+      
 
-  const { theme, themeHandler } = context;
+  const [currShape, setCurrShape] = useState<ShapeKey>("circle");
+  const [isHovering, setIsHovering] = useState<boolean>(false);
+
+  // Array of shape keys to cycle through
+  const shapeKeys = Object.keys(shapes) as ShapeKey[];
+  
+  useEffect(() => {
+    if (!isHovering) return;
+
+    const interval = setInterval(() => {
+      setCurrShape((prevShape) => {
+        const currentIndex = shapeKeys.indexOf(prevShape);
+        const nextIndex = (currentIndex + 1) % shapeKeys.length;
+        return shapeKeys[nextIndex];
+      });
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, [isHovering, shapeKeys]);
+
+  // Handle hover start and end
+  const handleHoverStart = () => setIsHovering(true);
+  const handleHoverEnd = () => setIsHovering(false);
 
   return (
-    <section id="home" className="relative lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 lg:px-12">
+    <section id="home" className="relative lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between py-12 md:py-16 lg:py-24 lg:px-12">
+    {/* user image */}
+      <motion.div
+        className="group fixed top-5 left-10 size-10 lg:w-14 lg:h-14 z-40"
+        onClick={() => {
+            setSelectedSection("home");
+            localStorage.setItem('section', "home")
+          }
+        }
+        onHoverStart={handleHoverStart}
+        onHoverEnd={handleHoverEnd}
+        onTouchStart={handleHoverStart}
+        onTouchEnd={handleHoverEnd}
+      >
+        {/* expanded icon image */}
+        <div className="fixed left-20 lg:left-40 top-14 w-0 group-hover:w-56 shadow-2xl rounded-lg overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-150 z-50">
+          <img src={Icon} alt="my image"/>
+        </div>
+
+        <motion.div
+          className="w-full h-full cursor-pointer"
+          initial={{ clipPath: shapes[currShape] }}
+          // Framer Motion animation for smooth clip-path transition
+          animate={{ clipPath: shapes[currShape] }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+          <a href="#home">
+            <img
+              src={Icon}
+              alt="my Image"
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+            />
+          </a>
+        </motion.div>
+      </motion.div>
+
       <div>
         <header className="relative w-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           {/* user data  */}
@@ -47,7 +114,7 @@ const Left = () => {
           transition={{ duration: 0.5, delay: 1.5 }}
           className="w-full mt-10 lg:mt-0 fixed flex left-0 bottom-4 justify-center items-center lg:relative lg:right-0 lg:left-0 lg:bottom-0 z-40">
           {/* nav links */}
-          <div className="w-fit lg:w-full flex lg:flex-col justify-center items-center lg:items-start dark:bg-[#e9edf1]/80 bg-[#2a3b52]/80 text-[#f9fafb] dark:text-[#2a3b52] lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-2 px-2 lg:py-0 lg:px-0 mt-10 gap-8 md:gap-16 lg:gap-2 z-40">
+          <div className="w-fit lg:w-full flex lg:flex-col justify-center items-center lg:items-start bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-2 px-2 lg:py-0 lg:px-0 mt-10 gap-8 md:gap-16 lg:gap-2 z-40">
             {
               NAVLINKS.map((navlink, index) => (
                 <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
@@ -71,7 +138,7 @@ const Left = () => {
             ))
           }
         </div>
-        <motion.button
+        {/* <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.5}}
@@ -80,7 +147,17 @@ const Left = () => {
           onClick={() => themeHandler()}>
             <p className={`w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill text-orange-300 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
             <p className={`absolute w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
-        </motion.button>
+        </motion.button> */}
+            <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 2.5}}
+                className="group fixed top-5 right-10 lg:relative lg:top-0 lg:right-0 w-fit flex bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb] text-inherit py-2 px-4 rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-clip z-50 duration-300 transition-all" 
+                aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
+                onClick={() => themeHandler()}>
+                  <p className={`w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill text-orange-300 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
+                  <p className={`absolute w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
+            </motion.button>
       </motion.div>
     </section>
   )

@@ -40,7 +40,7 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
                 </Tooltip>
               }
               <div className="w-full h-48 dark:border-[#f9fafb]/20 rounded-lg md:rounded-3xl md:border-[1px] border-[#1f2937]/20 overflow-hidden">
-                  <img src={imgSrc} alt="Project Image" className="w-full h-full object-cover scale-125 group-hover:scale-100 transition-transform duration-300"/>
+                  <img src={imgSrc} alt={`${title} image`} className="w-full h-full object-cover scale-125 group-hover:scale-100 transition-transform duration-300"/>
               </div>
             </div>
         </div>

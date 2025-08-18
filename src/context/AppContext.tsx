@@ -36,7 +36,7 @@ const result = lastPartOfUrl.slice(1)
 
 export function AppProvider({ children } : { children: ReactNode }) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
-    const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') ? localStorage.getItem('section') : 'home')
+    const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') ? localStorage.getItem('section') : result)
     const [groupBy, setGroupBy] = useState("all")
     const [tabIndex, setTabIndex] = useState(0)
 
