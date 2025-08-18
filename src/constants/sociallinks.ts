@@ -23,7 +23,7 @@ export const SOCIALLINKS = [
         id: 4,
         title: "Soozeer",
         icon: "bi-globe",
-        url: "https://soozeer.netlify.app/#/aefea77c-748a-4850-bc28-5bc45f74a7ce"
+        url: "https://soozeer.netlify.app/#/Gosab"
     }, 
     {
         id: 5,

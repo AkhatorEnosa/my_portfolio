@@ -30,7 +30,7 @@ const lastPartOfUrl = splitUrl[splitUrl.length - 1]
 
 const result = lastPartOfUrl.slice(1)
   localStorage.setItem("section", result)
-// console.log(result)
+// console.log("result", result)
 
 
 

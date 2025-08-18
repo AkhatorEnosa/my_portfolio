@@ -25,19 +25,19 @@ export const TOOL_LIST = [
     },
     {
         name: "Supabase",
-        icon: "bi bi-file-earmark-code",
+        icon: "bi bi-server",
         url: "https://supabase.com/",
         description: "An open-source Firebase alternative",
     },
     {
         name: "Netlify",
-        icon: "bi bi-file-earmark-code",
+        icon: "bi bi-hdd-network",
         url: "https://www.netlify.com/",
         description: "A platform for deploying and hosting static websites",
     },
     {
         name: "PostgreSQL",
-        icon: "bi bi-file-earmark-code",
+        icon: "bi bi-database",
         url: "https://www.postgresql.org/",
         description: "An open-source relational database management system",
     }
