@@ -93,18 +93,18 @@ const Left = () => {
           >
               Osakhogba Akhator
           </motion.h1>
-          <div className="flex flex-col mt-2 gap-2">
+          <div className="flex flex-col mt-2 gap-1 dark:text-[#f9fafb]/80">
             {/* description  */}
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-lg sm:text-2xl">Frontend Developer</motion.p>
+            className="text-lg sm:text-2xl uppercase">Frontend Developer</motion.p>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-            className="w-full text-sm sm:text-lg mt-2 dark:text-[#f9fafb]/70">Creating web experiences and turning designs into reality.</motion.p>
+            className="w-full text-md dark:text-[#f9fafb]/60">Creating web experiences and turning designs into reality.</motion.p>
           </div>
         </header>
 

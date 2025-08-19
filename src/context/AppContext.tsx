@@ -35,7 +35,7 @@ const result = lastPartOfUrl.slice(1)
 
 
 export function AppProvider({ children } : { children: ReactNode }) {
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark')
     const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') ? localStorage.getItem('section') : result)
     const [groupBy, setGroupBy] = useState("all")
     const [tabIndex, setTabIndex] = useState(0)
@@ -48,10 +48,12 @@ export function AppProvider({ children } : { children: ReactNode }) {
     }
   
     useEffect(() => {
-      const savedTheme = localStorage.getItem('theme');
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      localStorage.setItem('theme', theme); // Save theme to localStorage
+
+      const savedTheme = localStorage.getItem('theme'); // Retrieve saved theme from localStorage
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; // Check system preference for dark mode
       
-      const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+      const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light'); // Default to light if no saved theme and system preference is not dark
       setTheme(initialTheme);
       document.documentElement.classList.toggle('dark', initialTheme === 'dark');
 

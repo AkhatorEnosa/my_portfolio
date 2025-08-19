@@ -56,8 +56,9 @@ const Right = () => {
                             repeatType: "reverse",
                             ease: "easeInOut"
                         }}
-                        className="font-semibold dark:text-[#f9fafb] text-xl inline-block origin-bottom mr-2 hover:cursor-pointer">👋🏽
-                        </motion.p> 
+                        className="text-xl inline-block origin-bottom mr-2 hover:cursor-pointer">
+                            👋🏽
+                    </motion.p> 
                         {/* Hey there, I am a <span className="font-semibold dark:text-[#f9fafb]">Frontend Developer</span> with a degree in Computer Science, and I love building web experiences that are <span className="font-semibold dark:text-[#f9fafb]">smooth, intuitive, and built to last</span>. My toolbox includes <span className="font-semibold dark:text-[#f9fafb]">React, TypeScript, and JavaScript</span> for bringing ideas to life, <span className="font-semibold dark:text-[#f9fafb]">Motion</span> for adding that extra polish and animations, and <span className="font-semibold dark:text-[#f9fafb]">TailwindCSS</span> to make styling fast and fun. When web apps or sites need to handle complex state, I use <span className="font-semibold dark:text-[#f9fafb]">Redux Toolkit</span> or React's <span className="font-semibold dark:text-[#f9fafb]">Context API</span>, whichever fits best. */}
 
                         Hey there! My journey in tech began with a fascination for building things with code. As a kid, I was captivated by how websites worked and wanted to create my own, which sparked my passion for web development. That curiosity led me to pursue a <span className="font-semibold dark:text-[#f9fafb]">degree in Computer Science</span> , where I honed my skills and learned the foundations of programming, setting the stage for my career.
