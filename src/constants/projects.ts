@@ -1,18 +1,17 @@
-import soozeer from "../assets/soozeer.webp";
-// import Shaup from '../assets/shaup.webp'
-import Shaup from '../assets/e-store.webp'
-import Unscramble from '../assets/unscramble.webp'
-import myNoet from '../assets/mynoet.webp'
-import moovees from '../assets/moovees.webp'
-import doTaska from '../assets/dotaska.webp'
-import foodsco from '../assets/foodsco.webp'
-import Lokateur from '../assets/lokateur.webp'
-import splitter from '../assets/splitter.webp'
-import Genotype from '../assets/gmc.webp'
-import Techkare from '../assets/techkare.webp'
-import Kickrs from '../assets/kickrs.webp'
-import checkleest from '../assets/checkleest.webp'
-import walletity from '../assets/walletity.webp'
+import soozeer from "../assets/projects/soozeer.webp";
+import Shaup from '../assets/projects/e-store.webp'
+import Unscramble from '../assets/projects/unscramble.webp'
+import myNoet from '../assets/projects/mynoet.webp'
+import moovees from '../assets/projects/moovees.webp'
+import doTaska from '../assets/projects/dotaska.webp'
+import foodsco from '../assets/projects/foodsco.webp'
+import Lokateur from '../assets/projects/lokateur.webp'
+import splitter from '../assets/projects/splitter.webp'
+import Genotype from '../assets/projects/gmc.webp'
+import Techkare from '../assets/projects/techkare.webp'
+import Kickrs from '../assets/projects/kickrs.webp'
+import checkleest from '../assets/projects/checkleest.webp'
+import walletity from '../assets/projects/walletity.webp'
 
 export const PROJECTS = [
 

@@ -1,4 +1,4 @@
-import CV from '../assets/osakhogba.resume.pdf';
+import CV from '../assets/files/osakhogba.resume.pdf';
 
 export const SOCIALLINKS = [
     {
@@ -15,9 +15,9 @@ export const SOCIALLINKS = [
     },
     {
         id: 3,
-        title: "X(formerly Twitter)",
-        icon: "bi-twitter-x",
-        url: "https://x.com/5hin3_x"
+        title: "Dribbble",
+        icon: "bi-dribbble",
+        url: "https://dribbble.com/Gosab"
     },
     {
         id: 4,

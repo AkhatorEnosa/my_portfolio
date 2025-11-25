@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { NAVLINKS } from "../constants/navlinks";
 import { SOCIALLINKS } from "../constants/sociallinks";
-import Icon from "../assets/icon.webp";
+import Icon from "../assets/gallery/icon.webp";
 import { Tooltip } from "@mui/material";
 
 type ShapeKey = "octagon" | "circle" | "pentagon";
@@ -61,9 +61,9 @@ const Left = () => {
         onTouchEnd={handleHoverEnd}
       >
         {/* expanded icon image */}
-        <div className="fixed left-20 lg:left-40 top-14 w-0 group-hover:w-56 shadow-2xl rounded-lg overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-150 z-50">
+        <a href="#gallery" className="fixed left-20 lg:left-40 top-14 w-0 group-hover:w-56 shadow-2xl rounded-lg overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-150 z-50">
           <img src={Icon} alt="my image"/>
-        </div>
+        </a>
 
         <motion.div
           className="w-full h-full cursor-pointer"

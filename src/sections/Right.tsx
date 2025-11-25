@@ -10,6 +10,8 @@ import { TABS } from "../constants/tabs";
 import { PROJECTS } from "../constants/projects";
 import ProjectCard from "../components/ProjectCard";
 import TabButton from "../components/TabButton";
+import { GALLERY } from "../constants/gallery";
+import Modal from "../components/Modal";
 
 const Right = () => {
     const {groupBy, selectedSection} = useContext(AppContext);
@@ -169,6 +171,41 @@ const Right = () => {
                             ))
                         }
                     </div>
+                </div>
+            </motion.div>
+            
+
+          {/* Gallery section  */}
+            <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                viewport={{ once: true, amount: 0.2 }}
+                id="gallery"
+            > 
+                <motion.h1
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 2.8 }}
+                    className=" w-full text-2xl font-bold tracking-widest uppercase">Gallery</motion.h1>
+                    
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-fit mt-5">
+                    {
+                        GALLERY.map((item, index) => (
+                            <div className="group h-52 overflow-clip rounded-md" key={index}>
+                                <motion.div
+                                    className="h-full w-full z-40 break-words"
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                                    viewport={{ amount: 0.2 }}
+                                >
+                                    <Modal imgSrc={item.img} alt={item.img+"alt"} index={index}/>
+                                </motion.div>
+                            </div>
+                        ))
+                    }
                 </div>
             </motion.div>
 
