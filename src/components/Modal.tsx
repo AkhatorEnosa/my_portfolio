@@ -18,20 +18,25 @@ const Modal = ({ imgSrc, alt, index } : { imgSrc: string, alt: string, index: nu
   }, [show])
 
     return (
-    <div className={` ${show ? 'fixed top-0 left-0 flex w-screen h-screen text-white justify-center items-center z-50 cursor-pointer' : 'flex text-white justify-center items-center z-50 cursor-pointer'}`} onClick={() => setShow(!show)}>
-            <div className={show ? "absolute top-0 left-0 h-full w-full bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 backdrop-blur-sm" : ""}></div>
-            {/* <img src={imgSrc} alt={alt} className="w-3/12 scale-150" /> */}
-            
-        <motion.img
-            src={imgSrc} 
-            alt={alt}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            viewport={{ amount: 0.2 }}
-            className={`${show && "w-3/12 z-50"}`}
-        />
-    </div>
+
+        <motion.div
+            key={index}
+            className={show ? "fixed top-0 left-0 flex w-screen h-screen text-white justify-center items-center z-50 cursor-pointer" : "relative group h-52 overflow-clip rounded-md z-20 break-words"}
+            onClick={() => setShow(!show)}
+        >
+            <div className={show ? "absolute top-0 left-0 h-full w-full bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 backdrop-blur-sm z-10" : "absolute opacity-0 group-hover:opacity-100 h-full w-full bg-[#f9fafb]/50 dark:bg-[#2a3b52]/50 flex justify-center items-center top-0 left-0 z-50"}>
+                <i className={`bi bi-eye ${show && "hidden"} size-5 p-4 hover:p-6 animate-bounce bg-[#f9fafb] dark:bg-[#2a3b52] rounded-full text-center flex justify-center items-center cursor-pointer transition-all duration-150`}></i>
+            </div>
+            <motion.img
+                src={imgSrc} 
+                alt={alt}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ amount: 0.2 }}
+                className={show ? "md:h-[100vh] z-40" : `w-fit group-hover:cursor-pointer scale-50 transition-all duration-300 z-20`}
+            />
+        </motion.div>
     )
 }
 

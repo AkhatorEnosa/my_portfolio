@@ -8,12 +8,12 @@ import CursorTracker from "./components/CursorTracker";
 function App() {
   const {theme} = useContext(AppContext);
   return (
-    <div className="mx-auto min-h-screen max-w-[1800px] px-6 md:px-36 lg:px-12 bg-[#f9fafb] dark:bg-[#1F2937] text-[#000000] dark:text-[#f9fafb]">
+    <div className="mx-auto min-h-screen max-w-[1800px] px-0 md:px-36 lg:px-12 bg-[#f9fafb] dark:bg-[#1F2937] text-[#000000] dark:text-[#f9fafb]">
       <div className={`${theme === 'dark' ? "bg-[#000000]" : "bg-[#f5f5f5]"} fixed w-screen h-screen left-0 top-0 z-10`}>
         <CursorTracker/>
       </div>
       {/* <Navbar /> */}
-      <div className="relative flex flex-col lg:flex-row lg:justify-between gap-10 z-30">
+      <div className="relative flex flex-col lg:flex-row lg:justify-between gap-5 lg:gap-10 z-30">
         <Left />
         <Right />
       </div>

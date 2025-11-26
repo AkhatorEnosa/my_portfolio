@@ -46,7 +46,7 @@ const Left = () => {
   const handleHoverEnd = () => setIsHovering(false);
 
   return (
-    <section id="home" className="relative lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between py-12 md:py-16 lg:py-24 lg:px-12">
+    <section id="home" className="relative h-screen w-screen lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between py-12 md:py-16 lg:py-24 lg:px-12">
     {/* user image */}
       <motion.div
         className="group fixed top-5 left-10 size-10 lg:w-14 lg:h-14 z-40"
@@ -61,7 +61,7 @@ const Left = () => {
         onTouchEnd={handleHoverEnd}
       >
         {/* expanded icon image */}
-        <a href="#gallery" className="fixed left-20 lg:left-40 top-14 w-0 group-hover:w-56 shadow-2xl rounded-lg overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-150 z-50">
+        <a href="#gallery" className="fixed left-20 lg:left-40 top-14 w-0 group-hover:w-56 shadow-2xl rounded-lg overflow-hidden opacity-0 lg:group-hover:opacity-100 ease-in-out transition-all duration-150 z-50">
           <img src={Icon} alt="my image"/>
         </a>
 
@@ -115,7 +115,7 @@ const Left = () => {
           transition={{ duration: 0.5, delay: 1.5 }}
           className="w-full mt-10 lg:mt-0 fixed flex left-0 bottom-4 justify-center items-center lg:relative lg:right-0 lg:left-0 lg:bottom-0 z-40">
           {/* nav links */}
-          <div className="w-fit lg:w-full flex lg:flex-col justify-center items-center lg:items-start bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-2 px-2 lg:py-0 lg:px-0 mt-10 gap-8 md:gap-16 lg:gap-2 z-40">
+          <div className="w-fit lg:w-full flex lg:flex-col justify-center items-center lg:items-start bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-2 px-2 lg:py-0 lg:px-0 mt-10 gap-2 sm:gap-8 md:gap-16 lg:gap-2 z-40">
             {
               NAVLINKS.map((navlink, index) => (
                 <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
