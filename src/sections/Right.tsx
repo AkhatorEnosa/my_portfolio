@@ -45,7 +45,7 @@ const Right = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ amount: 0.2 }}
-                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-sm tracking-wide"
+                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-xs sm:text-sm tracking-wide"
                 >
                         
                     <motion.p 
@@ -90,7 +90,7 @@ const Right = () => {
                     transition={{ duration: 0.5, delay: 2.8 }}
                     className="w-full text-2xl font-bold tracking-widest uppercase">What I work with</motion.h1>
 
-                <div className="grid grid-cols-2 gap-10 mt-5">
+                <div className="grid md:grid-cols-2 gap-10 mt-5">
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}

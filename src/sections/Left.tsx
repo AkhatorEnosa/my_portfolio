@@ -46,7 +46,7 @@ const Left = () => {
   const handleHoverEnd = () => setIsHovering(false);
 
   return (
-    <section id="home" className="relative h-screen w-screen lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between py-12 md:py-16 lg:py-24 lg:px-12">
+    <section id="home" className="relative h-screen w-screen justify-center items-center lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between py-12 md:py-16 lg:py-24 lg:px-12">
     {/* user image */}
       <motion.div
         className="group fixed top-5 left-10 size-10 lg:w-14 lg:h-14 z-40"
@@ -82,14 +82,14 @@ const Left = () => {
         </motion.div>
       </motion.div>
 
-      <div>
+      <div className="w-full h-full flex flex-col justify-center items-center lg:justify-between lg:items-center gap-6 lg:gap-0">
         <header className="relative w-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           {/* user data  */}
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-6xl sm:text-8xl lg:text-6xl font-bold mt-10 md:mt-0 leading-14"
+            className="text-4xl sm:text-8xl lg:text-6xl font-bold mt-10 md:mt-0 leading-14"
           >
               Osakhogba Akhator
           </motion.h1>
@@ -104,7 +104,7 @@ const Left = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-            className="w-full text-md dark:text-[#f9fafb]/60">Creating web experiences and turning designs into reality.</motion.p>
+            className="w-full text-xs md:text-md mt-5 px-4 md:px-0 dark:text-[#f9fafb]/60">Creating web experiences and turning designs into reality.</motion.p>
           </div>
         </header>
 
@@ -123,13 +123,44 @@ const Left = () => {
             }
           </div>
         </motion.nav>
+
+        {/* social links for small screens  */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 2 }}
+          className="w-full flex md:hidden mt-12 lg:mt-10 justify-center lg:justify-between items-center gap-4 text-3xl lg:text-2xl"
+        >
+          {/* social links */} 
+          <div className="flex gap-6 ">
+            {
+              SOCIALLINKS.map((sociallink) => (
+                <SocialLink key={sociallink.id} url={sociallink.url} title={sociallink.title} icon={sociallink.icon}/>
+              ))
+            }
+          </div>
+          
+          {/* Theme toggle button for mobile */}
+            <Tooltip title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} placement="bottom" arrow>
+              <motion.button
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 2.5}}
+                  className="group fixed top-5 right-10 lg:relative lg:top-0 lg:right-0 w-fit flex bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb] text-inherit py-2 px-4 justify-center items-center rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-clip z-50 duration-300 transition-all" 
+                  aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
+                  onClick={() => themeHandler()}>
+                    <p className={`w-fit text-xs md:text-sm flex justify-center items-center lg:gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}><span className="hidden lg:flex">Light Mode</span><i className={`text-2xl bi bi-brightness-high-fill text-orange-400 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
+                    <p className={`absolute w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}><span className="hidden lg:flex">Dark Mode</span><i className={`text-xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
+              </motion.button>
+            </Tooltip>
+        </motion.div>
       </div>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 2 }}
-        className="w-full flex mt-12 lg:mt-10 justify-center lg:justify-between items-center gap-4 text-3xl lg:text-2xl"
+        className="hidden w-full md:flex mt-12 lg:mt-10 justify-center lg:justify-between items-center gap-4 text-3xl lg:text-2xl"
       >
         {/* social links */} 
         <div className="flex gap-6 ">
@@ -139,16 +170,7 @@ const Left = () => {
             ))
           }
         </div>
-        {/* <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 2.5}}
-          className="group relative hidden lg:flex w-fit bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb] py-2 px-4 rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-hidden z-50 duration-300 transition-all" 
-          aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
-          onClick={() => themeHandler()}>
-            <p className={`w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}>Light Mode<i className={`text-2xl bi bi-brightness-high-fill text-orange-300 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
-            <p className={`absolute w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}>Dark Mode<i className={`text-xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
-        </motion.button> */}
+        
         {/* Theme toggle button for mobile */}
           <Tooltip title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} placement="bottom" arrow>
             <motion.button
