@@ -6,6 +6,12 @@ export default {
     './src/**/*.{jsx,tsx}' // Only React components
   ],
   theme: {
-    extend: {} // No extra config needed
+    extend: {}, // No extra config needed
+    screens: {
+      xs: '340px',
+      sm: '540px',
+      md: '768px',
+      lg: '1024px',
+    }
   }
 }

@@ -25,12 +25,12 @@ const Right = () => {
     }, [selectedSection]);
 
   return (
-        <main className="mt-5 px-6 lg:mt-0 lg:w-[52%] lg:py-14 lg:px-12">
+        <main className="mt-5 lg:mt-0 lg:w-[52%] lg:py-14">
             <motion.div id="about"
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 2.5 }}
-                className="text-base py-10 lg:py-0"
+                className="text-base py-10 lg:py-0 px-6 md:px-36 lg:px-12"
             >
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
@@ -83,14 +83,14 @@ const Right = () => {
                 </motion.div>
             </motion.div>
 
-            <div id="skills" className="py-10">
+            <div id="skills" className="py-10 px-6 md:px-36 lg:px-12">
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.8 }}
                     className="w-full text-2xl font-bold tracking-widest uppercase">What I work with</motion.h1>
 
-                <div className="grid md:grid-cols-2 gap-10 mt-5">
+                <div className="grid grid-cols-1 xs:grid-cols-2 gap-10 mt-5">
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ const Right = () => {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 3.8 }}
-                id="projects" className="py-10 relative"
+                id="projects" className="py-10 relative px-6 md:px-36 lg:px-12"
             >
                 <h1 className="w-full text-2xl font-bold tracking-widest uppercase">Projects</h1>
                 <div className="cards w-full flex flex-col gap-6 mt-5">
@@ -183,6 +183,7 @@ const Right = () => {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ once: true, amount: 0.2 }}
                 id="gallery"
+                className="px-6 md:px-36 lg:px-12"
             > 
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
@@ -199,27 +200,12 @@ const Right = () => {
                 </div>
             </motion.div>
 
-            <div className="w-full flex flex-col lg:mt-10 mb-10 pb-10 justify-center items-center text-center">
-                <p className="text-2xl mt-10">Let us work on something together!</p>
-                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse text-[#008080] dark:text-inherit">collaboration or just a chat!</a></p>
+            <div className="w-full flex flex-col mt-10 pb-24 px-6 md:px-36 lg:px-12 justify-center items-center text-center dark:bg-[#f9fafb] bg-[#1F2937] dark:text-[#000000] text-[#f9fafb]">
+                <p className="text-2xl font-semibold mt-10">Let us work on something together!</p>
+                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse dark:text-[#008080] text-inherit">collaboration or just a chat!</a></p>
             </div>
         </main>
   )
 }
 
 export default Right
-
-
-
-{/* <motion.div
-initial={{ opacity: 0, y: 50 }}
-animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.5, delay: 0.7 }}
-className="relative w-fit flex flex-col mt-5 gap-2">
-    <a href={cv} target="_blank" className="relative z-10">
-        <motion.button
-            whileTap={{ scale: 0.95 }}
-            className="resume-button w-fit p-3 rounded-lg bg-[#1F2937] text-[#f9fafb] dark:bg-[#f9fafb] dark:text-[#1F2937] hover:scale-105 hover:bg-[#008080] dark:hover:bg-[#008080] dark:hover:text-[#f9fafb] text-sm lg:text-base transition-all duration-300">Download CV</motion.button>
-    </a>
-    <i className="absolute cursor bi bi-cursor-fill top-5 right-10 text-[#f9fafb] dark:text-[#1F2937] z-30"></i>
-</motion.div> */}

@@ -82,14 +82,14 @@ const Left = () => {
         </motion.div>
       </motion.div>
 
-      <div className="w-full h-full flex flex-col justify-center items-center lg:justify-between lg:items-center gap-6 lg:gap-0">
-        <header className="relative w-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+      <div className="w-full h-full lg:h-fit flex flex-col justify-center items-center lg:justify-between lg:items-center gap-6 lg:gap-0">
+        <header className="relative px-6 md:px-36 lg:px-0 w-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           {/* user data  */}
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl sm:text-8xl lg:text-6xl font-bold mt-10 md:mt-0 leading-14"
+            className="text-5xl sm:text-8xl lg:text-6xl font-bold mt-10 md:mt-0 leading-14"
           >
               Osakhogba Akhator
           </motion.h1>
@@ -99,12 +99,12 @@ const Left = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-lg sm:text-2xl uppercase">Frontend Developer</motion.p>
+            className="text-lg xs:text-2xl uppercase">Frontend Developer</motion.p>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-            className="w-full text-xs md:text-md mt-5 px-4 md:px-0 dark:text-[#f9fafb]/60">Creating web experiences and turning designs into reality.</motion.p>
+            className="w-full text-sm xs:text-base sm:mt-5 px-4 md:px-0 dark:text-[#f9fafb]/60">Creating web experiences and turning designs into reality.</motion.p>
           </div>
         </header>
 
@@ -129,7 +129,7 @@ const Left = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 2 }}
-          className="w-full flex md:hidden mt-12 lg:mt-10 justify-center lg:justify-between items-center gap-4 text-3xl lg:text-2xl"
+          className="w-full flex lg:hidden mt-12 lg:mt-10 justify-center lg:justify-between items-center gap-4 text-3xl lg:text-2xl"
         >
           {/* social links */} 
           <div className="flex gap-6 ">
@@ -146,13 +146,25 @@ const Left = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 2.5}}
-                  className="group fixed top-5 right-10 lg:relative lg:top-0 lg:right-0 w-fit flex bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 dark:text-[#f9fafb] text-inherit py-2 px-4 justify-center items-center rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-clip z-50 duration-300 transition-all" 
+                  className="group fixed top-4 right-10 lg:relative lg:top-0 lg:right-0 bg-[#e9edf1]/80 dark:bg-[#2a3b52]/80 p-5 size-6 flex justify-center items-center rounded-full backdrop-blur-sm shadow-lg z-50 duration-300 transition-all" 
                   aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
                   onClick={() => themeHandler()}>
-                    <p className={`w-fit text-xs md:text-sm flex justify-center items-center lg:gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}><span className="hidden lg:flex">Light Mode</span><i className={`text-2xl bi bi-brightness-high-fill text-orange-400 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
-                    <p className={`absolute w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}><span className="hidden lg:flex">Dark Mode</span><i className={`text-xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
+                    <p className={`w-fit text-[10px] sm:text-xs md:text-sm flex justify-center items-center lg:gap-2 ${theme === 'dark' ? "-translate-x-30 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}><i className={`text-2xl bi bi-brightness-high-fill text-orange-400 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
+                    <p className={`absolute w-fit text-[10px] sm:text-xs md:text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}><i className={`text-xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
               </motion.button>
             </Tooltip>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2.5 }}
+          className="absolute w-full top-[90%] lg:hidden"
+        >
+          <a href="#about" aria-label="scroll-down" className="text-[10px] flex flex-col justify-center items-center gap-0 text-center text-inherit ">
+            <i className="bi bi-mouse text-xl animate-bounce"></i>
+            <p>Scroll Down</p>
+          </a>
         </motion.div>
       </div>
 
@@ -160,7 +172,7 @@ const Left = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 2 }}
-        className="hidden w-full md:flex mt-12 lg:mt-10 justify-center lg:justify-between items-center gap-4 text-3xl lg:text-2xl"
+        className="hidden w-full lg:flex mt-12 lg:mt-10 justify-center lg:justify-between items-center gap-4 text-3xl lg:text-2xl"
       >
         {/* social links */} 
         <div className="flex gap-6 ">
