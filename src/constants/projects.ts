@@ -25,11 +25,11 @@ export const PROJECTS = [
         construction: false
     },
     {
-        title: "mynoet",
+        title: "wrotenote",
         image: myNoet,
-        description: "myNoet is an application meticulously crafted to mirror the spirit of Google Keep, thoughtfully designed to provide users with a swift and seamless platform for capturing their ideas and thoughts with exceptional ease and efficiency, unencumbered by unnecessary complexities.",
-        tag: ["ReactJS", "Tanstack Query", "Redux Toolkit", "TailwindCSS", "Supabase"],
-        url: "https://mynoet.netlify.app/",
+        description: "wroteNote is an application meticulously crafted to mirror the spirit of Google Keep, thoughtfully designed to provide users with a swift and seamless platform for capturing their ideas and thoughts with exceptional ease and efficiency, unencumbered by unnecessary complexities.",
+        tag: ["ReactJS", "TailwindCSS", "Tanstack Query", "Redux Toolkit", "Supabase"],
+        url: "https://wrotenote.netlify.app/",
         group: "web applications",
         construction: false
     },
@@ -121,7 +121,7 @@ export const PROJECTS = [
         tag: ["html", "css", "javascript", "TailwindCSS", "API"],
         url: "https://techkare.netlify.app/",
         group: "web applications",
-        construction: true
+        construction: false
     },
     {
         title: "checkleest",
