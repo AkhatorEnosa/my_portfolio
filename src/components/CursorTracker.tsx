@@ -36,7 +36,7 @@ export default function CursorTracker() {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Custom cursor */}
       <motion.div
-        className="fixed top-0 left-0 h-96 w-96 rounded-full pointer-events-none bg-[#cfe7ff] dark:bg-[#2881ff] blur-[150px] opacity-20 z-50"
+        className="fixed top-0 left-0 h-96 w-96 rounded-full pointer-events-none bg-[#fff828] dark:bg-[#2881ff] blur-[150px] opacity-5 dark:opacity-60 z-50"
         animate={{
           x: position.x,
           y: position.y

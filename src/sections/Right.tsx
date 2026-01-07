@@ -200,9 +200,9 @@ const Right = () => {
                 </div>
             </motion.div>
 
-            <div className="w-full flex flex-col mt-10 pb-24 px-6 md:px-36 lg:px-12 justify-center items-center text-center dark:bg-[#f9fafb] bg-[#1F2937] dark:text-[#000000] text-[#f9fafb]">
+            <div className="w-full flex flex-col mt-10 pb-24 px-6 md:px-36 lg:px-12 justify-center items-center text-center text-[#000000] dark:text-[#f9fafb] lg:bg-inherit lg:dark:bg-inherit">
                 <p className="text-2xl font-semibold mt-10">Let us work on something together!</p>
-                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse dark:text-[#008080] text-inherit">collaboration or just a chat!</a></p>
+                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse text-[#008080] dark:text-yellow-200 ">collaboration or just a chat!</a></p>
             </div>
         </main>
   )
