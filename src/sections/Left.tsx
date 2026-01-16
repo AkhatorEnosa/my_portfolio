@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { NAVLINKS } from "../constants/navlinks";
 import { SOCIALLINKS } from "../constants/sociallinks";
-import Icon from "../assets/gallery/icon.webp";
+import Icon from "../assets/gallery/icon1.webp";
 import { Tooltip } from "@mui/material";
 
 type ShapeKey = "octagon" | "circle" | "pentagon";

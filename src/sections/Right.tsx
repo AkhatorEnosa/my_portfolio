@@ -97,7 +97,7 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3 }}
                         className="flex flex-col gap-2"
                     >
-                        <h2 className="leading-5 md:text-lg font-bold">Languages</h2>
+                        <h2 className="leading-5 md:text-lg font-bold">Languages & Runtime</h2>
                         <ul className="flex flex-col gap-2">
                             {LANGUAGES.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index}/></li>

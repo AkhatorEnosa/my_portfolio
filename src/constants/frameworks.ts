@@ -1,44 +1,62 @@
 export const FRAMEWORKS = [
     {
-        name: "React",
-        icon: "bi bi-filetype-jsx",
-        url: "https://reactjs.org/",
-        description: "A JavaScript library for building user interfaces",
-    },
-    {
         name: "Next.js",
         icon: "bi bi-filetype-jsx",
         url: "https://nextjs.org/",
-        description: "The React Framework for Production",
+        description: "The React framework for high-performance production applications.",
+    },
+    {
+        name: "React",
+        icon: "bi bi-filetype-jsx",
+        url: "https://react.dev/",
+        description: "A JavaScript library for building component-based user interfaces.",
+    },
+    {
+        name: "Express",
+        icon: "bi bi-cpu",
+        url: "https://expressjs.com/",
+        description: "Fast, unopinionated, minimalist web framework for Node.js.",
+    },
+    {
+        name: "Clerk",
+        icon: "bi bi-person-lock", 
+        url: "https://clerk.com/",
+        description: "The most comprehensive User Management and Authentication solution.",
+    },
+    {
+        name: "shadcn/ui",
+        icon: "bi bi-box-seam",
+        url: "https://ui.shadcn.com/",
+        description: "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    },
+    {
+        name: "Material UI",
+        icon: "bi bi-layers",
+        url: "https://mui.com/",
+        description: "A comprehensive suite of UI tools that implement Google's Material Design.",
     },
     {
         name: "Tailwind CSS",
-        icon: "bi bi-filetype-css",
+        icon: "bi bi-palette",
         url: "https://tailwindcss.com/",
-        description: "A utility-first CSS framework for creating custom designs",
+        description: "A utility-first CSS framework for rapid UI development.",
     },
     {
-        name: "Bootstrap",
-        icon: "bi bi-bootstrap",
-        url: "https://getbootstrap.com/",
-        description: "The most popular HTML, CSS, and JS library in the world",
-    },
-    { 
-        name: "Tanstack Query",
-        icon: "bi bi-file-earmark-code",
+        name: "TanStack Query",
+        icon: "bi bi-arrow-repeat",
         url: "https://tanstack.com/query/latest",
-        description: "Powerful data fetching and state management for React",
+        description: "Powerful asynchronous state management and data fetching.",
     },
     {
-        name: "Motion(formerly Framer Motion)",
-        icon: "bi bi-file-earmark-code",
-        url: "https://www.framer.com/docs/",
-        description: "A production-ready motion library for React",
-    },
-    {  
         name: "Redux Toolkit",
-        icon: "bi bi-file-earmark-code",
+        icon: "bi bi-diagram-3",
         url: "https://redux-toolkit.js.org/",
-        description: "The official, opinionated, batteries-included toolset for efficient Redux development",
+        description: "The official toolset for efficient global state management.",
+    },
+    {
+        name: "Motion",
+        icon: "bi bi-magic",
+        url: "https://motion.dev/",
+        description: "A production-ready animation library for React and the web.",
     }
 ];
