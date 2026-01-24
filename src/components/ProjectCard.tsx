@@ -15,8 +15,8 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
   return (
     <motion.a 
       layout
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, filter: 'blur(4px)' }}
+      whileInView={{ opacity: 1, filter: 'blur(0px)' }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ amount: 0.2 }}
       aria-label={title}
