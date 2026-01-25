@@ -148,7 +148,7 @@ const Right = () => {
             >
                 <h1 className="w-full text-2xl font-bold tracking-widest uppercase">Projects</h1>
                 <div className="cards w-full flex flex-col gap-6 mt-5">
-                    <div className="tabs md:w-fit flex gap-2 lg:gap-3 items-center overflow-x-scroll py-3 px-3 rounded-full md:sticky top-4 bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 backdrop-blur-sm z-30">
+                    <div className="tabs md:w-fit flex gap-2 lg:gap-3 items-center overflow-x-scroll py-3 px-3 rounded-full md:sticky top-4 bg-[#f9fafb]/80 dark:bg-[#787878]/50 backdrop-blur-sm z-30">
                         {TABS.map((tab, index) => (
                             <TabButton 
                                 key={index}
@@ -170,11 +170,6 @@ const Right = () => {
 
           {/* Gallery section  */}
             <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                viewport={{ once: true, amount: 0.2 }}
                 id="gallery"
                 className="px-6 md:px-36 lg:px-12"
             > 
@@ -182,7 +177,8 @@ const Right = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.8 }}
-                    className=" w-full text-2xl font-bold tracking-widest uppercase">Gallery</motion.h1>
+                    className=" w-full text-2xl font-bold tracking-widest uppercase"
+                >Gallery</motion.h1>
                     
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 h-fit mt-5">
                     {
