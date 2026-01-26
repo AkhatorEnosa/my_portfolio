@@ -23,6 +23,7 @@ const Left = () => {
 
   const [currShape, setCurrShape] = useState<ShapeKey>("circle");
   const [isHovering, setIsHovering] = useState<boolean>(false);
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   // Array of shape keys to cycle through
   const shapeKeys = Object.keys(shapes) as ShapeKey[];
@@ -41,9 +42,13 @@ const Left = () => {
     return () => clearInterval(interval);
   }, [isHovering, shapeKeys]);
 
-  // Handle hover start and end
+  // Handle hover start and end for logo image
   const handleHoverStart = () => setIsHovering(true);
   const handleHoverEnd = () => setIsHovering(false);
+
+  const handleMenuToggle = () => {
+    setOpenMenu(!openMenu);
+  }
 
   return (
     <section id="home" className="relative h-screen w-screen justify-center items-center lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between py-12 md:py-16 lg:py-24 lg:px-12">
@@ -113,14 +118,28 @@ const Left = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
-          className="w-full mt-10 lg:mt-0 fixed flex left-0 bottom-4 justify-center items-center lg:relative lg:right-0 lg:left-0 lg:bottom-0 z-40">
-          {/* nav links */}
-          <div className="w-fit lg:w-full flex lg:flex-col justify-center items-center lg:items-start bg-[#f9fafb]/80 dark:bg-[#787878]/50 lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-2 px-2 lg:py-0 lg:px-0 mt-10 gap-2 sm:gap-8 md:gap-16 lg:gap-2 z-40">
+          className="w-full mx-10 sm:mx-0 mt-10 lg:mt-0 fixed flex left-0 bottom-4 sm:justify-center sm:items-center lg:relative lg:right-0 lg:left-0 lg:bottom-0 z-40">
+          {/* nav links sm to lg */}
+          <div className="hidden sm:flex w-fit lg:w-full lg:flex-col justify-center items-center lg:items-start bg-[#f9fafb]/80 dark:bg-[#787878]/50 lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:shadow-none rounded-full backdrop-blur-sm shadow-lg py-2 px-2 lg:py-0 lg:px-0 mt-10 gap-2 sm:gap-4 lg:gap-2 z-40">
             {
               NAVLINKS.map((navlink, index) => (
                 <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
               ))
             }
+          </div>
+
+          {/* nav links < sm */}
+          <div className="relative flex sm:hidden size-[70px] border-[5px] border-[#f5f5f5] dark:border-[#000000] lg:flex-col justify-center items-center lg:items-start text-white dark:text-black dark:bg-[#f5f5f5]/80 bg-[#1f2937] rounded-full backdrop-blur-sm shadow-lg z-40" onClick={handleMenuToggle} aria-label="menu button">
+            <span className={`bi ${openMenu ? 'bi-x-lg text-xl -rotate-[180deg]' : 'bi-list text-2xl rotate-0'} transition-all duration-300`}></span>
+
+            {/* menu items  */}
+            <div className={`absolute w-[150px] p-[2px] overflow-hidden sm:hidden -left-10 bottom-20 w-fit h-fit flex flex-col justify-center items-center bg-[#f9fafb]/90 dark:bg-[#000000] rounded-lg backdrop-blur-sm shadow-lg origin-[center_150%] ${!openMenu ? "rotate-[180deg] opacity-0" : "rotate-0 scale-100"} z-30 transition-all duration-300`}>
+              {
+                NAVLINKS.map((navlink, index) => (
+                  <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
+                ))
+              }
+            </div>
           </div>
         </motion.nav>
 

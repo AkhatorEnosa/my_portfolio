@@ -171,7 +171,7 @@ const Right = () => {
           {/* Gallery section  */}
             <motion.div 
                 id="gallery"
-                className="px-6 md:px-36 lg:px-12"
+                className="px-6 md:px-36 lg:px-12 py-10"
             > 
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
