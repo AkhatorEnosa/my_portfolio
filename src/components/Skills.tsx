@@ -16,7 +16,7 @@ const Skills = ({name, index, url, icon, desc} : SkillsProps) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ amount: 0.2 }}
     
-      href={url} target="_blank" key={index} className="group flex gap-2 text-xs sm:text-sm hover:text-[#008080] dark:text-[#f9fafb]/70 dark:hover:text-inherit hover:font-semibold capitalize transition-all duration-300" title={desc}>
+      href={url} target="_blank" key={index} className="group flex gap-2 text-xs xs:text-sm hover:text-[#008080] dark:text-[#f9fafb]/70 dark:hover:text-inherit hover:font-semibold capitalize transition-all duration-300" title={desc}>
     {
         icon && <i className={`${icon} group-hover:-translate-x-2 transition-all duration-300`}></i>
     } 

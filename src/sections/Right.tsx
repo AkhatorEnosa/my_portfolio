@@ -36,7 +36,7 @@ const Right = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.5 }}
-                    className="w-full text-2xl font-bold tracking-widest uppercase lg:hidden">
+                    className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase lg:hidden">
                     About
                 </motion.h1>
 
@@ -45,7 +45,7 @@ const Right = () => {
                     whileInView={{ opacity: 1, filter: 'blur(0px)' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ amount: 0.2 }}
-                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-xs sm:text-sm tracking-wide"
+                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-xs sm:text-sm text-center sm:text-left tracking-wide"
                 >
                         
                     <motion.p 
@@ -81,9 +81,9 @@ const Right = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.8 }}
-                    className="w-full text-2xl font-bold tracking-widest uppercase">What I work with</motion.h1>
+                    className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase">What I work with</motion.h1>
 
-                <div className="grid grid-cols-1 xs:grid-cols-2 gap-10 mt-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 text-center sm:text-left gap-10 mt-5">
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ const Right = () => {
                         className="flex flex-col gap-2"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Languages & Runtime</h2>
-                        <ul className="flex flex-col gap-2">
+                        <ul className="flex flex-col items-center sm:items-start gap-2">
                             {LANGUAGES.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index}/></li>
                             ))}
@@ -104,7 +104,7 @@ const Right = () => {
                         className="flex flex-col gap-2"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Frameworks & Libraries</h2>
-                        <ul className="flex flex-col gap-2">
+                        <ul className="flex flex-col items-center sm:items-start gap-2">
                             {FRAMEWORKS.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
                             ))}
@@ -117,7 +117,7 @@ const Right = () => {
                         className="flex flex-col gap-2"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Tools & Softwares</h2>
-                        <ul className="flex flex-col gap-2">
+                        <ul className="flex flex-col items-center sm:items-start gap-2">
                             {TOOL_LIST.map((x, index) =>(
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
                             ))}
@@ -130,7 +130,7 @@ const Right = () => {
                         className="flex flex-col gap-2"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Soft Skills</h2>
-                        <ul className="flex flex-col gap-2">
+                        <ul className="flex flex-col items-center sm:items-start gap-2">
                             {SOFT_SKILLS.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
                             ))}
@@ -146,9 +146,9 @@ const Right = () => {
                 transition={{ duration: 0.5, delay: 3.8 }}
                 id="projects" className="py-10 relative px-6 md:px-36 lg:px-12"
             >
-                <h1 className="w-full text-2xl font-bold tracking-widest uppercase">Projects</h1>
-                <div className="cards w-full flex flex-col gap-6 mt-5">
-                    <div className="tabs md:w-fit flex gap-2 lg:gap-3 items-center overflow-x-scroll py-3 px-3 rounded-full md:sticky top-4 bg-[#f9fafb]/80 dark:bg-[#787878]/50 backdrop-blur-sm z-30">
+                <h1 className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase">Projects</h1>
+                <div className="cards w-full flex flex-col items-center lg:items-start gap-6 mt-5">
+                    <div className="tabs sm:w-fit flex gap-2 lg:gap-3 items-center overflow-x-scroll py-3 px-3 rounded-full md:sticky top-4 bg-[#f9fafb]/80 dark:bg-[#787878]/50 backdrop-blur-sm z-30">
                         {TABS.map((tab, index) => (
                             <TabButton 
                                 key={index}
@@ -177,7 +177,7 @@ const Right = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.8 }}
-                    className=" w-full text-2xl font-bold tracking-widest uppercase"
+                    className=" w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase"
                 >Gallery</motion.h1>
                     
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 h-fit mt-5">

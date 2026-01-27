@@ -127,21 +127,26 @@ const Left = () => {
               ))
             }
           </div>
-
-          {/* nav links < sm */}
-          <div className="relative flex sm:hidden size-[70px] border-[5px] border-[#f5f5f5] dark:border-[#000000] lg:flex-col justify-center items-center lg:items-start text-white dark:text-black dark:bg-[#f5f5f5]/80 bg-[#1f2937] rounded-full backdrop-blur-sm shadow-lg z-40" onClick={handleMenuToggle} aria-label="menu button">
-            <span className={`bi ${openMenu ? 'bi-x-lg text-xl -rotate-[180deg]' : 'bi-list text-2xl rotate-0'} transition-all duration-300`}></span>
-
-            {/* menu items  */}
-            <div className={`absolute w-[150px] p-[2px] overflow-hidden sm:hidden -left-10 bottom-20 w-fit h-fit flex flex-col justify-center items-center bg-[#f9fafb]/90 dark:bg-[#000000] rounded-lg backdrop-blur-sm shadow-lg origin-[center_150%] ${!openMenu ? "rotate-[180deg] opacity-0" : "rotate-0 scale-100"} z-30 transition-all duration-300`}>
-              {
-                NAVLINKS.map((navlink, index) => (
-                  <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
-                ))
-              }
-            </div>
-          </div>
         </motion.nav>
+
+        {/* nav links < sm */}
+        <motion.div
+          layout
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
+          className="fixed left-14 bottom-4 flex sm:hidden size-[70px] border-[5px] border-[#f5f5f5] dark:border-[#000000] lg:flex-col justify-center items-center lg:items-start text-white dark:text-black dark:bg-[#f5f5f5]/80 bg-[#1f2937] rounded-full backdrop-blur-sm shadow-lg z-40" onClick={handleMenuToggle} aria-label="menu button">
+          <span className={`bi ${openMenu ? 'bi-x-lg text-xl -rotate-[180deg]' : 'bi-list text-2xl rotate-0'} transition-all duration-300`}></span>
+
+          {/* menu items  */}
+          <div className={`absolute w-[170px] p-[2px] overflow-hidden sm:hidden bottom-20 w-fit h-fit flex flex-col justify-center items-center bg-[#f9fafb] dark:bg-[#000000] rounded-lg backdrop-blur-sm shadow-md dark:shadow-sm dark:shadow-[#787878]/50 origin-[center_150%] ${!openMenu ? "rotate-[180deg] opacity-0" : "rotate-0 scale-100"} z-30 transition-all duration-300`}>
+            {
+              NAVLINKS.map((navlink, index) => (
+                <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
+              ))
+            }
+          </div>
+        </motion.div>
 
         {/* social links for small screens  */}
         <motion.div
