@@ -12,6 +12,7 @@ import ProjectCard from "../components/ProjectCard";
 import TabButton from "../components/TabButton";
 import { GALLERY } from "../constants/gallery";
 import Modal from "../components/Modal";
+import { BACKEND_LIST } from "../constants/backend";
 
 const Right = () => {
     const {groupBy, selectedSection} = useContext(AppContext);
@@ -45,7 +46,7 @@ const Right = () => {
                     whileInView={{ opacity: 1, filter: 'blur(0px)' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ amount: 0.2 }}
-                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-xs sm:text-sm text-center sm:text-left tracking-wide"
+                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-xs sm:text-sm text-center md:text-left tracking-wide"
                 >
                         
                     <motion.p 
@@ -83,15 +84,15 @@ const Right = () => {
                     transition={{ duration: 0.5, delay: 2.8 }}
                     className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase">What I work with</motion.h1>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 text-center sm:text-left gap-10 mt-5">
+                <div className="columns-1 sm:columns-2 space-y-10 text-center lg:text-left gap-10 mt-5">
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 3 }}
-                        className="flex flex-col gap-2"
+                        className="flex flex-col gap-2 break-inside-avoid"
                     >
-                        <h2 className="leading-5 md:text-lg font-bold">Languages & Runtime</h2>
-                        <ul className="flex flex-col items-center sm:items-start gap-2">
+                        <h2 className="leading-5 md:text-lg font-bold">Languages</h2>
+                        <ul className="flex flex-col items-center lg:items-start gap-2">
                             {LANGUAGES.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index}/></li>
                             ))}
@@ -101,10 +102,10 @@ const Right = () => {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 3.2 }}
-                        className="flex flex-col gap-2"
+                        className="flex flex-col gap-2 break-inside-avoid"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Frameworks & Libraries</h2>
-                        <ul className="flex flex-col items-center sm:items-start gap-2">
+                        <ul className="flex flex-col items-center lg:items-start gap-2">
                             {FRAMEWORKS.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
                             ))}
@@ -114,10 +115,10 @@ const Right = () => {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 3.4 }}
-                        className="flex flex-col gap-2"
+                        className="flex flex-col gap-2 break-inside-avoid"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Tools & Softwares</h2>
-                        <ul className="flex flex-col items-center sm:items-start gap-2">
+                        <ul className="flex flex-col items-center lg:items-start gap-2">
                             {TOOL_LIST.map((x, index) =>(
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
                             ))}
@@ -126,11 +127,24 @@ const Right = () => {
                     <motion.div 
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 3.4 }}
+                        className="flex flex-col gap-2 break-inside-avoid"
+                    >
+                        <h2 className="leading-5 md:text-lg font-bold">Backend</h2>
+                        <ul className="flex flex-col items-center lg:items-start gap-2">
+                            {BACKEND_LIST.map((x, index) =>(
+                                <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                    <motion.div 
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 3.6 }}
-                        className="flex flex-col gap-2"
+                        className="flex flex-col gap-2 break-inside-avoid"
                     >
                         <h2 className="leading-5 md:text-lg font-bold">Soft Skills</h2>
-                        <ul className="flex flex-col items-center sm:items-start gap-2">
+                        <ul className="flex flex-col items-center lg:items-start gap-2">
                             {SOFT_SKILLS.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
                             ))}

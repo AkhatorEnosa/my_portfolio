@@ -12,12 +12,6 @@ export const FRAMEWORKS = [
         description: "A JavaScript library for building component-based user interfaces.",
     },
     {
-        name: "Express",
-        icon: "bi bi-cpu",
-        url: "https://expressjs.com/",
-        description: "Fast, unopinionated, minimalist web framework for Node.js.",
-    },
-    {
         name: "Clerk",
         icon: "bi bi-person-lock", 
         url: "https://clerk.com/",

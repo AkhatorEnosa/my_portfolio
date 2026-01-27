@@ -18,10 +18,5 @@ export const LANGUAGES = [
         name: "TypeScript",
         icon: "bi bi-filetype-tsx",
         url: "https://www.typescriptlang.org/",
-    },
-    {
-        name: "Node.js",
-        icon: "bi bi-hexagon",
-        url: "https://nodejs.org/",
     }
 ];
