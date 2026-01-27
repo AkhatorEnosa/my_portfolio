@@ -148,7 +148,7 @@ const Right = () => {
             >
                 <h1 className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase">Projects</h1>
                 <div className="cards w-full flex flex-col items-center lg:items-start gap-6 mt-5">
-                    <div className="tabs sm:w-fit flex gap-2 lg:gap-3 items-center overflow-x-scroll py-3 px-3 rounded-full md:sticky top-4 bg-[#f9fafb]/80 dark:bg-[#787878]/50 backdrop-blur-sm z-30">
+                    <div className="tabs w-full sm:w-fit flex gap-2 lg:gap-3 items-center overflow-x-scroll py-3 px-3 rounded-full md:sticky top-4 bg-[#f9fafb]/80 dark:bg-[#787878]/50 backdrop-blur-sm z-30">
                         {TABS.map((tab, index) => (
                             <TabButton 
                                 key={index}
