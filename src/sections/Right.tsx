@@ -197,7 +197,7 @@ const Right = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 h-fit mt-5">
                     {
                         GALLERY.map((item, index) => (
-                            <Modal imgSrc={item.img} alt={item.img+"alt"} index={index}/>
+                            <Modal imgSrc={item.img} alt={item.img+"alt"} index={item.id}/>
                         ))
                     }
                 </div>

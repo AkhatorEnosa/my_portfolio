@@ -67,6 +67,9 @@ const Modal = ({ imgSrc, alt, index } : { imgSrc: string, alt: string, index: nu
             transition={{ duration: 0.6, ease: "easeInOut" }}
             className={show ? "fixed top-0 left-0 flex w-screen h-screen justify-center items-center z-50 cursor-pointer" : "relative group h-64 overflow-clip flex flex-col justify-center items-center rounded-md z-20 break-words"}
             onClick={handleNav}
+            role="button"
+            aria-label="Open image modal"
+            tabIndex={index}
         >
             <motion.div
                 className={show ? "absolute top-0 left-0 h-full w-full bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 backdrop-blur-sm z-10" : "absolute opacity-0 group-hover:opacity-100 h-full w-full bg-[#f9fafb]/50 dark:bg-[#2a3b52]/50 flex justify-center items-center top-0 left-0 z-50 transition-opacity duration-150"}>
