@@ -60,8 +60,6 @@ const Modal = ({ imgSrc, alt, index } : { imgSrc: string, alt: string, index: nu
     return (
         <motion.div
             key={index}
-            layout
-            layoutId={`pic-${index}`}
             initial={{ opacity: 0, filter: "blur(4px)" }}
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -72,7 +70,7 @@ const Modal = ({ imgSrc, alt, index } : { imgSrc: string, alt: string, index: nu
             tabIndex={index}
         >
             <motion.div
-                className={show ? "absolute top-0 left-0 h-full w-full bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 backdrop-blur-sm z-10" : "absolute opacity-0 group-hover:opacity-100 h-full w-full bg-[#f9fafb]/50 dark:bg-[#2a3b52]/50 flex justify-center items-center top-0 left-0 z-50 transition-opacity duration-150"}>
+                className={show ? "absolute top-0 left-0 h-full w-full bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 backdrop-blur-sm z-10" : "absolute opacity-0 group-hover:opacity-100 h-full w-full bg-[#f9fafb]/50 dark:bg-[#2a3b52]/50 flex justify-center items-center top-0 left-0 z-50"}>
                 <i className={`bi bi-eye ${show && "hidden"} size-5 p-4 hover:p-6 animate-bounce bg-[#f9fafb] dark:bg-[#2a3b52] rounded-full text-center flex justify-center items-center cursor-pointer transition-all duration-150`}></i>
             </motion.div>
 
