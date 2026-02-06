@@ -12,6 +12,18 @@ export const FRAMEWORKS = [
         description: "A JavaScript library for building component-based user interfaces.",
     },
     {
+        name: "React Native",
+        icon: "bi bi-phone",
+        url: "https://reactnative.dev/",
+        description: "A framework for building native apps for Android and iOS using React.",
+    },
+    {
+        name: "Expo",
+        icon: "bi bi-universal-access",
+        url: "https://expo.dev/",
+        description: "An open-source platform for making universal native apps with React.",
+    },
+    {
         name: "Clerk",
         icon: "bi bi-person-lock", 
         url: "https://clerk.com/",
