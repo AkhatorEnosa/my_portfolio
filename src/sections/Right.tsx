@@ -13,6 +13,8 @@ import TabButton from "../components/TabButton";
 import { GALLERY } from "../constants/gallery";
 import Modal from "../components/Modal";
 import { BACKEND_LIST } from "../constants/backend";
+import { SERVICES } from "../constants/services";
+import ServiceCard from "../components/ServiceCard";
 
 const Right = () => {
     const {groupBy, selectedSection} = useContext(AppContext);
@@ -76,6 +78,29 @@ const Right = () => {
                         </p>
                 </motion.div>
             </motion.div>
+
+            <div id="services" className="py-10 px-6 md:px-36 lg:px-12">
+                <motion.h1
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 2.8 }}
+                    className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase">What I can do for you</motion.h1>
+
+                <div className="columns-1 sm:columns-2 space-y-4 text-center lg:text-left gap-4 mt-5">
+                    {
+                      SERVICES.map((service, index) => (
+                        <ServiceCard
+                          key={index}
+                          title={service.title}
+                          desc={service.description}
+                          tech={service.technologies}
+                          icon={service.icon}
+                          index={index}
+                        />
+                      ))
+                    }
+                </div>
+            </div>
 
             <div id="skills" className="py-10 px-6 md:px-36 lg:px-12">
                 <motion.h1
