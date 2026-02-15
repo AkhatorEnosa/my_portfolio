@@ -18,7 +18,7 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
       initial={{ opacity: 0, filter: 'blur(4px)' }}
       whileInView={{ opacity: 1, filter: 'blur(0px)' }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      viewport={{ amount: 0.2 }}
+      viewport={{ once: true }}
       aria-label={title}
       href={url} target="_blank" className="group relative text-xs sm:text-sm dark:text-[#f9fafb]/70 dark:hover:text-inherit bg-[#1f2937]/5 dark:bg-[#f9fafb]/5 lg:bg-transparent lg:darK:bg-transparent lg:hover:bg-[#1f2937]/5 lg:dark:hover:bg-[#f9fafb]/5 dark:text-[#f9fafb] border-[1px] md:border-none border-[#1f2937]/20 dark:border-[#f9fafb]/20 lg:shadow rounded-lg md:p-4 transition-all duration-300 flex flex-col gap-2">
         <div className="flex flex-col-reverse md:grid md:grid-cols-5 justify-between items-center gap-4 md:gap-6">

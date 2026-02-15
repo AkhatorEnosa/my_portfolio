@@ -47,7 +47,7 @@ const Right = () => {
                     initial={{ opacity: 0, filter: 'blur(4px)'}}
                     whileInView={{ opacity: 1, filter: 'blur(0px)' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    viewport={{ amount: 0.2 }}
+                    viewport={{ once: true }}
                     className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-xs sm:text-sm text-center md:text-left tracking-wide"
                 >
                         
@@ -83,23 +83,29 @@ const Right = () => {
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 2.8 }}
+                    transition={{ duration: 0.5, delay: 2.5 }}
                     className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase">What I can do for you</motion.h1>
 
-                <div className="columns-1 sm:columns-2 space-y-4 text-center lg:text-left gap-4 mt-5">
-                    {
-                      SERVICES.map((service, index) => (
-                        <ServiceCard
-                          key={index}
-                          title={service.title}
-                          desc={service.description}
-                          tech={service.technologies}
-                          icon={service.icon}
-                          index={index}
-                        />
-                      ))
-                    }
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 2.8 }}
+                >
+                    <div className="columns-1 sm:columns-2 space-y-4 text-center lg:text-left gap-4 mt-5">
+                        {
+                        SERVICES.map((service, index) => (
+                            <ServiceCard
+                                key={index}
+                                title={service.title}
+                                desc={service.description}
+                                tech={service.technologies}
+                                icon={service.icon}
+                                index={index}
+                            />
+                        ))
+                        }
+                    </div>
+                </motion.div>
             </div>
 
             <div id="skills" className="py-10 px-6 md:px-36 lg:px-12">

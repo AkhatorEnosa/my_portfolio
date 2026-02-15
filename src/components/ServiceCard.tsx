@@ -8,13 +8,13 @@ interface ServiceCardProps {
   index: number
 }
 
-const ServiceCard = ({ title, desc, tech, icon, index }: ServiceCardProps) => {
+const ServiceCard = ({ title, desc, tech, icon }: ServiceCardProps) => {
   return (
     <motion.div
         key={title}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
+        initial={{ opacity: 0, filter: 'blur(4px)' }}
+        whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
         className="group flex flex-col gap-2 items-center lg:items-start max-w-md break-inside-avoid relative h-fit text-xs sm:text-sm dark:text-[#f9fafb] dark:bg-[#f9fafb]/5 md:bg-transparent md:darK:bg-transparent lg:hover:bg-[#1f2937]/5 lg:dark:hover:bg-[#f9fafb]/5 dark:text-[#f9fafb] border-[1px] lg:border-none mx-auto border-[#1f2937]/20 dark:border-[#f9fafb]/20 lg:shadow rounded-lg p-4 transition-all duration-300"
     >
