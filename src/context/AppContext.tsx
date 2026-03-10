@@ -11,7 +11,7 @@ export const AppContext = createContext<{
   setGroupBy: React.Dispatch<React.SetStateAction<string>>;
   themeHandler: () => void
 }>({
-  theme: 'light',
+  theme: 'dark',
   setTheme: () => {},
   selectedSection: '',
   setSelectedSection: () => {},

@@ -54,7 +54,7 @@ const Left = () => {
     <section id="home" className="relative h-screen w-screen justify-center items-center lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between py-12 md:py-16 lg:py-24 lg:px-12">
     {/* user image */}
       <motion.div
-        className="group fixed top-5 left-10 size-10 lg:w-14 lg:h-14 z-40"
+        className="group fixed top-10 lg:top-5 left-10 size-10 md:size-20 lg:size-14 z-40"
         onClick={() => {
             setSelectedSection("home");
             localStorage.setItem('section', "home")
@@ -104,7 +104,7 @@ const Left = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-lg xs:text-2xl uppercase">Frontend Developer</motion.p>
+            className="text-lg xs:text-2xl text-cyan-600 dark:text-sky-400 uppercase">Frontend Developer</motion.p>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -135,11 +135,11 @@ const Left = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
-          className="fixed left-14 bottom-4 flex sm:hidden size-[70px] border-[5px] border-[#f5f5f5] dark:border-[#000000] lg:flex-col justify-center items-center lg:items-start text-white dark:text-black dark:bg-[#f5f5f5]/80 bg-[#1f2937] rounded-full backdrop-blur-sm shadow-lg z-40" onClick={handleMenuToggle} aria-label="menu button">
+          className="fixed left-5 bottom-4 flex sm:hidden size-[70px] border-[5px] border-[#f5f5f5] dark:border-[#000000] lg:flex-col justify-center items-center lg:items-start text-white dark:text-black dark:bg-[#f5f5f5]/80 bg-[#1f2937] rounded-full backdrop-blur-sm shadow-lg z-40" onClick={handleMenuToggle} aria-label="menu button">
           <span className={`bi ${openMenu ? 'bi-x-lg text-xl -rotate-[180deg]' : 'bi-list text-2xl rotate-0'} transition-all duration-300`}></span>
 
           {/* menu items  */}
-          <div className={`absolute w-[170px] p-[2px] overflow-hidden sm:hidden bottom-20 w-fit h-fit flex flex-col justify-center items-center bg-[#f9fafb] dark:bg-[#000000] rounded-lg backdrop-blur-sm shadow-md dark:shadow-sm dark:shadow-[#787878]/50 origin-[center_150%] ${!openMenu ? "rotate-[180deg] opacity-0" : "rotate-0 scale-100"} z-30 transition-all duration-300`}>
+          <div className={`absolute p-[2px] overflow-hidden sm:hidden bottom-20 w-fit h-fit flex flex-col justify-center items-center bg-[#f9fafb] dark:bg-[#000000] rounded-lg backdrop-blur-sm shadow-md dark:shadow-sm dark:shadow-[#787878]/50 origin-[center_150%] ${!openMenu ? "rotate-[180deg] opacity-0" : "rotate-0 scale-100"} z-30 transition-all duration-300`}>
             {
               NAVLINKS.map((navlink, index) => (
                 <NavLink key={index+navlink} url={`#${navlink}`} title={navlink}/>
@@ -170,11 +170,12 @@ const Left = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 2.5}}
-                  className="group fixed top-4 right-10 lg:relative lg:top-0 lg:right-0 bg-[#e9edf1]/80 dark:bg-[#787878]/50 p-5 size-6 flex justify-center items-center rounded-full backdrop-blur-sm shadow-lg z-50 duration-300 transition-all" 
+                  className="group fixed top-10 right-10 lg:relative lg:top-0 lg:right-0 bg-[#e9edf1]/80 dark:bg-[#787878]/50 size-10 md:size-20 lg:size-6 flex justify-center items-center rounded-full backdrop-blur-sm shadow-lg z-50 duration-300 transition-all" 
                   aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
                   onClick={() => themeHandler()}>
-                    <p className={`w-fit text-[10px] sm:text-xs md:text-sm flex justify-center items-center lg:gap-2 ${theme === 'dark' ? "-translate-y-30 opacity-0" : "translate-y-0 opacity-100"} duration-300 transition-all`}><i className={`text-2xl bi bi-brightness-high-fill text-orange-400 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
-                    <p className={`absolute w-fit text-[10px] sm:text-xs md:text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100"} duration-300 transition-all`}><i className={`text-xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
+                    <p className={`w-fit flex justify-center items-center lg:gap-2 ${theme === 'dark' ? "-translate-y-30 opacity-0" : "translate-y-0 opacity-100"} duration-300 transition-all`}><i className={`text-5xl bi bi-brightness-high-fill text-orange-400 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
+                    
+                    <p className={`absolute w-fit flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100"} duration-300 transition-all`}><i className={`bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
               </motion.button>
             </Tooltip>
         </motion.div>

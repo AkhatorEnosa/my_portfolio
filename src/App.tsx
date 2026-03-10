@@ -8,7 +8,7 @@ const App = () => {
     <Router>
       <div className="mx-auto min-h-screen max-w-[1800px] text-[#000000] dark:text-[#f9fafb]">
         {/* Background & Cursor Layer */}
-        <div className={`dark:bg-[#000000] bg-[#f5f5f5] fixed w-screen h-screen left-0 top-0 z-10`}>
+        <div className={`dark:bg-[#000000] bg-white fixed w-screen h-screen left-0 top-0 z-10`}>
           <CursorTracker />
         </div>
 

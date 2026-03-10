@@ -48,7 +48,7 @@ const Right = () => {
                     whileInView={{ opacity: 1, filter: 'blur(0px)' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ once: true }}
-                    className="dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-xs sm:text-sm text-center md:text-left tracking-wide"
+                    className="text-black/80 dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-xs sm:text-sm text-center md:text-left tracking-wide"
                 >
                         
                     <motion.p 
@@ -65,10 +65,10 @@ const Right = () => {
                             👋🏽
                     </motion.p>
 
-                        Hey there! My journey in tech began with a fascination for building things with code. As a kid, I was captivated by how websites worked and wanted to create my own, which sparked my passion for web development. That curiosity led me to pursue a <span className="font-semibold dark:text-[#f9fafb]">degree in Computer Science</span> , where I honed my skills and learned the foundations of programming, setting the stage for my career.
+                        Hey there! My journey in tech began with a fascination for building things with code. As a kid, I was captivated by how websites worked and wanted to create my own, which sparked my passion for web development. That curiosity led me to pursue a <span className="font-semibold text-black dark:text-[#f9fafb]">degree in Computer Science</span> , where I honed my skills and learned the foundations of programming, setting the stage for my career.
 
                         <p className="mt-4">
-                            Currently, I am a <span className="font-semibold dark:text-[#f9fafb]">Frontend Developer</span> crafting smooth, intuitive, and reliable web experiences. My go to stack includes <span className="font-semibold dark:text-[#f9fafb]">React, NextJs, TypeScript, and JavaScript</span> to bring ideas to life, <span className="font-semibold dark:text-[#f9fafb]">Motion</span> for polished animations, and <span className="font-semibold dark:text-[#f9fafb]">TailwindCSS</span> for fast, fun styling. I manage complex state with <span className="font-semibold dark:text-[#f9fafb]">Redux Toolkit or Context API</span>, depending on the project needs. I also work with <span className="font-semibold dark:text-[#f9fafb]">APIs</span> to make apps feel dynamic and leverage <span className="font-semibold dark:text-[#f9fafb]">NodeJS, Express, NeonDB, Supabase and PostgreSQL</span> for backend support when necessary to ensure everything runs seamlessly.
+                            Currently, I am a <span className="font-semibold text-black dark:text-[#f9fafb]">Frontend Developer</span> crafting smooth, intuitive, and reliable web experiences. My go to stack includes <span className="font-semibold text-black dark:text-[#f9fafb]">React, NextJs, TypeScript, and JavaScript</span> to bring ideas to life, <span className="font-semibold text-black dark:text-[#f9fafb]">Motion</span> for polished animations, and <span className="font-semibold text-black dark:text-[#f9fafb]">TailwindCSS</span> for fast, fun styling. I manage complex state with <span className="font-semibold text-black dark:text-[#f9fafb]">Redux Toolkit or Context API</span>, depending on the project needs. I also work with <span className="font-semibold text-black dark:text-[#f9fafb]">APIs</span> to make apps feel dynamic and leverage <span className="font-semibold text-black dark:text-[#f9fafb]">NodeJS, Express, NeonDB, Supabase and PostgreSQL</span> for backend support when necessary to ensure everything runs seamlessly.
                         </p>
 
 
@@ -234,9 +234,9 @@ const Right = () => {
                 </div>
             </motion.div>
 
-            <div className="w-full flex flex-col mt-10 pb-24 px-6 md:px-36 lg:px-12 justify-center items-center text-center text-[#000000] dark:text-[#f9fafb] lg:bg-inherit lg:dark:bg-inherit">
+            <div className="w-full flex flex-col mt-10 pb-24 px-6 md:px-36 lg:px-12 justify-center items-center text-center text-[#000000] text-black dark:text-[#f9fafb] lg:bg-inherit lg:dark:bg-inherit">
                 <p className="text-2xl font-semibold mt-10">Let us work on something together!</p>
-                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse text-[#008080] dark:text-yellow-200 ">collaboration or just a chat!</a></p>
+                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse border-cyan-600/20 dark:border-sky-400/20 text-black hover:text-inherit text-black dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] bg-transparent ">collaboration or just a chat!</a></p>
             </div>
         </main>
   )
