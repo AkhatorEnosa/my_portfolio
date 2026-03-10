@@ -39,7 +39,7 @@ const Right = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.5 }}
-                    className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase lg:hidden">
+                    className="w-full heading text-2xl font-bold text-center lg:text-left tracking-widest uppercase lg:hidden">
                     About
                 </motion.h1>
 
@@ -84,7 +84,7 @@ const Right = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.5 }}
-                    className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase">What I can do for you</motion.h1>
+                    className="w-full heading text-2xl font-bold text-center lg:text-left tracking-tight uppercase">What I can do for you</motion.h1>
 
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -113,7 +113,7 @@ const Right = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.8 }}
-                    className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase">What I work with</motion.h1>
+                    className="w-full heading text-2xl font-bold text-center lg:text-left tracking-tight uppercase">What I work with</motion.h1>
 
                 <div className="columns-1 sm:columns-2 space-y-10 text-center lg:text-left gap-10 mt-5">
                     <motion.div
@@ -122,7 +122,7 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3 }}
                         className="flex flex-col gap-2 break-inside-avoid"
                     >
-                        <h2 className="leading-5 md:text-lg font-bold">Languages</h2>
+                        <h2 className="heading leading-5 md:text-lg font-semibold">Languages</h2>
                         <ul className="flex flex-col items-center lg:items-start gap-2">
                             {LANGUAGES.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index}/></li>
@@ -135,7 +135,7 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3.2 }}
                         className="flex flex-col gap-2 break-inside-avoid"
                     >
-                        <h2 className="leading-5 md:text-lg font-bold">Frameworks & Libraries</h2>
+                        <h2 className="heading leading-5 md:text-lg font-semibold">Frameworks & Libraries</h2>
                         <ul className="flex flex-col items-center lg:items-start gap-2">
                             {FRAMEWORKS.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
@@ -148,7 +148,7 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3.4 }}
                         className="flex flex-col gap-2 break-inside-avoid"
                     >
-                        <h2 className="leading-5 md:text-lg font-bold">Tools & Softwares</h2>
+                        <h2 className="heading leading-5 md:text-lg font-semibold">Tools & Softwares</h2>
                         <ul className="flex flex-col items-center lg:items-start gap-2">
                             {TOOL_LIST.map((x, index) =>(
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
@@ -161,7 +161,7 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3.4 }}
                         className="flex flex-col gap-2 break-inside-avoid"
                     >
-                        <h2 className="leading-5 md:text-lg font-bold">Backend</h2>
+                        <h2 className="heading leading-5 md:text-lg font-semibold">Backend</h2>
                         <ul className="flex flex-col items-center lg:items-start gap-2">
                             {BACKEND_LIST.map((x, index) =>(
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
@@ -174,7 +174,7 @@ const Right = () => {
                         transition={{ duration: 0.5, delay: 3.6 }}
                         className="flex flex-col gap-2 break-inside-avoid"
                     >
-                        <h2 className="leading-5 md:text-lg font-bold">Soft Skills</h2>
+                        <h2 className="heading leading-5 md:text-lg font-semibold">Soft Skills</h2>
                         <ul className="flex flex-col items-center lg:items-start gap-2">
                             {SOFT_SKILLS.map((x, index) => (
                                 <li key={index}><Skills url={x.url} name={x.name} icon={x.icon} index={index} desc={x.description}/></li>
@@ -191,7 +191,7 @@ const Right = () => {
                 transition={{ duration: 0.5, delay: 3.8 }}
                 id="projects" className="py-10 relative px-6 md:px-36 lg:px-12"
             >
-                <h1 className="w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase">Projects</h1>
+                <h1 className="w-full heading text-2xl font-bold text-center lg:text-left tracking-tight uppercase">Projects</h1>
                 <div className="cards w-full flex flex-col items-center lg:items-start gap-6 mt-5">
                     <div className="tabs w-full sm:w-fit flex gap-2 lg:gap-3 items-center overflow-x-scroll py-3 px-3 rounded-full md:sticky top-4 bg-[#f9fafb]/80 dark:bg-[#787878]/50 backdrop-blur-sm z-30">
                         {TABS.map((tab, index) => (
@@ -222,7 +222,7 @@ const Right = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.8 }}
-                    className=" w-full text-2xl font-bold text-center lg:text-left tracking-widest uppercase"
+                    className="w-full heading text-2xl font-bold text-center lg:text-left tracking-tight uppercase"
                 >Gallery</motion.h1>
                     
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 h-fit mt-5">

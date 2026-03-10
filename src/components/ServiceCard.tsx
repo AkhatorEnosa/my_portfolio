@@ -23,7 +23,7 @@ const ServiceCard = ({ title, desc, tech, icon }: ServiceCardProps) => {
             <i className={`bi ${icon} text-2xl`}></i>
         </div>
         
-        <h3 className="leading-5 text-lg font-bold">{title}</h3>
+        <h3 className="heading text-lg font-semibold tracking-tight leading-relaxed">{title}</h3>
       </div>
         <p className="sm:text-sm line-clamp-2 sm:line-clamp-3 md:line-clamp-none text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] mb-2 leading-relaxed">{desc}</p>
 

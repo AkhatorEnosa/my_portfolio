@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Syne:wght@400..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,17 +6,16 @@
 
 * {
     transition: background-color 0.1s, color 0.05s;
-    font-family: "Plus Jakarta Sans", sans-serif;
-  }
+    font-family: "Outfit", sans-serif;
+}
+
+.heading {
+    font-family:  "Syne", sans-serif;
+}
 
 .cursor {
     animation: move 1s ease-in-out infinite alternate;
 }
-
-/* .cards:has(.card:hover) .card:not(:hover) {
-    op
-  } */
-
 
 /* Chrome, Safari and Opera */
 .tabs::-webkit-scrollbar {
