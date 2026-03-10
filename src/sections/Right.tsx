@@ -79,7 +79,7 @@ const Right = () => {
                 </motion.div>
             </motion.div>
 
-            <div id="services" className="py-10 px-6 md:px-36 lg:px-12">
+            <div id="services" className="py-10 px-6 md:px-24 lg:px-12">
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ const Right = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2.8 }}
                 >
-                    <div className="columns-1 sm:columns-2 space-y-4 text-center lg:text-left gap-4 mt-5">
+                    <div className="columns-1 xl:columns-2 space-y-10 xl:space-y-4 text-center lg:text-left gap-4 mt-5">
                         {
                         SERVICES.map((service, index) => (
                             <ServiceCard
@@ -189,7 +189,7 @@ const Right = () => {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 3.8 }}
-                id="projects" className="py-10 relative px-6 md:px-36 lg:px-12"
+                id="projects" className="py-10 px-6 md:px-24 lg:px-12"
             >
                 <h1 className="w-full heading text-2xl font-bold text-center lg:text-left tracking-tight uppercase">Projects</h1>
                 <div className="cards w-full flex flex-col items-center lg:items-start gap-6 mt-5">
@@ -202,7 +202,7 @@ const Right = () => {
                             />
                         ))}
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-10 xl:gap-4">
                         {
                             PROJECTS.map((project, index) => (
                                 (project.group === groupBy || groupBy === "all") && <ProjectCard key={index} title={project.title} imgSrc={project.image} tech={project.tag || []} url={project.url} desc={project.description} construction={project.construction}/>
@@ -234,9 +234,9 @@ const Right = () => {
                 </div>
             </motion.div>
 
-            <div className="w-full flex flex-col mt-10 pb-24 px-6 md:px-36 lg:px-12 justify-center items-center text-center text-[#000000] text-black dark:text-[#f9fafb] lg:bg-inherit lg:dark:bg-inherit">
+            <div className="w-full flex flex-col mt-10 pb-24 px-6 md:px-36 lg:px-12 justify-center items-center text-center text-black dark:text-[#f9fafb] lg:bg-inherit lg:dark:bg-inherit">
                 <p className="text-2xl font-semibold mt-10">Let us work on something together!</p>
-                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse border-cyan-600/20 dark:border-sky-400/20 text-black hover:text-inherit text-black dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] bg-transparent ">collaboration or just a chat!</a></p>
+                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse border-cyan-600/20 dark:border-sky-400/20 text-black hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] bg-transparent ">collaboration or just a chat!</a></p>
             </div>
         </main>
   )

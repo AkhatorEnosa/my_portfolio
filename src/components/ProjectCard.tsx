@@ -25,7 +25,7 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
             <div className="w-full md:w-fit md:col-span-3 md:h-full flex flex-col justify-between px-4 md:px-0 gap-2">
                 <div className="w-full flex flex-col gap-2">
                   <h2 aria-label={title} className="w-full heading flex gap-2 text-lg font-semibold lg:group-hover:underline capitalize">{title} <i className="bi bi-arrow-right -rotate-45 group-hover:rotate-0 transition-all duration-300"></i></h2>
-                  <p className="sm:text-sm line-clamp-2 sm:line-clamp-3 md:line-clamp-none">{desc}</p>
+                  <p className="sm:text-sm line-clamp-2 md:line-clamp-none">{desc}</p>
                 </div>
                 {/* <hr className="text-[#1f2937]/20"/> */}
                 {/* <a href={url} target="_blank" className="text-sm text-[#FF6B6B]">View Project</a> */}

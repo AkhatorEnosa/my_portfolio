@@ -51,10 +51,10 @@ const Left = () => {
   }
 
   return (
-    <section id="home" className="relative h-screen w-screen justify-center items-center lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between py-12 md:py-16 lg:py-24 lg:px-12">
+    <section id="home" className="relative h-screen w-screen justify-center items-center lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between py-12 md:py-16 lg:py-24 px-6 md:px-24 lg:px-12">
     {/* user image */}
       <motion.div
-        className="group fixed top-10 lg:top-5 left-10 size-10 md:size-20 lg:size-14 z-40"
+        className="group fixed top-10 lg:top-5 left-10 size-10 lg:size-14 z-40"
         onClick={() => {
             setSelectedSection("home");
             localStorage.setItem('section', "home")
@@ -94,22 +94,22 @@ const Left = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="heading text-5xl sm:text-8xl lg:text-6xl font-extrabold mt-10 md:mt-0 leading-loose"
+            className="heading text-5xl sm:text-7xl lg:text-6xl font-bold mt-10 md:mt-0 leading-[0.8]"
           >
               Osakhogba Akhator
           </motion.h1>
-          <div className="flex flex-col mt-2 gap-1 dark:text-[#f9fafb]/80">
+          <div className="flex flex-col mt-2 gap-4 dark:text-[#f9fafb]/80">
             {/* description  */}
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-lg xs:text-2xl text-cyan-600 dark:text-sky-400 uppercase">Frontend Developer</motion.p>
+            className="text-xl lg:text-2xl text-cyan-600 dark:text-sky-400 uppercase">Frontend Developer</motion.p>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-            className="w-full text-sm xs:text-base sm:mt-5 px-4 md:px-0 dark:text-[#f9fafb]/60">Creating web experiences and turning designs into reality.</motion.p>
+            className="w-full text-sm lg:text-base sm:mt-5 px-4 md:px-0 dark:text-[#f9fafb]/60">Creating web experiences and turning designs into reality.</motion.p>
           </div>
         </header>
 
@@ -170,12 +170,12 @@ const Left = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 2.5}}
-                  className="group fixed top-10 right-10 lg:relative lg:top-0 lg:right-0 border-[1px] border-cyan-600/30 dark:border-sky-400/50 dark:bg-[#1c1c1c] bg-[#f9fafb] size-10 md:size-20 lg:size-6 flex justify-center items-center rounded-full backdrop-blur-sm shadow-lg z-50 duration-300 transition-all" 
+                  className="group fixed top-10 right-10 lg:relative lg:top-0 lg:right-0 border-[1px] border-cyan-600/30 dark:border-sky-400/50 dark:bg-[#1c1c1c] bg-[#f9fafb] size-10 lg:size-6 flex justify-center items-center rounded-full backdrop-blur-sm shadow-lg z-50 duration-300 transition-all" 
                   aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
                   onClick={() => themeHandler()}>
-                    <p className={`w-fit flex justify-center items-center lg:gap-2 ${theme === 'dark' ? "-translate-y-30 opacity-0" : "translate-y-0 opacity-100"} duration-300 transition-all`}><i className={`text-5xl bi bi-brightness-high-fill text-orange-400 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
+                    <p className={`w-fit flex justify-center items-center lg:gap-2 ${theme === 'dark' ? "-translate-y-30 opacity-0" : "translate-y-0 opacity-100"} duration-300 transition-all`}><i className={`text-sm lg:text-5xl bi bi-brightness-high-fill text-orange-400 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
                     
-                    <p className={`absolute w-fit flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100"} duration-300 transition-all`}><i className={`bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
+                    <p className={`absolute w-fit flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100"} duration-300 transition-all`}><i className={`text-sm lg:text-5xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
               </motion.button>
             </Tooltip>
         </motion.div>
@@ -184,7 +184,7 @@ const Left = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.5 }}
-          className="absolute w-full top-[82%] lg:hidden"
+          className="absolute w-full bottom-[12%] lg:hidden text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb]"
         >
           <a href="#about" aria-label="scroll-down" className="text-[10px] flex flex-col justify-center items-center gap-0 text-center text-inherit ">
             <i className="bi bi-mouse text-xl animate-bounce"></i>
