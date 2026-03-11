@@ -170,7 +170,7 @@ const Left = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 2.5}}
-                  className="group fixed top-10 right-10 lg:relative lg:top-0 lg:right-0 border-[1px] border-cyan-600/30 dark:border-sky-400/50 dark:bg-[#1c1c1c] bg-[#f9fafb] size-10 lg:size-6 flex justify-center items-center rounded-full backdrop-blur-sm shadow-lg z-50 duration-300 transition-all" 
+                  className="group fixed top-10 right-10 lg:relative lg:top-0 lg:right-0 border-[1px] border-black/30 dark:border-[#f9fafb]/50 dark:bg-[#1c1c1c] bg-[#f9fafb] size-10 lg:size-6 flex justify-center items-center rounded-full backdrop-blur-sm shadow-lg z-50 duration-300 transition-all" 
                   aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
                   onClick={() => themeHandler()}>
                     <p className={`w-fit flex justify-center items-center lg:gap-2 ${theme === 'dark' ? "-translate-y-30 opacity-0" : "translate-y-0 opacity-100"} duration-300 transition-all`}><i className={`text-sm lg:text-5xl bi bi-brightness-high-fill text-orange-400 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>
@@ -214,7 +214,7 @@ const Left = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 2.5}}
-                className="group fixed top-5 right-10 lg:relative lg:top-0 lg:right-0 w-fit flex border-[1px] border-cyan-600/30 dark:border-sky-400/50 dark:bg-[#1c1c1c] bg-[#f9fafb] dark:text-[#f9fafb] text-inherit py-2 px-4 justify-center items-center rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-clip z-50 duration-300 transition-all" 
+                className="group fixed top-5 right-10 lg:relative lg:top-0 lg:right-0 w-fit flex border-[1px] border-black/30 dark:border-[#f9fafb]/50 dark:bg-[#1c1c1c] bg-[#f9fafb] dark:text-[#f9fafb] text-inherit py-2 px-4 justify-center items-center rounded-full backdrop-blur-sm shadow-lg lg:shadow-none lg:backdrop-blur-none cursor-pointer overflow-clip z-50 duration-300 transition-all" 
                 aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
                 onClick={() => themeHandler()}>
                   <p className={`w-fit text-xs md:text-sm flex justify-center items-center lg:gap-2 ${theme === 'dark' ? "l opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}><span className="hidden lg:flex">Light Mode</span><i className={`text-2xl bi bi-brightness-high-fill text-orange-400 group-hover:rotate-[360] ${theme !== 'dark' ? "rotate-180" : "rotate-0"} duration-300 transition-all`}></i></p>

@@ -33,7 +33,7 @@ const Right = () => {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 2.5 }}
-                className="text-base py-10 lg:py-0 px-6 md:px-36 lg:px-12"
+                className="py-10 lg:py-0 px-6 md:px-36 lg:px-12"
             >
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
@@ -48,7 +48,7 @@ const Right = () => {
                     whileInView={{ opacity: 1, filter: 'blur(0px)' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ once: true }}
-                    className="text-black/80 dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-xs sm:text-sm text-center md:text-left tracking-wide"
+                    className="text-black/80 dark:text-[#f9fafb]/70 mt-5 lg:mt-0 text-justify lg:text-left tracking-wide"
                 >
                         
                     <motion.p 
