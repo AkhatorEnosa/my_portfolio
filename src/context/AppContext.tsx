@@ -9,7 +9,10 @@ export const AppContext = createContext<{
   setTabIndex: React.Dispatch<React.SetStateAction<number>>;
   groupBy: string;
   setGroupBy: React.Dispatch<React.SetStateAction<string>>;
-  themeHandler: () => void
+  isScrolled: boolean;
+  setIsScrolled: React.Dispatch<React.SetStateAction<boolean>>;
+  themeHandler: () => void;
+  toggleScroll: () => void;
 }>({
   theme: 'dark',
   setTheme: () => {},
@@ -19,9 +22,11 @@ export const AppContext = createContext<{
   setTabIndex: () => {},
   groupBy: 'all',
   setGroupBy: () => {},
-  themeHandler: () => {},
+  isScrolled: false,
+  setIsScrolled: () => {},
+  themeHandler: () => { },
+  toggleScroll: () => { },
 });
-
 
 // get url last part 
 const originUrl = location.href;
@@ -39,6 +44,7 @@ export function AppProvider({ children } : { children: ReactNode }) {
     const [selectedSection, setSelectedSection] = useState(localStorage.getItem('section') ? localStorage.getItem('section') : result)
     const [groupBy, setGroupBy] = useState("all")
     const [tabIndex, setTabIndex] = useState(0)
+    const [isScrolled, setIsScrolled] = useState(false)
 
     const themeHandler = () => {
       const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -46,6 +52,40 @@ export function AppProvider({ children } : { children: ReactNode }) {
       localStorage.setItem('theme', newTheme);
       document.documentElement.classList.toggle('dark', newTheme === 'dark');
     }
+
+    const trackScroll = () => {
+      // Calculate the scroll threshold as 90% of the viewport height
+      const scrollThreshold = window.innerHeight * 0.9;
+
+      if (window.scrollY >= scrollThreshold) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false)
+      }
+      console.log(scrollThreshold)
+      // console.log(window.innerHeight)
+    }
+  
+    // toggel scroll to top when isScrolled is true and scroll to about section when isScrolled is false
+    const toggleScroll = () => {
+      if (isScrolled) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+
+    // Add scroll event listener to track scroll position
+    useEffect(() => {
+      window.addEventListener('scroll', trackScroll);
+
+      return () => {
+        window.removeEventListener('scroll', trackScroll);
+      };
+    }, []);
   
     useEffect(() => {
       localStorage.setItem('theme', theme); // Save theme to localStorage
@@ -66,7 +106,9 @@ export function AppProvider({ children } : { children: ReactNode }) {
         selectedSection, setSelectedSection,
         tabIndex, setTabIndex,
         groupBy, setGroupBy,
+        isScrolled, setIsScrolled,
         themeHandler,
+        toggleScroll
     }}>
       {children}
     </AppContext.Provider>

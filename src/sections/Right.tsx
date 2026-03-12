@@ -17,7 +17,7 @@ import { SERVICES } from "../constants/services";
 import ServiceCard from "../components/ServiceCard";
 
 const Right = () => {
-    const {groupBy, selectedSection} = useContext(AppContext);
+    const {groupBy, selectedSection, isScrolled, toggleScroll} = useContext(AppContext);
 
     //scroll to section based on selected section
     useEffect(() => {
@@ -33,7 +33,7 @@ const Right = () => {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 2.5 }}
-                className="py-10 lg:py-0 px-6 md:px-36 lg:px-12"
+                className="h-screen lg:h-auto flex flex-col justify-center items-center py-10 lg:py-0 px-6 md:px-36 lg:px-12"
             >
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
@@ -108,7 +108,7 @@ const Right = () => {
                 </motion.div>
             </div>
 
-            <div id="skills" className="py-10 px-6 md:px-36 lg:px-12">
+            <div id="skills" className="h-screen lg:h-auto flex flex-col justify-center items-center py-10 px-6 md:px-36 lg:px-12">
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -238,6 +238,20 @@ const Right = () => {
                 <p className="text-2xl font-semibold mt-10">Let us work on something together!</p>
                 <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse border-cyan-600/20 dark:border-sky-400/20 text-black hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] bg-transparent ">collaboration or just a chat!</a></p>
             </div>
+
+            {isScrolled && <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-col items-center gap-2 fixed w-fit bottom-[10%] right-20 text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] z-[100] cursor-pointer"
+                onClick={toggleScroll}
+            >
+                <span aria-label="scroll-down" className="size-4 p-4 flex items-center justify-center border-[1px] border-black/30 dark:border-[#f9fafb]/50 dark:bg-[#1c1c1c] bg-[#f9fafb] text-black/70 dark:text-[#f9fafb]/60  animate-bounce rounded-full">
+                    <i className="bi bi-arrow-up"></i>
+                </span>
+                <p className="text-[10px] px-2 flex flex-col justify-center items-center gap-0 text-center border-[1px] border-black/30 dark:border-[#f9fafb]/50 dark:bg-[#1c1c1c] bg-[#f9fafb] text-black/70 dark:text-[#f9fafb]/60 rounded-lg">Go To Top</p>
+            </motion.div>}
         </main>
   )
 }

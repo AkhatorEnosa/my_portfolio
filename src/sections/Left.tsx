@@ -18,7 +18,7 @@ const shapes: Record<ShapeKey, string> = {
 };
 
 const Left = () => {
-  const { setSelectedSection, theme, themeHandler } = useContext(AppContext);
+  const { setSelectedSection, theme, themeHandler, toggleScroll } = useContext(AppContext);
       
 
   const [currShape, setCurrShape] = useState<ShapeKey>("circle");
@@ -94,7 +94,7 @@ const Left = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="heading text-5xl sm:text-7xl lg:text-6xl font-bold mt-10 md:mt-0 leading-[0.8]"
+            className="heading text-5xl sm:text-7xl lg:text-6xl font-bold mt-10 md:mt-0"
           >
               Osakhogba Akhator
           </motion.h1>
@@ -184,12 +184,13 @@ const Left = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.5 }}
-          className="absolute w-full bottom-[30%] lg:hidden text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb]"
+          className={`absolute w-full bottom-[18%] lg:hidden text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb]`}
+          onClick={toggleScroll}
         >
-          <a href="#about" aria-label="scroll-down" className="text-[10px] flex flex-col justify-center items-center gap-0 text-center text-inherit ">
-            <i className="bi bi-mouse text-xl animate-bounce"></i>
+          <span aria-label="scroll-down" className="text-[10px] flex flex-col justify-center items-center gap-0 text-center text-inherit ">
+            <i className="bi bi-mouse text-2xl animate-bounce"></i>
             <p>Scroll Down</p>
-          </a>
+          </span>
         </motion.div>
       </div>
 
