@@ -179,19 +179,6 @@ const Left = () => {
               </motion.button>
             </Tooltip>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 2.5 }}
-          className={`absolute w-full bottom-[18%] lg:hidden text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb]`}
-          onClick={toggleScroll}
-        >
-          <span aria-label="scroll-down" className="text-[10px] flex flex-col justify-center items-center gap-0 text-center text-inherit ">
-            <i className="bi bi-mouse text-2xl animate-bounce"></i>
-            <p>Scroll Down</p>
-          </span>
-        </motion.div>
       </div>
 
       <motion.div
@@ -222,6 +209,21 @@ const Left = () => {
                   <p className={`absolute w-fit text-xs md:text-sm flex justify-center items-center gap-2 ${theme !== 'dark' ? "-translate-x-20 opacity-0" : "translate-x-0 opacity-100"} duration-300 transition-all`}><span className="hidden lg:flex">Dark Mode</span><i className={`text-xl bi bi-moon-fill text-yellow-200 group-hover:rotate-[360] ${theme === 'dark' ? "rotate-[360deg]" : "rotate-0"} duration-300 transition-all`}></i></p>
             </motion.button>
           </Tooltip>
+      </motion.div>
+
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 2.5 }}
+        className={`relative bottom-[18%] flex justify-center lg:hidden text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb]`}
+      >
+        <span aria-label="scroll-down" className="w-fit text-[10px] flex flex-col justify-center items-center gap-0 text-center text-inherit "
+         onClick={toggleScroll}
+        >
+          <i className="bi bi-mouse text-2xl animate-bounce"></i>
+          <p>Scroll Down</p>
+        </span>
       </motion.div>
     </section>
   )
