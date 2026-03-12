@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion"
 import { useNavigate, useSearchParams } from "react-router-dom";
 
-const Modal = ({ imgSrc, alt, index } : { imgSrc: string, alt: string, index: number }) => {
+const Modal = ({ imgSrc, alt, desc, index } : { imgSrc: string, desc: string, alt: string, index: number }) => {
     const [show, setShow] = useState(false);
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
@@ -60,13 +60,15 @@ const Modal = ({ imgSrc, alt, index } : { imgSrc: string, alt: string, index: nu
     return (
         <motion.div
             key={index}
-            initial={{ opacity: 0, filter: "blur(4px)" }}
-            whileInView={{ opacity: 1, filter: "blur(0px)" }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className={show ? "fixed top-0 left-0 flex w-screen h-screen justify-center items-center z-50 cursor-pointer" : "relative group h-64 overflow-clip flex flex-col justify-center items-center rounded-md z-20 break-words"}
+            initial={{ opacity: 0, y: 5 }} // Replaced blur with subtle Y-offset for accessibility
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className={show ? "fixed top-0 left-0 flex w-screen h-screen justify-center items-center z-[170] cursor-pointer" : "relative group h-64 overflow-clip flex flex-col justify-center items-center rounded-md z-20 break-words"}
             onClick={handleNav}
-            role="button"
             aria-label="Open image modal"
+            role="dialog"
+            aria-modal="true"
             tabIndex={index}
         >
             <motion.div
@@ -78,15 +80,16 @@ const Modal = ({ imgSrc, alt, index } : { imgSrc: string, alt: string, index: nu
                 <div 
                     aria-label="Close modal" 
                     onClick={handleNav} 
-                    className="absolute top-5 right-5 px-3 py-1 text-xs dark:bg-[#f9fafb] bg-[#2a3b52] text-[#f9fafb] dark:text-[#2a3b52] rounded-full flex items-center gap-1 font-semibold cursor-pointer z-50"
+                    className="absolute top-5 right-5 px-3 py-1 text-xs dark:bg-[#f9fafb] bg-[#2a3b52] text-[#f9fafb] dark:text-[#2a3b52] rounded-full flex items-center gap-1 font-semibold cursor-pointer z-[170]"
                 >
-                    <i className="bi bi-x-lg text-red-600"></i> Close
+                    <i className="bi bi-x-lg text-red-600" aria-hidden="true"></i> Close
                 </div>
             )}
 
             <motion.img
                 src={imgSrc} 
                 alt={alt}
+                aria-label={desc}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}

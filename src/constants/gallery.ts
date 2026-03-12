@@ -7,19 +7,23 @@ import pic5 from '../assets/gallery/pic5.webp'
 export const GALLERY = [
     {
         id: 1,
-        img:  pic1
+        img: pic1,
+        desc: "Photo of a pretty flower"
     },
     {
         id: 4,
-        img:  pic4
+        img: pic4,
+        desc: "A selfie photo of myself"
     },
     {
         id: 5,
-        img:  pic5
+        img: pic5,
+        desc: "A photo of myself in a restaurant"
     },
     {
         id: 3,
-        img:  pic3
+        img: pic3,
+        desc: "a photo of laptop"
     },
     // {
     //     id: 2,

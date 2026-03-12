@@ -11,17 +11,23 @@ interface SkillsProps {
 const Skills = ({name, index, url, icon, desc} : SkillsProps) => {
   return (
     <motion.a
-      initial={{ opacity: 0, filter: 'blur(4px)' }}
-      whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+      initial={{ opacity: 0, y: 5 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-        viewport={{ once: true }}
+      viewport={{ once: true }}
     
-      href={url} target="_blank" key={index} className="group flex gap-2 text-xs xs:text-sm text-black/80 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold capitalize transition-all duration-300" title={desc}>
-    {
-        icon && <i className={`${icon} group-hover:-translate-x-2 transition-all duration-300`}></i>
-    } 
-    {name}
-</motion.a>
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      key={index}
+      className="group flex gap-2 text-xs xs:text-sm text-black/80 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] hover:font-semibold capitalize transition-all duration-300"
+      aria-label={`${name} (opens in a new tab)`}
+    >
+        {
+            icon && <i className={`${icon} group-hover:-translate-x-2 transition-all duration-300`} aria-hidden="true"></i>
+        } 
+        {name}
+    </motion.a>
   )
 }
 

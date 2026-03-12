@@ -40,7 +40,7 @@ export default function CursorTracker() {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-50">
       <motion.div 
-        className="absolute inset-0 z-20 text-cyan-600/50 dark:text-sky-400/70" 
+        className="absolute inset-0 z-20 text-cyan-600/30 dark:text-sky-400/50" 
         style={{ 
           backgroundImage: `
             linear-gradient(to right, currentColor 1px, transparent 1px), 
