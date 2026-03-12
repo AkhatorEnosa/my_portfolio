@@ -184,7 +184,7 @@ const Left = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.5 }}
-          className="absolute w-full bottom-[12%] lg:hidden text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb]"
+          className="absolute w-full bottom-[30%] lg:hidden text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb]"
         >
           <a href="#about" aria-label="scroll-down" className="text-[10px] flex flex-col justify-center items-center gap-0 text-center text-inherit ">
             <i className="bi bi-mouse text-xl animate-bounce"></i>
