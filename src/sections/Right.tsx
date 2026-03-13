@@ -108,7 +108,7 @@ const Right = () => {
                 </motion.div>
             </div>
 
-            <div id="skills" className="h-screen lg:h-auto flex flex-col justify-center items-center lg:justify-start lg:items-start py-10 px-6 md:px-36 lg:px-12">
+            <div id="skills" className="flex flex-col justify-center items-center lg:justify-start lg:items-start py-10 px-6 md:px-36 lg:px-12">
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -244,13 +244,13 @@ const Right = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="group flex flex-col items-center gap-2 fixed w-fit bottom-[10%] right-20 text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] z-[100] cursor-pointer"
+                className="group flex flex-col items-center gap-2 fixed w-fit bottom-4 right-5 text-black/70 hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] z-[100] cursor-pointer"
                 onClick={toggleScroll}
             >
-                <span aria-label="scroll-down" className="size-4 p-4 flex items-center justify-center border-[1px] border-black/30 group-hover:border-black dark:border-[#f9fafb]/50 dark:group-hover:border-[#f9fafb] dark:bg-[#1c1c1c] bg-[#f9fafb] animate-bounce rounded-full">
+                <span aria-label="scroll-down" className="flex items-center justify-center size-[70px] border-[5px] border-[#f5f5f5] dark:border-[#000000] lg:flex-col text-white dark:text-black dark:bg-[#f5f5f5]/80 bg-[#1f2937] backdrop-blur-sm shadow-lg rounded-full">
                     <i className="bi bi-arrow-up"></i>
                 </span>
-                <p className="text-[10px] px-2 flex flex-col justify-center items-center gap-0 text-center border-[1px] border-black/30 group-hover:border-black dark:border-[#f9fafb]/50 dark:group-hover:border-[#f9fafb] dark:bg-[#1c1c1c] bg-[#f9fafb] rounded-lg">Go To Top</p>
+                {/* <p className="text-[10px] px-2 flex flex-col justify-center items-center gap-0 text-center border-[1px] border-black/30 group-hover:border-black dark:border-[#f9fafb]/50 dark:group-hover:border-[#f9fafb] dark:bg-[#1c1c1c] bg-[#f9fafb] rounded-lg">Go To Top</p> */}
             </motion.div>}
         </main>
   )

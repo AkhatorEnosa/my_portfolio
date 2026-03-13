@@ -8,7 +8,7 @@ interface SkillsProps {
     desc?: string,
 }
 
-const Skills = ({name, index, url, icon, desc} : SkillsProps) => {
+const Skills = ({name, index, url, icon} : SkillsProps) => {
   return (
     <motion.a
       initial={{ opacity: 0, y: 5 }}
