@@ -15,6 +15,7 @@ import Modal from "../components/Modal";
 import { BACKEND_LIST } from "../constants/backend";
 import { SERVICES } from "../constants/services";
 import ServiceCard from "../components/ServiceCard";
+import FAQ from "./Faq";
 
 const Right = () => {
     const {groupBy, selectedSection, isScrolled, toggleScroll} = useContext(AppContext);
@@ -234,9 +235,24 @@ const Right = () => {
                 </div>
             </motion.div>
 
+          {/* FAQ section  */}
+            <motion.div 
+                id="faq"
+                className="px-6 md:px-36 lg:px-12 py-10"
+            > 
+                <motion.h1
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 3.0 }}
+                    className="w-full heading text-2xl font-bold text-center lg:text-left tracking-tight uppercase"
+                >Frequently Asked Questions</motion.h1>
+                    
+                <FAQ />
+            </motion.div>
+
             <div className="w-full flex flex-col mt-10 pb-24 px-6 md:px-36 lg:px-12 justify-center items-center text-center text-black dark:text-[#f9fafb] lg:bg-inherit lg:dark:bg-inherit">
                 <p className="text-2xl font-semibold mt-10">Let us work on something together!</p>
-                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse border-cyan-600/20 dark:border-green-400 text-black hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] bg-transparent ">collaboration or just a chat!</a></p>
+                <p className="text-sm mt-2 opacity-80">Feel free to reach out for <a href="mailto:aosakhogba@gmail.com" className=" font-semibold underline animate-pulse border-indigo-500 dark:border-green-400 text-black hover:text-inherit dark:text-[#f9fafb]/60 dark:hover:text-[#f9fafb] bg-transparent ">collaboration or just a chat!</a></p>
             </div>
 
             {isScrolled && <motion.div

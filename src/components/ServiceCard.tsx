@@ -19,7 +19,7 @@ const ServiceCard = ({ title, desc, tech, icon }: ServiceCardProps) => {
         className="group flex flex-col gap-2 text-lg items-center lg:items-start max-w-md break-inside-avoid relative h-fit dark:text-[#f9fafb] dark:bg-[#1c1c1c] bg-[#f9fafb] border-[1px] lg:border-none mx-auto border-[#1f2937]/20 dark:border-[#f9fafb]/20 lg:shadow rounded-lg p-4 transition-all duration-300"
     >
       <div className="flex flex-col justify-center items-center lg:flex-row gap-2">
-        <div className="flex w-fit items-center justify-center min-w-14 min-h-14 rounded-2xl text-cyan-600 dark:text-green-400 bg-cyan-600/5 dark:bg-green-400/20 group-hover:scale-110 transition-transform duration-300">
+        <div className="flex w-fit items-center justify-center min-w-14 min-h-14 rounded-2xl text-indigo-500 dark:text-green-400 bg-indigo-500/5 dark:bg-green-400/20 group-hover:scale-110 transition-transform duration-300">
             <i className={`bi ${icon} text-2xl`}></i>
         </div>
         
@@ -31,7 +31,7 @@ const ServiceCard = ({ title, desc, tech, icon }: ServiceCardProps) => {
         aria-label={`Technologies used in ${title}`}
       >
         {tech.map((x: string, index: number) => (
-            <li key={index} className="px-2 border border-cyan-600/30 dark:border-green-400/50 text-cyan-600 dark:text-green-400 bg-transparent rounded-full">{x}</li>
+            <li key={index} className="px-2 border border-indigo-500/50 dark:border-green-400/50 text-indigo-500 dark:text-green-400 bg-transparent rounded-full">{x}</li>
         ))}
       </ul>
     </motion.div>
