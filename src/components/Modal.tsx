@@ -72,8 +72,8 @@ const Modal = ({ imgSrc, alt, desc, index } : { imgSrc: string, desc: string, al
             tabIndex={index}
         >
             <motion.div
-                className={show ? "absolute top-0 left-0 h-full w-full bg-[#f9fafb]/80 dark:bg-[#2a3b52]/80 backdrop-blur-sm z-10" : "absolute opacity-0 group-hover:opacity-100 h-full w-full bg-[#f9fafb]/50 dark:bg-[#2a3b52]/50 flex justify-center items-center top-0 left-0 z-50"}>
-                <i className={`bi bi-eye ${show && "hidden"} size-5 p-4 hover:p-6 animate-bounce bg-[#f9fafb] dark:bg-[#2a3b52] rounded-full text-center flex justify-center items-center cursor-pointer transition-all duration-150`}></i>
+                className={show ? "absolute top-0 left-0 h-full w-full bg-cyan-600/10 dark:bg-green-400/10 backdrop-blur-sm z-10" : "absolute opacity-0 group-hover:opacity-100 h-full w-full bg-cyan-600/10 dark:bg-green-400/10 flex justify-center items-center top-0 left-0 z-50"}>
+                <i className={`bi bi-eye ${show && "hidden"} size-5 p-4 hover:p-6 animate-bounce bg-cyan-600 dark:bg-green-400 rounded-full text-center text-white dark:text-black flex justify-center items-center cursor-pointer transition-all duration-150`}></i>
             </motion.div>
 
             {show && (

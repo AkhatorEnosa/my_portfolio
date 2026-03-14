@@ -50,7 +50,7 @@ const ProjectCard = ({ title, desc, tech, url, construction, imgSrc }: ProjectCa
         >
             {/* {tech.map((x: string) => (x + " • "))} */}
             {tech.map((x: string, index: number) => (
-                <li key={index} className="px-2 py-1 border border-cyan-600/30 dark:border-sky-400/50 text-cyan-600 dark:text-sky-400 bg-transparent rounded-2xl">{x}</li>
+                <li key={index} className="px-2 py-1 border border-cyan-600/30 dark:border-green-400/50 text-cyan-600 dark:text-green-400 bg-transparent rounded-2xl">{x}</li>
             ))}
         </ul>
     </motion.a>
