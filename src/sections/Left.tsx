@@ -24,6 +24,7 @@ const Left = () => {
   const [currShape, setCurrShape] = useState<ShapeKey>("circle");
   const [isHovering, setIsHovering] = useState<boolean>(false);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [expandIcon, setExpandIcon] = useState<boolean>(false);
 
   // Array of shape keys to cycle through
   const shapeKeys = Object.keys(shapes) as ShapeKey[];
@@ -55,25 +56,16 @@ const Left = () => {
     {/* user image */}
       <motion.div
         className="group fixed top-10 lg:top-5 left-10 size-10 lg:size-14 z-40"
-        onClick={() => {
-            setSelectedSection("home");
-            localStorage.setItem('section', "home")
-          }
-        }
+        onClick={() => setExpandIcon(prev => !prev)}
+
         onHoverStart={handleHoverStart}
         onHoverEnd={handleHoverEnd}
         onTouchStart={handleHoverStart}
         onTouchEnd={handleHoverEnd}
       >
-        {/* expanded icon image */}
-        <a href="#gallery" className="fixed left-20 lg:left-40 top-14 w-0 group-hover:w-56 shadow-2xl rounded-lg overflow-hidden opacity-0 lg:group-hover:opacity-100 ease-in-out transition-all duration-150 z-50">
-          <img src={Icon} alt="my image"/>
-        </a>
-
         <motion.div
           className="w-full h-full cursor-pointer"
           initial={{ clipPath: shapes[currShape] }}
-          // Framer Motion animation for smooth clip-path transition
           animate={{ clipPath: shapes[currShape] }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
@@ -86,6 +78,11 @@ const Left = () => {
             />
           </a>
         </motion.div>
+
+        {/* expanded icon image */}
+        <a href="#gallery" className={`fixed left-20 lg:left-40 top-14 ${expandIcon ? "w-56" : "w-0 group-hover:w-56  opacity-0 lg:group-hover:opacity-100"} shadow-2xl rounded-lg overflow-hidden ease-in-out transition-all duration-150 z-50`}>
+          <img src={Icon} alt="my image"/>
+        </a>
       </motion.div>
 
       <div className="w-full h-full lg:h-fit flex flex-col justify-center items-center lg:justify-between lg:items-center gap-6 lg:gap-0">
