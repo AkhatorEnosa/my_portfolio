@@ -1,6 +1,6 @@
 import soozeer from "../assets/projects/soozeer.webp";
 import Shaup from '../assets/projects/e-store.webp'
-import Unscramble from '../assets/projects/unscramble.webp'
+// import Unscramble from '../assets/projects/unscramble.webp'
 import myNoet from '../assets/projects/mynoet.webp'
 import moovees from '../assets/projects/moovees.webp'
 import doTaska from '../assets/projects/dotaska.webp'
