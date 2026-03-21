@@ -80,7 +80,7 @@ const Left = () => {
         </motion.div>
 
         {/* expanded icon image */}
-        <a href="#gallery" className={`fixed left-20 lg:left-40 top-14 ${expandIcon ? "w-56" : "w-0 group-hover:w-56  opacity-0 lg:group-hover:opacity-100"} shadow-2xl rounded-lg overflow-hidden ease-in-out transition-all duration-150 z-50`}>
+        <a href="#gallery" className={`fixed left-28 lg:left-40 top-14 ${expandIcon ? "w-56" : "w-0 group-hover:w-56  opacity-0 lg:group-hover:opacity-100"} shadow-2xl rounded-lg overflow-hidden ease-in-out transition-all duration-150 z-50`}>
           <img src={Icon} alt="my image"/>
         </a>
       </motion.div>
