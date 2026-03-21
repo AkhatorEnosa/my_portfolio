@@ -3,7 +3,7 @@ import Shaup from '../assets/projects/e-store.webp'
 // import Unscramble from '../assets/projects/unscramble.webp'
 import myNoet from '../assets/projects/mynoet.webp'
 import moovees from '../assets/projects/moovees.webp'
-import doTaska from '../assets/projects/dotaska.webp'
+// import doTaska from '../assets/projects/dotaska.webp'
 import foodsco from '../assets/projects/foodsco.webp'
 import Lokateur from '../assets/projects/lokateur.webp'
 import splitter from '../assets/projects/splitter.webp'
@@ -43,6 +43,15 @@ export const PROJECTS = [
         construction: false
     },
     {
+        title: "Prizquiz",
+        image: "https://res.cloudinary.com/dgmpx8acb/image/upload/v1774103127/Screenshot_2026-03-21_at_15.23.24_c0hy5n.png",
+        description: "A fun and interactive word game where players unscramble letters to form words. Built with ReactJS, it offers a clean interface and engaging gameplay.",
+        tag: ["ReactJS", "TailwindCSS", "API"],
+        url: "https://prizquiz.netlify.app/",
+        group: "web applications",
+        construction: false
+    },
+    {
         title: "bill splitter",
         image: splitter,
         description: "A user-friendly web application designed to simplify splitting bills between two or more people, including optional tip calculations. Built with HTML, CSS, and JavaScript, it offers a clean and intuitive interface for quick and accurate bill division.",
@@ -60,15 +69,15 @@ export const PROJECTS = [
         group: "websites",
         construction: false
     },
-    {
-      title: "dotaska",
-      image: doTaska,
-      description: "A task management application that allows users to create, edit, and delete tasks. Built with ReactJS, it provides a clean interface and efficient navigation.",
-      tag: ["ReactJS", "TypeScript", "TailwindCSS", "Motion"],
-      url: "https://dotaska.netlify.app/",
-      group: "web applications",
-      construction: false
-    },
+    // {
+    //   title: "dotaska",
+    //   image: doTaska,
+    //   description: "A task management application that allows users to create, edit, and delete tasks. Built with ReactJS, it provides a clean interface and efficient navigation.",
+    //   tag: ["ReactJS", "TypeScript", "TailwindCSS", "Motion"],
+    //   url: "https://dotaska.netlify.app/",
+    //   group: "web applications",
+    //   construction: false
+    // },
     {
       title: "foodsco",
       image: foodsco,
@@ -93,15 +102,6 @@ export const PROJECTS = [
         description: "A sleek and responsive product page designed to showcase items with detailed descriptions, and high-quality images. Built to enhance the shopping experience, it ensures seamless navigation and quick purchasing decisions.",
         tag: ["ReactJS", "TailwindCSS"],
         url: "https://kickrs.netlify.app/",
-        group: "web applications",
-        construction: false
-    },
-    {
-        title: "Prizquiz",
-        image: "https://res.cloudinary.com/dgmpx8acb/image/upload/v1774103127/Screenshot_2026-03-21_at_15.23.24_c0hy5n.png",
-        description: "A fun and interactive word game where players unscramble letters to form words. Built with ReactJS, it offers a clean interface and engaging gameplay.",
-        tag: ["ReactJS", "TailwindCSS", "API"],
-        url: "https://prizquiz.netlify.app/",
         group: "web applications",
         construction: false
     },

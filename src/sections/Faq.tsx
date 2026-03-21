@@ -29,7 +29,7 @@ interface FAQProps {
 
 const FAQItem = ({ question, answer, isOpen, onClick } : FAQProps) => {
   return (
-    <div className="border-b border-indigo-500/10 dark:border-green-400/10 last:border-none">
+    <div className={`${!isOpen ? "border-b" : "border-none"} border-indigo-500 dark:border-green-400 last:border-none trnasition-all duration-150`}>
       <button
         className="w-full py-6 flex justify-between items-center text-left hover:opacity-80 transition-opacity focus:outline-none"
         onClick={onClick}
