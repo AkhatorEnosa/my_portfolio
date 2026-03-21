@@ -18,7 +18,7 @@ const shapes: Record<ShapeKey, string> = {
 };
 
 const Left = () => {
-  const { setSelectedSection, theme, themeHandler, toggleScroll } = useContext(AppContext);
+  const { theme, themeHandler, toggleScroll } = useContext(AppContext);
       
 
   const [currShape, setCurrShape] = useState<ShapeKey>("circle");
