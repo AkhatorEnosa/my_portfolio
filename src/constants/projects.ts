@@ -97,14 +97,23 @@ export const PROJECTS = [
         construction: false
     },
     {
-        title: "unscramble",
-        image: Unscramble,
+        title: "Prizquiz",
+        image: "https://res.cloudinary.com/dgmpx8acb/image/upload/v1774103127/Screenshot_2026-03-21_at_15.23.24_c0hy5n.png",
         description: "A fun and interactive word game where players unscramble letters to form words. Built with ReactJS, it offers a clean interface and engaging gameplay.",
-        tag: ["ReactJS", "CSS", "API"],
-        url: "https://akhatorenosa.github.io/unscramble-game/",
+        tag: ["ReactJS", "TailwindCSS", "API"],
+        url: "https://prizquiz.netlify.app/",
         group: "web applications",
         construction: false
     },
+    // {
+    //     title: "unscramble",
+    //     image: Unscramble,
+    //     description: "A fun and interactive word game where players unscramble letters to form words. Built with ReactJS, it offers a clean interface and engaging gameplay.",
+    //     tag: ["ReactJS", "CSS", "API"],
+    //     url: "https://akhatorenosa.github.io/unscramble-game/",
+    //     group: "web applications",
+    //     construction: false
+    // },
     {
         title: "genotype match checker",
         image: Genotype,
