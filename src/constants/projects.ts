@@ -44,7 +44,7 @@ export const PROJECTS = [
     },
     {
         title: "Prizquiz",
-        image: "https://res.cloudinary.com/dgmpx8acb/image/upload/v1774103127/Screenshot_2026-03-21_at_15.23.24_c0hy5n.png",
+        image: "https://res.cloudinary.com/dgmpx8acb/image/upload/v1774272585/Screenshot_2026-03-23_at_14.25.31_bmji14.png",
         description: "A fun and interactive word game where players unscramble letters to form words. Built with ReactJS, it offers a clean interface and engaging gameplay.",
         tag: ["ReactJS", "TailwindCSS", "API"],
         url: "https://prizquiz.netlify.app/",
