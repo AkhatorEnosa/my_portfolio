@@ -1,7 +1,7 @@
 import soozeer from "../assets/projects/soozeer.webp";
 import Shaup from '../assets/projects/e-store.webp'
 // import Unscramble from '../assets/projects/unscramble.webp'
-import myNoet from '../assets/projects/mynoet.webp'
+// import myNoet from '../assets/projects/mynoet.webp'
 import moovees from '../assets/projects/moovees.webp'
 // import doTaska from '../assets/projects/dotaska.webp'
 import foodsco from '../assets/projects/foodsco.webp'
@@ -26,7 +26,7 @@ export const PROJECTS = [
     },
     {
         title: "wrotenote",
-        image: myNoet,
+        image: "https://res.cloudinary.com/dgmpx8acb/image/upload/v1775551538/Screenshot_2026-04-07_at_09.42.14_onwl34.png",
         description: "wroteNote is an application meticulously crafted to mirror the spirit of Google Keep, thoughtfully designed to provide users with a swift and seamless platform for capturing their ideas and thoughts with exceptional ease and efficiency, unencumbered by unnecessary complexities.",
         tag: ["ReactJS", "TailwindCSS", "Tanstack Query", "Redux Toolkit", "Supabase"],
         url: "https://wrotenote.netlify.app/",
